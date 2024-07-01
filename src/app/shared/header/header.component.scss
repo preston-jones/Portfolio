@@ -1,0 +1,23 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px 30px 100px;
+    > #logo-header {
+        height: 30px;
+        object-fit: contain;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    > #burger-icon {
+        height: 32px;
+        object-fit: contain;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
