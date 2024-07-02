@@ -1,5 +1,12 @@
 app-header {
     display: flex;
     justify-content: center;
-    max-width: 1440px;
+    max-width: 100%;
+}
+
+app-footer {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    background-color: #000000;
 }

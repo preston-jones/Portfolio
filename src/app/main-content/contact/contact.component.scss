@@ -1,0 +1,14 @@
+.headline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    >h2 {
+        font-weight: 800;
+        font-size: 78px;
+        line-height: 78px;
+    }
+}
+
+.content {
+    width: 100%;
+}

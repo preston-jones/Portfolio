@@ -1,5 +1,8 @@
 .headline {
-    text-align: left;
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     >h2 {
         font-weight: 800;
@@ -11,7 +14,9 @@
 
 .content {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 52px;
 }
 
 .textblock {
@@ -20,7 +25,6 @@
     justify-content: flex-start;
     align-items: center;
     gap: 52px;
-    width: 619px;
 
     >p {
         text-wrap: wrap;
