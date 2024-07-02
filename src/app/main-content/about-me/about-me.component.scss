@@ -1,47 +1,57 @@
-.about-me-textblock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 52px;
-    width: 619px;
+.headline {
+    text-align: left;
 
     >h2 {
         font-weight: 800;
         font-size: 78px;
         line-height: 78px;
+        text-align: left;
     }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 52px;
+    width: 619px;
 
     >p {
+        text-wrap: wrap;
         font-weight: 400;
         font-size: 23px;
         line-height: 27.6px;
     }
 }
 
-#lets-talk-btn {
+.img-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 213px;
-    height: 68px;
-    border: #000000 4px solid;
-    padding: 20px 60px;
-    background-color: transparent;
-    >span {
-        font-weight: 400;
-        font-size: 23px;
-        line-height: 27.6px;
-        white-space: nowrap;
-    }
-    &:hover {
-        cursor: pointer;
-        padding: 20px 80px;
-    }
+    width: 533px;
+    height: 533px;
 }
 
 img {
     width: 533px;
     height: 533px;
     object-fit: contain;
+}
+
+.frame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 513px;
+    height: 513px;
 }
