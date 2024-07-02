@@ -232,5 +232,16 @@ h2:hover {
   to {
       transform: translateY(0);
   }
+}
+
+.diagonal-left-animation {
+  animation: 1.5ssiagonal-left 0s forwards;
+  transform: translateY(-250%);
+}
+
+@keyframes diagonal-left {
+  to {
+    transform: translate3d(100px, -100px, 0);
+  }
 
 }
