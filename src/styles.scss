@@ -235,7 +235,7 @@ h2:hover {
 }
 
 .diagonal-left-animation {
-  animation: 1.5ssiagonal-left 0s forwards;
+  animation: 1.5s diagonal-left 0s forwards;
   transform: translateY(-250%);
 }
 
@@ -243,5 +243,19 @@ h2:hover {
   to {
     transform: translate3d(100px, -100px, 0);
   }
+}
 
+.grow-animation {
+  animation: grow 1.5s ease-out;
+  transform: scale(1);
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
