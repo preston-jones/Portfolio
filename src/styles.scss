@@ -163,7 +163,7 @@ h6 {
 }
 
 .section-container {
-  width: 1440px;
+  max-width: 1440px;
   padding: 0 100px;
 }
 
@@ -200,6 +200,7 @@ h2:hover {
 }
 
 .slide-to-right-animation {
+  opacity: 0;
   animation: 1.5s slide-to-right 0s forwards;
   transform: translateX(-100%);
 }
@@ -207,30 +208,35 @@ h2:hover {
 @keyframes slide-to-right {
   to {
       transform: translateX(0);
+      opacity: 1;
   }
 
 }
 
 .slide-to-left-animation {
-  animation: 1.5s slide-to-left 0s forwards;
+  opacity: 0;
+  animation: 2s slide-to-left 0s forwards;
   transform: translateX(100%);
 }
 
 @keyframes slide-to-left {
   to {
       transform: translateX(0);
+      opacity: 1;
   }
 
 }
 
 .slide-down-animation {
-  animation: 1.5s slide-down 0s forwards;
+  opacity: 0;
+  animation: 2s slide-down 0s forwards;
   transform: translateY(-250%);
 }
 
 @keyframes slide-down {
   to {
       transform: translateY(0);
+      opacity: 1;
   }
 }
 
