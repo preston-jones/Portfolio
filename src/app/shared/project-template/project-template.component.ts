@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-project-template',
@@ -8,5 +9,27 @@ import { Component } from '@angular/core';
   styleUrl: './project-template.component.scss'
 })
 export class ProjectTemplateComponent {
+
+  @Input() projectTitle: string = '';
+  currentProjectTitle?: string;
+
+  projectsData = inject(ProjectsService).projects;
+  currentProjectData: any;
+
+  constructor() {
+    console.log('Hallo');
+  }
+
+  ngOnInit() {
+    this.currentProjectTitle = this.projectTitle;
+    console.log(this.currentProjectTitle);
+    this.getCurrentProjectData();
+  }
+
+
+  getCurrentProjectData() {
+    this.currentProjectData = this.projectsData.find(project => project.title === this.currentProjectTitle);
+    console.log(this.currentProjectData);
+  }
 
 }
