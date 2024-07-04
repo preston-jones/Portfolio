@@ -1,6 +1,19 @@
-<section class="project-template-container">
-    <div>
-        <p>project-template works!</p>
-        <p>{{ this.currentProjectTitle }}</p>
+<div class="project-template-container">
+    <div class="project-template">
+        <img src= '{{ this.currentProjectData.img }}'>
+        <div class="project-info">
+            <h3 class="font-syne">{{ this.currentProjectData.title }}</h3>
+            <span class="languages">
+                <p>HTML</p>
+                <p>|</p>
+                <p>CSS</p>
+                <p>|</p>
+                <p>JavaScript</p>
+            </span>
+            <p class="description">{{ this.currentProjectData.description }}</p>
+        </div>
     </div>
-</section>
+    <div class="project-counter font-syne">
+        <p>01/05</p>
+    </div>
+</div>

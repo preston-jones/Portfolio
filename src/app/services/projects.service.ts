@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Project } from '../Interfaces/project.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -7,10 +8,10 @@ export class ProjectsService {
 
   constructor() { }
 
-  projects = [
+  projects: Project[] = [
     {
       title: 'Cyber City',
-      img: './../../../assets/images/cyber-city.png',
+      img: 'assets/imgs/projectimage_cybercity.png',
       description: '2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion.',
       languages: [
         'JavaScript',
@@ -30,8 +31,8 @@ export class ProjectsService {
     },
     {
       title: 'Join',
-      img: 'https://via.placeholder.com/150',
-      description: '2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion.',
+      img: 'assets/imgs/projectimage_join.png',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       languages: [
         'JavaScript',
         'HTML',

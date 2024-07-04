@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
+import { Project } from '../../Interfaces/project.interfaces';
 
 @Component({
   selector: 'app-project-template',
@@ -14,10 +15,15 @@ export class ProjectTemplateComponent {
   currentProjectTitle?: string;
 
   projectsData = inject(ProjectsService).projects;
-  currentProjectData: any;
+  currentProjectData: Project = {
+    title: '',
+    img: '',
+    description: '',
+    languages: [],
+    links: []
+  };
 
   constructor() {
-    console.log('Hallo');
   }
 
   ngOnInit() {
@@ -28,8 +34,19 @@ export class ProjectTemplateComponent {
 
 
   getCurrentProjectData() {
-    this.currentProjectData = this.projectsData.find(project => project.title === this.currentProjectTitle);
+    const project = this.projectsData.find(project => project.title === this.currentProjectTitle);
+    if (project) {
+      this.currentProjectData = project;
+    } else {
+      // Provide a fallback project data here
+      this.currentProjectData = {
+        title: '',
+        img: '',
+        description: '',
+        languages: [],
+        links: []
+      };
+    }
     console.log(this.currentProjectData);
   }
-
 }

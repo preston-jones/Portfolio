@@ -1,0 +1,62 @@
+.project-template-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-template {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    >img {
+        width: 620px;
+        object-fit: contain;
+        padding: 20px 0;
+    }
+}
+
+.project-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+}
+
+.project-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    width: 479px;
+    height: 339px;
+    padding: 61px 0 0 0;
+
+    >h3 {
+        font-weight: 800;
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    >.description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    >.languages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 27.6px;
+        color: #FF9900;
+    }
+}

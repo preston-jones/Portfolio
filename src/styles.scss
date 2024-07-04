@@ -109,6 +109,14 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-overpass {
+  font-family: 'Overpass', sans-serif;
+}
+
 /* -- GLOBAL STYLES -- */
 * {
   margin: 0;
@@ -176,6 +184,7 @@ section,
 header,
 footer {
   max-width: 1440px;
+  width: 100vw;
   padding-right: 100px;
   padding-left: 100px;
 }
