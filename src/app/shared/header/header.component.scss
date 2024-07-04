@@ -1,11 +1,12 @@
 header {
-    width: 1440px;
+    width: 100%;
     position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px 30px 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #FFFCF3;
     > #logo-header {
         height: 40px;

@@ -5,6 +5,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ArrowComponent} from '../shared/arrow/arrow.component';
+import { ProjectTemplateComponent } from '../shared/project-template/project-template.component';
 
 @Component({
   selector: 'app-main-content',
@@ -16,6 +17,7 @@ import { ArrowComponent} from '../shared/arrow/arrow.component';
     PortfolioComponent,
     ContactComponent,
     ArrowComponent,
+    ProjectTemplateComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'

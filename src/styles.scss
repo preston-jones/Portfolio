@@ -138,6 +138,15 @@ h6 {
   color: #000000;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .btn-prim {
   display: flex;
   justify-content: center;
@@ -163,9 +172,12 @@ h6 {
   }
 }
 
-.section-container {
+section,
+header,
+footer {
   max-width: 1440px;
-  padding: 0 100px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 /* -- Scroll Effects -- */
@@ -178,9 +190,9 @@ h2:hover {
 .draw-frame-effect {
   border: #000000 4px solid;
   mask:
-      conic-gradient(from 180deg at top 4px right 4px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(--_i, 4px) border-box no-repeat,
-      conic-gradient(at bottom 4px left 4px, #0000 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 4px) 200% border-box no-repeat,
-      linear-gradient(#000 0 0) padding-box no-repeat;
+    conic-gradient(from 180deg at top 4px right 4px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(--_i, 4px) border-box no-repeat,
+    conic-gradient(at bottom 4px left 4px, #0000 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 4px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
   transition: 125ms, mask-position 125ms 125ms;
 }
 
@@ -192,11 +204,11 @@ h2:hover {
 /* -- ANIMATIONS -- */
 @keyframes arrowTopDown {
   from {
-      transform: translateY(-200px);
+    transform: translateY(-200px);
   }
 
   to {
-      transform: translateY(200px);
+    transform: translateY(200px);
   }
 }
 
@@ -208,8 +220,8 @@ h2:hover {
 
 @keyframes slide-to-right {
   to {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 
 }
@@ -222,8 +234,8 @@ h2:hover {
 
 @keyframes slide-to-left {
   to {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 
 }
@@ -236,8 +248,8 @@ h2:hover {
 
 @keyframes slide-down {
   to {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
