@@ -1,7 +1,8 @@
 <div class="project-template-container">
     <div class="project-template" [class.flex-row-reverse]="evenNumber" (mouseenter)="onMouseEnter()"
         (mouseleave)="onMouseLeave()">
-        <img src='{{ this.currentProjectData.img }}' class="filter-grayscale" [class.filter-color]="mouseEnter">
+        <a href="{{ this.currentProjectData.links[0].url }}" target="_blank"><img
+                src='{{ this.currentProjectData.img }}' class="filter-grayscale" [class.filter-color]="mouseEnter"></a>
         <div class="frame draw-img-frame-effect"
             [ngClass]="{'frame-left draw-img-frame-effect-start' : mouseEnter && !evenNumber}"
             [ngClass]="{'frame-right draw-img-frame-effect-start' : mouseEnter && evenNumber}">
@@ -13,16 +14,18 @@
                 <h3 class="font-syne">{{ this.currentProjectData.title }}</h3>
                 <span class="languages">
                     @for(language of currentProjectData.languages; track language; let index = $index){
-                        <p>{{ this.currentProjectData.languages[index] }}</p>
-                        @if (this.currentProjectData.languages.length > 1 && index < this.currentProjectData.languages.length - 1) {
-                            <p>|</p>
+                    <p>{{ this.currentProjectData.languages[index] }}</p>
+                    @if (this.currentProjectData.languages.length > 1 && index <
+                        this.currentProjectData.languages.length - 1) { <p>|</p>
                         }
-                    }
+                        }
                 </span>
                 <p class="description">{{ this.currentProjectData.description }}</p>
                 <div class="project-links">
                     @for(link of currentProjectData.links; track link; let index = $index){
-                    <button class="projectlink-btn">{{ currentProjectData.links[index].title }}</button>
+                    <button class="projectlink-btn"><a href="{{ this.currentProjectData.links[index].url }}"
+                            target="_blank">{{ currentProjectData.links[index].title }}</a></button>
+
                     }
                 </div>
             </div>
