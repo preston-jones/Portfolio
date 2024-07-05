@@ -43,7 +43,7 @@ export class ProjectsService {
       links: [
         {
           title: 'Live Demo',
-          url: 'https://preston-jones.developerakademie.net/2D_Game/index.html'
+          url: 'https://preston-jones.developerakademie.net/join/index.html'
         },
         {
           title: 'GitHub',
@@ -64,11 +64,11 @@ export class ProjectsService {
       links: [
         {
           title: 'Live Demo',
-          url: 'https://preston-jones.developerakademie.net/2D_Game/index.html'
+          url: 'https://preston-jones.developerakademie.net/Pokedex/index.html'
         },
         {
           title: 'GitHub',
-          url: 'https://github.com/preston-jones/2D_Sidescroller_Game'
+          url: 'https://github.com/preston-jones/pokedex'
         }
       ]
     },

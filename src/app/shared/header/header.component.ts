@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  openMenu: boolean = false;
+
+  loadMenu() {
+    this.openMenu = true;
+  }
+
 }
