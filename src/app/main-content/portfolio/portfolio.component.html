@@ -6,7 +6,8 @@
         </p>
     </div>
     <div class="content">
-        <app-project-template [projectTitle]="'Join'"></app-project-template>
-        <app-project-template [projectTitle]="'Cyber City'"></app-project-template>
+        @for(project of projectsData; track projectsData.length; let index = $index){
+        <app-project-template [projectTitle]="project.title" [projectIndex]="index + 1"></app-project-template>
+        }
     </div>
 </section>

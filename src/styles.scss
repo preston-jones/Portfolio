@@ -127,6 +127,9 @@
 body {
   font-family: 'Overpass', sans-serif;
   background-color: #FFFCF3;
+  overflow: scroll;
+  scrollbar-color: #000000 #FFFCF3;
+  scrollbar-width: thin;
 }
 
 app-main-content {
@@ -164,7 +167,6 @@ a {
   border: #000000 4px solid;
   padding: 20px 60px;
   background-color: transparent;
-  transition: all 125ms ease-in-out;
   font-weight: 400;
   font-size: 23px;
   line-height: 27.6px;

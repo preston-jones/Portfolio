@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ProjectTemplateComponent } from '../../shared/project-template/project-template.component';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,5 +12,7 @@ import { ProjectTemplateComponent } from '../../shared/project-template/project-
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+
+  projectsData = inject(ProjectsService).projects;
 
 }
