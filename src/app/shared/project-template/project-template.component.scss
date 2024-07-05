@@ -44,6 +44,8 @@
 #arrow-project {
     width: 76px;
     height: 180px;
+    opacity: 0;
+    animation: blend-in 0.4s forwards ease-out;
 }
 
 .filter-grayscale {
@@ -193,4 +195,14 @@ flex-direction: row-reverse;
   .draw-img-frame-effect-start {
     --_i: 100%;
     transition: 125ms, mask-size 125ms 125ms;
+  }
+
+  @keyframes blend-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
   }
