@@ -8,56 +8,70 @@ header {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #FFFCF3;
-    > #logo-header {
+
+    >#logo-header {
         height: 40px;
         object-fit: contain;
+
         &:hover {
             cursor: pointer;
         }
     }
-    > #burger-icon {
+
+    >#burger-icon {
         height: 32px;
+        width: 32px;
         object-fit: contain;
-        background-image: url('./../../../assets/animation/menue_1.png');
+        background-image: url('./../../../assets/animation/menue_default.png');
+        background-position: center;
+        background-size: cover;
+
         &:hover {
             cursor: pointer;
         }
     }
 }
 
-.menu-icon-animation {
-    animation: icon-animate 1s forwards;
+.menu-icon-animation-open {
+    animation: icon-animate-open 0.25s forwards;
+    z-index: 2;
+    background-size: cover;
+}
+
+@keyframes icon-animate-open {
+    0% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    45% {
+        background-image: url('./../../../assets/animation/menue_2.png');
+    }
+
+    75% {
+        background-image: url('./../../../assets/animation/menue_3.png');
+    }
+
+    100% {
+        background-image: url('./../../../assets/animation/menue_4.png');
+    }
+}
+
+.menu-icon-animation-close {
+    animation: icon-animate-close 0.5s forwards;
     z-index: 2;
     background-size: cover;
 }
 
 @keyframes icon-animate {
     0% {
-        background-image: url('./../../../assets/animation/menue_1.png');
-    }
-
-    15% {
-        background-image: url('./../../../assets/animation/menue_1.png');
-    }
-
-    35% {
-        background-image: url('./../../../assets/animation/menue_1.png');
+        background-image: url('./../../../assets/animation/menue_5.png');
     }
 
     50% {
-        background-image: url('./../../../assets/animation/menue_1.png');
-    }
-
-    65% {
-        background-image: url('./../../../assets/animation/menue_1.png');
-    }
-
-    80% {
-        background-image: url('./../../../assets/animation/menue_1.png');
+        background-image: url('./../../../assets/animation/menue_6.png');
     }
 
     100% {
-        background-image: url('./../../../assets/animation/menue_1.png');
+        background-image: url('./../../../assets/animation/menue_7.png');
     }
-
 }
