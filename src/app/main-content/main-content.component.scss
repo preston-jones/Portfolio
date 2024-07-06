@@ -1,3 +1,14 @@
 app-above-the-fold {
     height: 100vh;
 }
+
+app-contact {
+    background-image: url('./../../assets/imgs/rectangle.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1064px; /*wird noch dynamisch gemacht*/
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}

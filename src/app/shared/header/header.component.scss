@@ -18,6 +18,7 @@ header {
     > #burger-icon {
         height: 32px;
         object-fit: contain;
+        background-image: url('./../../../assets/animation/menue_1.png');
         &:hover {
             cursor: pointer;
         }
@@ -25,20 +26,38 @@ header {
 }
 
 .menu-icon-animation {
-    animation: animateMenuIcon 2s forwards;
+    animation: icon-animate 1s forwards;
+    z-index: 2;
+    background-size: cover;
 }
 
-// @keyframes animateMenuIcon {
-//     0% {
-//         background-image: url('../../../assets/img/animated/d-arrow.png');
-//     }
+@keyframes icon-animate {
+    0% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
 
-//     50% {
-//         background-image: url('../../../assets/img/animated/d-arrow1.png');
-//     }
+    15% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
 
-//     100% {
-//         transform: translate(-100rem, 60rem);
-//         background-image: url('../../../assets/img/animated/d-arrow2.png');
-//     }
-// }
+    35% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    50% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    65% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    80% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    100% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+}

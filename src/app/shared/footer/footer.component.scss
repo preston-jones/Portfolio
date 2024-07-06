@@ -10,15 +10,16 @@ footer {
 }
 
 .footer-top {
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-bottom {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
     >#legal {
         font-weight: 400;
         font-size: 16px;
@@ -48,13 +49,6 @@ align-items: center;
         object-fit: contain;
         cursor: pointer;
     }
-}
-
-.section-right {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: center;
 
     >#copyright {
         font-weight: 400;
@@ -63,11 +57,18 @@ align-items: center;
     }
 }
 
+.section-right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 42px;
 
     >a {
         display: flex;
