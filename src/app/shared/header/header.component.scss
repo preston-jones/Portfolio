@@ -28,18 +28,17 @@ header {
     animation: animateMenuIcon 2s forwards;
 }
 
-@keyframes animateMenuIcon {
-    0% {
-        background-image: url('../../../assets/img/animated/d-arrow.png');
-    }
+// @keyframes animateMenuIcon {
+//     0% {
+//         background-image: url('../../../assets/img/animated/d-arrow.png');
+//     }
 
-    50% {
-        background-image: url('../../../assets/img/animated/d-arrow1.png');
-    }
+//     50% {
+//         background-image: url('../../../assets/img/animated/d-arrow1.png');
+//     }
 
-    100% {
-        transform: translate(-100rem, 60rem);
-        background-image: url('../../../assets/img/animated/d-arrow2.png');
-    }
-
-}
+//     100% {
+//         transform: translate(-100rem, 60rem);
+//         background-image: url('../../../assets/img/animated/d-arrow2.png');
+//     }
+// }
