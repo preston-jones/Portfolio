@@ -3,10 +3,10 @@
         (mouseleave)="onMouseLeave()">
         <a href="{{ this.currentProjectData.links[0].url }}" target="_blank"><img
                 src='{{ this.currentProjectData.img }}' class="filter-grayscale" [class.filter-color]="mouseEnter"></a>
-        <!-- <div class="frame draw-img-frame-effect"
+        <div class="frame draw-img-frame-effect"
             [ngClass]="{'frame-left draw-img-frame-effect-start' : mouseEnter && !evenNumber}"
             [ngClass]="{'frame-right draw-img-frame-effect-start' : mouseEnter && evenNumber}">
-        </div> -->
+        </div>
         <div class="project-info" [class.slide-in-left-animation]="mouseEnter && evenNumber"
             [class.slide-in-right-animation]="mouseEnter && !evenNumber" [class.project-info-default]="!evenNumber"
             [class.project-info-reverse]="evenNumber">

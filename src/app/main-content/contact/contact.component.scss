@@ -1,20 +1,52 @@
-section {
-
-}
+section {}
 
 .headline {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 160px 0 80px 0;
+
     >h2 {
         font-weight: 800;
         font-size: 78px;
         line-height: 78px;
         color: #FFFCF3;
-        margin-top: 160px;
     }
 }
 
-.content {
-    width: 100%;
+.subheadline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    >h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38.4px;
+        color: #FF9900;
+    }
+
+    >span {
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 27.6px;
+        color: #FFFCF3;
+    }
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    >.form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
