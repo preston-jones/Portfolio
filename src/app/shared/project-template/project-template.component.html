@@ -1,8 +1,9 @@
 <div class="project-template-container">
     <div class="project-template" [class.flex-row-reverse]="evenNumber" (mouseenter)="onMouseEnter()"
         (mouseleave)="onMouseLeave()">
-        <a href="{{ this.currentProjectData.links[0].url }}" target="_blank"><img
-                src='{{ this.currentProjectData.img }}' class="filter-grayscale" [class.filter-color]="mouseEnter"></a>
+        <a href="{{ this.currentProjectData.links[0].url }}" target="_blank">
+            <img src='{{ this.currentProjectData.img }}' class="filter-grayscale" [class.filter-color]="mouseEnter">
+        </a>
         <div class="frame draw-img-frame-effect"
             [ngClass]="{'frame-left draw-img-frame-effect-start' : mouseEnter && !evenNumber}"
             [ngClass]="{'frame-right draw-img-frame-effect-start' : mouseEnter && evenNumber}">
@@ -29,7 +30,6 @@
                     }
                 </div>
             </div>
-            <img src="./../../../assets/icons/arrow-project.png" id="arrow-project">
         </div>
     </div>
     <div class="project-counter font-syne" [ngClass]="evenNumber ? 'project-counter-left' : 'project-counter-right'">
