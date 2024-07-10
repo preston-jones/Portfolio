@@ -1,9 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-arrow',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './arrow.component.html',
   styleUrl: './arrow.component.scss',
 })
@@ -11,6 +14,7 @@ export class ArrowComponent {
 
   @Input() arrowImgSrc: any;
   imgSrc?: string;
+  mouseEnter: boolean = false;
 
 
   constructor() {
@@ -21,13 +25,16 @@ export class ArrowComponent {
     console.log(this.imgSrc);
   }
 
-  // arrowLeftAnimation() {
 
-  // }
+  onMouseEnter() {
+    this.mouseEnter = true;
+    console.log(this.mouseEnter);
+  }
 
-
-  // arrowRightAnimation() {
-
-  // }
+  
+  onMouseLeave() {
+    this.mouseEnter = false;
+    console.log(this.mouseEnter);
+  }
 
 }

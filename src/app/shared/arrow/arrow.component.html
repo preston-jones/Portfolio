@@ -1,5 +1,8 @@
 <div class="section-container">
     <div class="content">
-        <img src= './../../../assets/icons/{{imgSrc}}.png' class="" alt="">
+        <img src='./../../../assets/animation/{{imgSrc}}_default.png' class=""
+            [ngClass]="{'arrow-diagonal-left-animation': mouseEnter && this.imgSrc == 'arrowLeft'}"
+            [ngClass]="{'arrow-diagonal-right-animation': mouseEnter && this.imgSrc == 'arrowRight'}"
+            (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
     </div>
 </div>
