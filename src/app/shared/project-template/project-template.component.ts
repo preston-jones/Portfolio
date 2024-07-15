@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../Interfaces/project.interfaces';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-project-template',
@@ -29,13 +30,16 @@ export class ProjectTemplateComponent {
     languages: [],
     links: []
   };
+  
 
   projectsLength: number = this.projectsData.length;
 
   constructor() {
   }
+  
 
   ngOnInit() {
+    AOS.init();
     this.currentProjectTitle = this.projectTitle;
     console.log(this.currentProjectTitle);
     this.getCurrentProjectData();

@@ -54,8 +54,16 @@
     filter: grayscale(100%);
 }
 
-.filter-color {
-    filter: grayscale(0%);
+// .filter-color {
+//     filter: grayscale(0%);
+// }
+
+[data-aos="filter-color"] {
+    filter: grayscale(100%);
+
+    &.aos-animate {
+        filter: grayscale(0%);
+    }
 }
 
 .flex-row-reverse {
@@ -83,6 +91,7 @@
 
     >.project-info-content {
         align-items: flex-end;
+
         >.description {
             text-align: right;
         }
@@ -94,6 +103,7 @@
 
     >.project-info-content {
         align-items: flex-start;
+
         >.description {
             text-align: left;
         }
