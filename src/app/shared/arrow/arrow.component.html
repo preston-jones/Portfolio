@@ -1,3 +1,4 @@
 <section>
-    <div class="content {{ this.imgSrc }}_img" [ngClass]="this.imgSrc == 'arrow_left' ? 'mrg-left' : 'mrg-right'"></div>
+    <div class="content {{ this.imgSrc }}_img"
+        [attr.data-aos]="this.imgSrc == 'arrow_left' ? 'arrow-left-animation' : 'arrow-right-animation'" data-aos-duration="1000"></div>
 </section>

@@ -1,9 +1,9 @@
 <section>
-    <div class="headline">
+    <div class="headline" data-aos="fade-right" data-aos-duration="1000">
         <h2>About me</h2>
     </div>
     <div class="content">
-        <div class="textblock">
+        <div class="textblock" data-aos="fade-down" data-aos-duration="1000">
             <p>
                 I am a software engineer with a passion for web development. I have experience in developing web
                 applications
@@ -18,9 +18,9 @@
             </p>
             <button class="btn-prim">Let's talk</button>
         </div>
-        <div class="img-container">
+        <div class="img-container" data-aos="fade-up" data-aos-duration="1000">
             <img src="./../../../assets/portrait.png" alt="About me" class="image">
-            <div class="frame draw-frame-effect"></div>
+            <div class="frame" [attr.data-aos]="'draw-img-frame'"></div>
         </div>
     </div>
 </section>

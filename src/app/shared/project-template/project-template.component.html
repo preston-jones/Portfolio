@@ -2,14 +2,13 @@
     <div class="project-template" [class.flex-row-reverse]="evenNumber" (mouseenter)="onMouseEnter()"
         (mouseleave)="onMouseLeave()">
         <a href="{{ this.currentProjectData.links[0].url }}" target="_blank">
-            <img src='{{ this.currentProjectData.img }}' class="filter-grayscale" [attr.data-aos]="'change-to-color'">
-        <div class="frame draw-img-frame-effect"
-            [ngClass]="evenNumber ? 'frame-right' : 'frame-left'"
-            [class.draw-img-frame-effect-start]="mouseEnter">
-        </div>
-    </a>
+            <img src='{{ this.currentProjectData.img }}' class="filter-grayscale" [attr.data-aos]="'change-to-color'" data-aos-duration="1000">
+            <div class="frame draw-img-frame-effect" [ngClass]="evenNumber ? 'frame-right' : 'frame-left'"
+                [class.draw-img-frame-effect-start]="mouseEnter">
+            </div>
+        </a>
         <div class="project-info" [class.project-info-default]="!evenNumber" [class.project-info-reverse]="evenNumber"
-            [attr.data-aos]="evenNumber ? 'fade-left' : 'fade-right'">
+            [attr.data-aos]="evenNumber ? 'fade-left' : 'fade-right'" data-aos-duration="1000">
             <div class="project-info-content">
                 <h3 class="font-syne">{{ this.currentProjectData.title }}</h3>
                 <span class="languages">
@@ -29,9 +28,11 @@
                     }
                 </div>
             </div>
+            <div class="project-counter font-syne"
+                [ngClass]="evenNumber ? 'project-counter-left' : 'project-counter-right'">
+                <p>{{ this.formatNumber(this.currentProjectIndex ?? 0) }}/{{ this.formatNumber(this.projectsLength) }}
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="project-counter font-syne" [ngClass]="evenNumber ? 'project-counter-left' : 'project-counter-right'">
-        <p>{{ this.formatNumber(this.currentProjectIndex ?? 0) }}/{{ this.formatNumber(this.projectsLength) }}</p>
     </div>
 </div>
