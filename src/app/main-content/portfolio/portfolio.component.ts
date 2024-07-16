@@ -15,4 +15,9 @@ export class PortfolioComponent {
 
   projectsData = inject(ProjectsService).projects;
 
+
+  show() {
+    console.log(this.projectsData);
+  }
+
 }

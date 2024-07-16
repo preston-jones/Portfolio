@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../Interfaces/project.interfaces';
@@ -13,7 +13,7 @@ import AOS from 'aos';
   templateUrl: './project-template.component.html',
   styleUrl: './project-template.component.scss'
 })
-export class ProjectTemplateComponent {
+export class ProjectTemplateComponent implements AfterViewInit {
 
   @Input() projectTitle: string = '';
   @Input() projectIndex: number = 0;
@@ -39,10 +39,15 @@ export class ProjectTemplateComponent {
   
 
   ngOnInit() {
-    AOS.init();
+    
     this.currentProjectTitle = this.projectTitle;
     console.log(this.currentProjectTitle);
     this.getCurrentProjectData();
+  }
+
+
+  ngAfterViewInit() {
+    AOS.init();
   }
 
 
