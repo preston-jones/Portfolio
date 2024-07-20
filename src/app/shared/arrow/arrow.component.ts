@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, AfterViewInit } from '@angular/core'
 import { CommonModule } from '@angular/common';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-arrow',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './arrow.component.html',
   styleUrl: './arrow.component.scss',
 })
-export class ArrowComponent {
+export class ArrowComponent implements AfterViewInit  {
 
   @Input() arrowImgSrc: any;
   imgSrc?: string;
@@ -23,6 +24,10 @@ export class ArrowComponent {
   ngOnInit() {
     this.imgSrc = this.arrowImgSrc;
     console.log(this.imgSrc);
+  }
+
+  ngAfterViewInit() {
+    AOS.init();
   }
 
 

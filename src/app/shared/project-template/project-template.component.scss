@@ -150,19 +150,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 65px;
-        padding: 20px 60px;
+        width: 207px;
+        height: 68px;
         border: #000000 4px solid;
+        padding: 20px 60px;
         background-color: transparent;
         font-weight: 400;
         font-size: 23px;
         line-height: 27.6px;
         white-space: nowrap;
+        transition: all 125ms ease-in-out;
 
         &:hover {
             cursor: pointer;
             transition: all 125ms ease-in-out;
-            transform: scale(1.1);
+            width: 260px;
+            padding: 20px 80px;
             font-weight: 700;
         }
     }
