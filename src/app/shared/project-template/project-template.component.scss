@@ -208,3 +208,60 @@
     --_i: 100%;
     transition: 125ms, mask-size 125ms 125ms;
 }
+
+
+@media screen and (max-width: 390px) {
+
+    .headline {
+        text-wrap: nowrap;
+
+        >h2 {
+            font-size: 45px;
+            line-height: 45px;
+            font-weight: 800;
+        }
+
+        >p {
+            text-wrap: wrap;
+        }
+    }
+
+    .project-template {
+        flex-direction: column;
+        // flex-direction: row-reverse; /* if project index is odd */
+
+        >a {
+            >img {
+                width: 100%;
+                object-fit: contain;
+                // padding: 20px 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    .project-info-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        height: 339px;
+        width: 316px;
+
+        >h3 {
+            font-weight: 800;
+            font-size: 23px;
+            line-height: 23px;
+        }
+
+        >.description {}
+
+        >.languages {}
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+}

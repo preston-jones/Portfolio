@@ -293,3 +293,24 @@ h2:hover {
     transform: scale(1);
   }
 }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media screen and (max-width: 390px) {
+
+  section,
+  header,
+  footer {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+}

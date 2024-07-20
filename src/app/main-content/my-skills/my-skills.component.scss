@@ -62,3 +62,24 @@
         color: #FF9900;
     }
 }
+
+
+@media screen and (max-width: 390px) {
+
+    .headline {
+        text-wrap: nowrap;
+        >h2 {
+            font-size: 45px;
+            line-height: 45px;
+            font-weight: 800;
+        }
+    }
+
+    .skills-row-top {
+        flex-wrap: wrap;
+    }
+
+    .skills-row-bottom {
+        flex-wrap: wrap;
+    }
+}
