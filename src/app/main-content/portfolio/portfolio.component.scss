@@ -21,6 +21,7 @@
         font-weight: 400;
         font-size: 23px;
         line-height: 27.6px;
+        font-family: 'Overpass', sans-serif;
     }
 }
 
@@ -36,6 +37,7 @@
 
     .headline {
         text-wrap: nowrap;
+        margin-bottom: 80px;
 
         >h2 {
             font-size: 45px;
@@ -46,6 +48,10 @@
         >p {
             text-wrap: wrap;
         }
+    }
+
+    .content {
+        gap: 160px;
     }
 
 }
