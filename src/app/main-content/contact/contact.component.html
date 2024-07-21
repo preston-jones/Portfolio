@@ -6,17 +6,20 @@
         <h3>Want to discuss a new project?</h3>
         <span>Say hello! let's discuss your ideas and make it happen</span>
     </div>
-    <form (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
         <!-- <label for="name">Name</label> -->
-        <input [(ngModel)]="contactData.name" [ngModelOptions]="{standalone: true}" type="text" id="name" name="firstname" placeholder="Your name">
+        <input [(ngModel)]="contactData.name" [ngModelOptions]="{standalone: true}" type="text" id="name"
+            name="firstname" placeholder="Your name" required>
 
         <!-- <label for="email">Email</label> -->
-        <input [(ngModel)]="contactData.email" [ngModelOptions]="{standalone: true}" type="text" id="email" name="lastname" placeholder="Your email">
+        <input [(ngModel)]="contactData.email" [ngModelOptions]="{standalone: true}" type="text" id="email"
+            name="lastname" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
 
         <!-- <label for="message">Message</label> -->
-        <textarea [(ngModel)]="contactData.message" [ngModelOptions]="{standalone: true}" id="message" name="message" style="height:200px" placeholder="Your message"></textarea>
+        <textarea [(ngModel)]="contactData.message" [ngModelOptions]="{standalone: true}" id="message" name="message"
+            placeholder="Your message"></textarea>
 
         <input id="submit-btn" type="submit" value="Send message">
 
