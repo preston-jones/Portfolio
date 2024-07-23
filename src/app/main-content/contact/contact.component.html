@@ -8,18 +8,31 @@
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-        <!-- <label for="name">Name</label> -->
-        <input [(ngModel)]="contactData.name" [ngModelOptions]="{standalone: true}" type="text" id="name"
-            name="firstname" placeholder="Your name" required>
+        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="firstname"
+            placeholder="Your name" required>
+        <label for="name">
+            @if (!name.valid && name.touched && !name.disabled) {
+            <span class="form-error">Please enter a message</span>
+            }
+        </label>
 
-        <!-- <label for="email">Email</label> -->
-        <input [(ngModel)]="contactData.email" [ngModelOptions]="{standalone: true}" type="text" id="email"
-            name="lastname" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+        <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="lastname"
+            placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        <label for="email">
+            @if (!email.valid && email.touched && !email.disabled) {
+            <span class="form-error">Please enter a message</span>
+            }
+        </label>
 
 
-        <!-- <label for="message">Message</label> -->
-        <textarea [(ngModel)]="contactData.message" [ngModelOptions]="{standalone: true}" id="message" name="message"
-            placeholder="Your message"></textarea>
+        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message"
+            placeholder="Your message" required=></textarea>
+        <label for="message">
+            @if (!message.valid && message.touched && !message.disabled) {
+            <span class="form-error">Please enter a message</span>
+            }
+        </label>
 
         <input id="submit-btn" type="submit" value="Send message">
 

@@ -56,7 +56,7 @@ form {
     color: #FFFCF3;
     width: 617px;
     gap: 20px;
-    margin-top: 24px;
+    margin-top: 32px;
 
     >input,
     textarea {
@@ -73,12 +73,19 @@ form {
 
     textarea {
         height: 200px;
+
+        > span {
+            color: #FFFCF3;
+        }
     }
 
     label {
         font-family: 'Overpass';
+        text-align: left;
         font-weight: 400;
-        font-size: 16;
+        font-size: 16px;
+        height: 20px;
+        width: 100%;
     }
 
     ::placeholder {
@@ -88,6 +95,10 @@ form {
         font-size: 16px;
         line-height: 19.2px;
     }
+}
+
+.form-error {
+    color: red;
 }
 
 #submit-btn {
@@ -109,7 +120,7 @@ input {
     gap: 10px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
 
     .headline {
         margin: 100px 0 80px 0;
