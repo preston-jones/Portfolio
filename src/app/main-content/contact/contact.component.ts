@@ -40,6 +40,7 @@ export class ContactComponent {
     console.log(ngForm.form.valid);
     console.log(this.mailTest);
     console.log(ngForm.submitted);
+    
 
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
