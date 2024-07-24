@@ -10,22 +10,24 @@ export class ProjectsService {
 
   projects: Project[] = [
     {
-      title: 'Cyber City',
-      img: 'assets/imgs/projectimage_cybercity.png',
-      description: '2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion.',
+      title: 'DABubble',
+      img: 'assets/imgs/projectimage_dabubble.png',
+      description: 'A chat messenger app inspired by Slack, allows users to communicate with each other through channels or direct messages. ',
       languages: [
-        'JavaScript',
-        'HTML',
-        'CSS'
+        'Angular',
+        'TypeScript',
+        'Firebase',
+        'Material Design',
+        'SCSS'
       ],
       links: [
         {
           title: 'Live Demo',
-          url: 'https://preston-jones.developerakademie.net/2D_Game/index.html'
+          url: ''
         },
         {
           title: 'GitHub',
-          url: 'https://github.com/preston-jones/2D_Sidescroller_Game'
+          url: ''
         }
       ]
     },
@@ -36,14 +38,13 @@ export class ProjectsService {
       languages: [
         'Angular',
         'TypeScript',
-        'HTML',
-        'CSS',
-        'Firebase'
+        'Firebase',
+        'SCSS',
       ],
       links: [
         {
           title: 'Live Demo',
-          url: 'https://preston-jones.developerakademie.net/join/index.html'
+          url: 'https://prestonjones-developer.de/projects/join/index.html'
         },
         {
           title: 'GitHub',
@@ -52,19 +53,41 @@ export class ProjectsService {
       ]
     },
     {
+      title: 'Cyber City',
+      img: 'assets/imgs/projectimage_cybercity.png',
+      description: '2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion.',
+      languages: [
+        'JavaScript',
+        'OOP',
+        'HTML',
+        'CSS'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'https://prestonjones-developer.de/projects/cybercity/index.html'
+        },
+        {
+          title: 'GitHub',
+          url: 'https://github.com/preston-jones/2D_Sidescroller_Game'
+        }
+      ]
+    },
+
+    {
       title: 'Pokedex',
       img: 'assets/imgs/projectimage_pokedex.png',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information. ',
       languages: [
         'JavaScript',
-        'HTML',
+        'API',
         'CSS',
-        'Api'
+        'HTML'
       ],
       links: [
         {
           title: 'Live Demo',
-          url: 'https://preston-jones.developerakademie.net/Pokedex/index.html'
+          url: 'https://prestonjones-developer.de/projects/pokedex/index.html'
         },
         {
           title: 'GitHub',
@@ -72,26 +95,6 @@ export class ProjectsService {
         }
       ]
     },
-    {
-      title: 'DABubble',
-      img: 'assets/imgs/projectimage_pokedex.png',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information. ',
-      languages: [
-        'JavaScript',
-        'HTML',
-        'CSS',
-        'Api'
-      ],
-      links: [
-        {
-          title: 'Live Demo',
-          url: 'https://preston-jones.developerakademie.net/2D_Game/index.html'
-        },
-        {
-          title: 'GitHub',
-          url: 'https://github.com/preston-jones/2D_Sidescroller_Game'
-        }
-      ]
-    },
+
   ];
 }

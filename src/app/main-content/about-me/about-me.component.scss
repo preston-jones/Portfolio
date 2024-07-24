@@ -37,15 +37,13 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 533px;
-    height: 533px;
+    align-items: flex-start;
 }
 
 img {
     width: 533px;
     height: 533px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .frame {
@@ -55,8 +53,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 513px;
-    height: 513px;
+    width: 533px;
+    height: 533px;
     border: 4px solid #000000;
 }
 

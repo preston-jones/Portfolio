@@ -7,33 +7,55 @@
         <span>Say hello! let's discuss your ideas and make it happen</span>
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-
-        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="firstname"
-            placeholder="Your name" required>
-        <label for="name">
-            @if (!name.valid && name.touched && !name.disabled) {
-            <span class="form-error">Please enter a message</span>
-            }
-        </label>
-
-
-        <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="lastname"
-            placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-        <label for="email">
-            @if (!email.valid && email.touched && !email.disabled) {
-            <span class="form-error">Please enter a message</span>
-            }
-        </label>
-
-
-        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message"
-            placeholder="Your message" required=></textarea>
-        <label for="message">
-            @if (!message.valid && message.touched && !message.disabled) {
-            <span class="form-error">Please enter a message</span>
-            }
-        </label>
-
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input #name="ngModel" [class.input-error]="!name.valid && name.touched && !name.disabled"
+                    [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="Your name"
+                    required>
+                @if (!name.valid && name.touched && !name.disabled) {
+                <img class="status-icon" src="../../../assets/icons/error.png" alt="">
+                } @else if (name.valid && name.touched && !name.disabled) {<img class="status-icon"
+                    src="../../../assets/icons/success.png" alt="">}
+            </div>
+            <label for="name">
+                @if (!name.valid && name.touched && !name.disabled) {
+                <span class="form-error">Please enter your name</span>
+                }
+            </label>
+        </div>
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input #email="ngModel" [class.input-error]="!email.valid && email.touched && !email.disabled"
+                    [(ngModel)]="contactData.email" type="text" id="email" name="lastname" placeholder="Your email"
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    @if (!email.valid && email.touched && !email.disabled) {
+                        <img class="status-icon" src="../../../assets/icons/error.png" alt="">
+                        } @else if (email.valid && email.touched && !email.disabled) {<img class="status-icon"
+                            src="../../../assets/icons/success.png" alt="">}
+            </div>
+            <label for="email">
+                @if (!email.valid && email.touched && !email.disabled) {
+                <span class="form-error">Please enter your email</span>
+                }
+            </label>
+        </div>
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea #message="ngModel" minlength="4"
+                    [class.input-error]="!message.valid && message.touched && !message.disabled"
+                    [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message"
+                    required=></textarea>
+                    @if (!message.valid && message.touched && !message.disabled) {
+                        <img class="status-icon" src="../../../assets/icons/error.png" alt="">
+                        } @else if (message.valid && message.touched && !message.disabled) {<img class="status-icon"
+                            src="../../../assets/icons/success.png" alt="">}
+            </div>
+            <label for="message">
+                @if (!message.valid && message.touched && !message.disabled) {
+                <span class="form-error">Please enter a message</span>
+                }
+            </label>
+        </div>
         <input id="submit-btn" type="submit" value="Send message">
 
     </form>
