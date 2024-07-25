@@ -14,13 +14,16 @@
     align-items: center;
     width: 100%;
     // flex-direction: row-reverse; /* if project index is odd */
+}
 
-    >img {
-        max-width: 620px;
-        object-fit: contain;
-        padding: 20px 0;
-        z-index: 1;
-    }
+.project-img {
+    display: flex;
+    align-items: center;
+    width: 620px;
+    height: 345px;
+    object-fit: cover;
+    // padding: 20px 0;
+    z-index: 1;
 }
 
 .frame {
@@ -29,17 +32,25 @@
     justify-content: center;
     align-items: center;
     width: 620px;
-    height: 393px;
+    height: 345px;
     z-index: 2;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+        cursor: pointer;
+        --_i: 100%;
+        transition: 125ms, mask-size 125ms 125ms;
+    }
 }
 
 .frame-left {
-    top: 20px;
+    top: 47px;
     left: 20px;
 }
 
 .frame-right {
-    top: 20px;
+    top: 47px;
     right: 20px;
 }
 
@@ -210,12 +221,12 @@
     transition: 125ms, mask-position 125ms 125ms;
 }
 
-.draw-img-frame-effect-start {
-    opacity: 1;
-    cursor: pointer;
-    --_i: 100%;
-    transition: 125ms, mask-size 125ms 125ms;
-}
+// .draw-img-frame-effect-start {
+//     opacity: 1;
+//     cursor: pointer;
+//     --_i: 100%;
+//     transition: 125ms, mask-size 125ms 125ms;
+// }
 
 
 @media screen and (max-width: 420px) {

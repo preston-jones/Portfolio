@@ -1,14 +1,23 @@
 .headline {
     margin-bottom: 64px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
 
     >h2 {
         font-weight: 800;
         font-size: 78px;
         line-height: 78px;
         text-align: left;
+    }
+
+    >#aboutme-quote {
+        font-family: 'Rock Salt';
+        font-size: 23px;
+        line-height: 27.6px;
+        font-weight: 400;
     }
 }
 
@@ -37,25 +46,31 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 img {
-    width: 533px;
+    width: 540px;
     height: 533px;
-    object-fit: cover;
+    object-fit: contain;
+    z-index: 1;
+    filter: drop-shadow(1px -4px 10px #00000083);
+    // filter: drop-shadow(0 0 0.75rem crimson);
 }
 
 .frame {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    // top: 81px;
+    // left: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 533px;
     height: 533px;
-    border: 4px solid #000000;
+    background-image: url('../../../assets/imgs/background-profil.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -78,13 +93,13 @@ img {
         width: 349px;
         height: 349px;
     }
-    
+
     img {
         width: 349px;
         height: 349px;
         object-fit: contain;
     }
-    
+
     .frame {
         top: 10px;
         left: 10px;
