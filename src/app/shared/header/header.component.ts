@@ -11,6 +11,7 @@ export class HeaderComponent {
 
   openMenu: boolean = false;
 
+
   loadMenu() {
     this.openMenu = true;
   }

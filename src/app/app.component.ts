@@ -19,5 +19,7 @@ import { MainContentComponent } from './main-content/main-content.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
   title = 'Preston Jones Developer';
+  
 }

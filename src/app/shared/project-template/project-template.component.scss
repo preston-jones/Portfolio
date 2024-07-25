@@ -221,13 +221,6 @@
     transition: 125ms, mask-position 125ms 125ms;
 }
 
-// .draw-img-frame-effect-start {
-//     opacity: 1;
-//     cursor: pointer;
-//     --_i: 100%;
-//     transition: 125ms, mask-size 125ms 125ms;
-// }
-
 
 @media screen and (max-width: 420px) {
 
@@ -272,10 +265,6 @@
             font-size: 32px;
             line-height: 38.4px;
         }
-
-        >.description {}
-
-        >.languages {}
     }
 
     .project-links {

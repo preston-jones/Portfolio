@@ -126,6 +126,22 @@
   font-family: 'Overpass', sans-serif;
 }
 
+/* -- SCROLLBAR -- */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+  // outline: 1px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #000000;
+height: 103px;
+}
+
+/* -- ANIMATION OF SCROLL -- */
 @import '../node_modules/aos/dist/aos.css';
 
 /* -- GLOBAL STYLES -- */
@@ -138,9 +154,7 @@
 body {
   font-family: 'Overpass', sans-serif;
   background-color: #FFFCF3;
-  overflow: scroll;
-  scrollbar-color: #000000 #FFFCF3;
-  scrollbar-width: thin;
+  overflow-x: hidden;
 }
 
 app-main-content {

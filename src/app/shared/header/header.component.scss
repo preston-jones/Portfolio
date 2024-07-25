@@ -1,14 +1,11 @@
 header {
     width: 100%;
-    position: fixed;
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #FFFCF3;
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
 
     >#logo-header {
         height: 40px;
