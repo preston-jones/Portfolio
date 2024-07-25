@@ -8,17 +8,18 @@
 
     >h2 {
         font-weight: 800;
-        font-size: 78px;
-        line-height: 78px;
+        font-size: 72px;
+        line-height: 72px;
         text-align: left;
     }
+}
 
-    >#aboutme-quote {
-        font-family: 'Rock Salt';
-        font-size: 23px;
-        line-height: 27.6px;
-        font-weight: 400;
-    }
+#aboutme-quote {
+    font-family: 'Rock Salt';
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 64px;
 }
 
 .content {
@@ -30,15 +31,16 @@
 .textblock {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 52px;
 
     >p {
+        font-family: Overpass;
         text-wrap: wrap;
         font-weight: 400;
-        font-size: 23px;
-        line-height: 27.6px;
+        font-size: 21px;
+        line-height: 23px;
     }
 }
 
