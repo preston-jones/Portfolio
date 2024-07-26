@@ -1,5 +1,21 @@
 <header>
     <img id="logo-header" src="./../../../assets/icons/logo.png">
-    <div id="burger-icon" class="menu-icon-animation-open"  (click)="loadMenu()" [class.menu-icon-animation-open]="openMenu"></div>
+    <div id="burger-icon" class="menu-icon-animation-open" (click)="loadMenu()"
+        [class.menu-icon-animation-open]="openMenu"></div>
     <!-- <img id="burger-icon" class="menu-icon-animation" src="./../../../assets/animation/menue_default.png" (click)="loadMenu()" [class.menu-icon-animation]="openMenu"> -->
 </header>
+<menu>
+    <div id="menu-container" [class.menu-animation]="openMenu">
+        <div id="menu-content">
+            <div class="menu-link">
+                <p>About me</p>
+            </div>
+            <div class="menu-link">
+                <p>My skills</p>
+            </div>
+            <div class="menu-link">
+                <p>Portfolio</p>
+            </div>
+        </div>
+    </div>
+</menu>

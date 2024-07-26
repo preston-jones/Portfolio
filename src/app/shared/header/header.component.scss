@@ -30,10 +30,70 @@ header {
     }
 }
 
+menu {
+    position: absolute;
+    top: 100px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #FFFCF3;
+    // overflow-y: hidden;
+}
+
+#menu-container {
+
+    >#menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1440px;
+        width: 100%;
+        gap: 35px;
+        margin-top: 64px;
+    }
+}
+
+.menu-link {
+    padding: 16px;
+    background-image: url('../../../assets/animation/link_hover_default.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    >p {
+        font-family: Syne;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 96px;
+        color: #000000;
+    }
+
+    &:hover {
+        animation: link-hover-animation 100ms forwards;
+        cursor: pointer;
+    }
+}
+
+
 .menu-icon-animation-open {
     animation: icon-animate-open 0.25s forwards;
     z-index: 2;
     background-size: cover;
+}
+
+@keyframes link-hover-animation {
+    0% {
+        background-image: url('../../../assets/animation/link_hover_default.png');
+    }
+
+    50% {
+        background-image: url('../../../assets/animation/link_hover_variant1.png');
+    }
+
+    100% {
+        background-image: url('../../../assets/animation/link_hover_variant2.png');
+    }
 }
 
 @keyframes icon-animate-open {
