@@ -111,11 +111,13 @@
 
 /* rock-salt-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Rock Salt';
   font-style: normal;
   font-weight: 400;
-  src: url('../src/assets/fonts/rock-salt-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../src/assets/fonts/rock-salt-v22-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 .font-syne {
@@ -132,13 +134,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   // outline: 1px solid #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: #000000;
-height: 103px;
+  background-color: #000000;
+  height: 103px;
 }
 
 /* -- ANIMATION OF SCROLL -- */
@@ -217,10 +219,14 @@ footer {
 }
 
 /* -- Scroll Effects -- */
-h2:hover {
-  transition: all 100ms ease-in-out;
-  color: #FF9900;
-  cursor: default;
+h2 {
+  transition: color 125ms ease-in-out;
+
+  &:hover {
+    transition: color 125ms ease-in-out;
+    color: #FF9900;
+    cursor: default;
+  }
 }
 
 .draw-frame-effect {

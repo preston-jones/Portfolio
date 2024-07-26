@@ -18,9 +18,10 @@ section {
         font-size: 72px;
         line-height: 72px;
         color: #FFFCF3;
+        transition: color 125ms ease-in-out;
 
         &:hover {
-            transition: all 100ms ease-in-out;
+            transition: color 125ms ease-in-out;
             color: #FF9900;
             cursor: default;
         }
@@ -197,6 +198,25 @@ input {
     &:hover {
         cursor: pointer;
         animation: back-to-top-animation 300ms ease-out forwards;
+    }
+}
+
+.change-color {
+    animation: change-color-animation 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes change-color-animation {
+    0% {
+        color: #FFFCF3;
+    }
+
+    50% {
+        color: #FF9900;
+    }
+
+    100% {
+        color: #FFFCF3;
     }
 }
 

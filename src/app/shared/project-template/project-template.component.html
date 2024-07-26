@@ -1,7 +1,7 @@
 <div class="project-template-container">
     <div class="project-template" [class.flex-row-reverse]="evenNumber" (mouseenter)="onMouseEnter()"
         (mouseleave)="onMouseLeave()">
-        <a href="{{ this.currentProjectData.links[0].url }}" target="_blank">
+        <a href="{{ this.currentProjectData.links[0].url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
             <img src='{{ this.currentProjectData.img }}' class="filter-grayscale project-img" [attr.data-aos]="'change-to-color'" data-aos-duration="1000">
             <div class="frame draw-img-frame-effect" [ngClass]="evenNumber ? 'frame-right' : 'frame-left'">
             </div>
