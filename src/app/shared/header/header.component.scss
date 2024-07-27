@@ -70,7 +70,7 @@ menu {
     }
 
     &:hover {
-        animation: link-hover-animation 100ms forwards;
+        animation: link-hover-animation 0.25s ease-in-out forwards;
         cursor: pointer;
     }
 }
