@@ -1,10 +1,10 @@
 <header>
     <img id="logo-header" src="./../../../assets/icons/logo.png">
-    <div id="burger-icon" class="menu-icon-animation-open" (click)="loadMenu()"
+    <div id="burger-icon" class="menu-icon-animation-open" (click)="toggleMenu()"
         [class.menu-icon-animation-open]="openMenu"></div>
     <!-- <img id="burger-icon" class="menu-icon-animation" src="./../../../assets/animation/menue_default.png" (click)="loadMenu()" [class.menu-icon-animation]="openMenu"> -->
 </header>
-<menu>
+<menu [ngClass]="openMenu ? 'openMenu' : 'closeMenu'">
     <div id="menu-container" [class.menu-animation]="openMenu">
         <div id="menu-content">
             <div class="menu-link">

@@ -37,10 +37,32 @@ menu {
     height: 100vh;
     z-index: 100;
     background-color: #FFFCF3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     // overflow-y: hidden;
 }
 
+.openMenu {
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+    // transform: translateX(1440px);
+    // transition: all 1s ease-in-out;
+}
+
+.closeMenu {
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    // transform: translateX(1440px);
+    // transition: all 1s ease-in-out;
+}
+
 #menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 
     >#menu-content {
         display: flex;
@@ -48,7 +70,6 @@ menu {
         justify-content: center;
         align-items: flex-start;
         max-width: 1440px;
-        width: 100%;
         gap: 35px;
         margin-top: 64px;
     }
@@ -70,7 +91,7 @@ menu {
     }
 
     &:hover {
-        animation: link-hover-animation 0.25s ease-in-out forwards;
+        animation: link-hover-animation 0.25s ease-in forwards;
         cursor: pointer;
     }
 }
