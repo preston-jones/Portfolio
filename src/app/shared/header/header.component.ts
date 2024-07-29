@@ -20,4 +20,9 @@ export class HeaderComponent {
     console.log(this.openMenu);
   }
 
+
+  closeMenu() {
+    this.openMenu = false;
+  }
+
 }

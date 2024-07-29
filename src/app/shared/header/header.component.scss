@@ -39,8 +39,8 @@ menu {
     background-color: #FFFCF3;
     display: flex;
     justify-content: center;
-    align-items: center;
-    // overflow-y: hidden;
+    align-items: flex-start;
+
 }
 
 .openMenu {
@@ -61,17 +61,15 @@ menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    margin-top: 64px;
+    max-width: 1440px;
 
     >#menu-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        max-width: 1440px;
         gap: 35px;
-        margin-top: 64px;
     }
 }
 
