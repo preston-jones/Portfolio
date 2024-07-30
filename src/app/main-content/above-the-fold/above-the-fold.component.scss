@@ -12,7 +12,8 @@ h1 {
     font-size: 120px;
     line-height: 120px;
     text-align: center;
-    // color: #000000;
+    text-shadow: 3px 3px 2px #9191916e;
+
 }
 
 .headline-container {
@@ -25,7 +26,8 @@ h1 {
 }
 
 .headline-underline {
-    font-family: 'Rock Salt';
+    // font-family: 'Rock Salt';
+    font-family: Overpass;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -44,7 +44,14 @@ section {
         text-wrap: wrap;
         font-weight: 400;
         font-size: 21px;
-        line-height: 23px;
+        // line-height: 23px;
+        line-height: 135%;
+    }
+
+    >p::first-letter {
+        font-size: 36px;
+        font-weight: 800;
+        color: #000000;
     }
 }
 

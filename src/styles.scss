@@ -156,7 +156,6 @@
 body {
   font-family: 'Overpass', sans-serif;
   background-color: #FFFCF3;
-  overflow-x: hidden;
 }
 
 app-main-content {
@@ -174,6 +173,10 @@ h5,
 h6 {
   font-family: 'Syne', sans-serif;
   color: #000000;
+}
+
+h2, h3 {
+  text-shadow: 3px 3px 2px #9191916e;
 }
 
 a {
@@ -199,6 +202,7 @@ a {
   line-height: 27.6px;
   white-space: nowrap;
   transition: all 125ms ease-in-out;
+  box-shadow: 9px 9px 2px #9191916e;
 
   &:hover {
     cursor: pointer;

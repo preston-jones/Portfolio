@@ -15,18 +15,17 @@ header {
             cursor: pointer;
         }
     }
+}
 
-    >#burger-icon {
-        height: 32px;
-        width: 32px;
-        object-fit: contain;
-        background-image: url('./../../../assets/animation/menue_default.png');
-        background-position: center;
-        background-size: cover;
+#burger-icon {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-        &:hover {
-            cursor: pointer;
-        }
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -40,21 +39,21 @@ menu {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
+    transition: all 0.25s ease-in-out;
 }
 
 .openMenu {
     transform: translateX(0);
+    opacity: 1;
     transition: transform 0.5s ease-in-out;
-    // transform: translateX(1440px);
-    // transition: all 1s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .closeMenu {
     transform: translateX(100%);
+    opacity: 0;
     transition: transform 0.5s ease-in-out;
-    // transform: translateX(1440px);
-    // transition: all 1s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 }
 
 #menu-container {
@@ -79,24 +78,34 @@ menu {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    transition: background-image 1s ease-in-out;
+    color: #000000;
 
-    >p {
+    >a {
         font-family: Syne;
         font-weight: 700;
         font-size: 96px;
         line-height: 96px;
-        color: #000000;
     }
 
     &:hover {
         animation: link-hover-animation 0.25s ease-in forwards;
         cursor: pointer;
+        color: #FF9900;
     }
 }
 
 
 .menu-icon-animation-open {
-    animation: icon-animate-open 0.25s forwards;
+    background-image: url('./../../../assets/animation/menue_4.png');
+    animation: icon-animate-open 0.25s ease-in-out forwards;
+    z-index: 2;
+    background-size: cover;
+}
+
+.menu-icon-animation-close {
+    background-image: url('./../../../assets/animation/menue_default.png');
+    animation: icon-animate-close 0.25s ease-in-out forwards;
     z-index: 2;
     background-size: cover;
 }
@@ -116,39 +125,32 @@ menu {
 }
 
 @keyframes icon-animate-open {
-    0% {
+
+    25% {
         background-image: url('./../../../assets/animation/menue_1.png');
     }
 
-    45% {
+    50% {
         background-image: url('./../../../assets/animation/menue_2.png');
     }
 
     75% {
         background-image: url('./../../../assets/animation/menue_3.png');
     }
-
-    100% {
-        background-image: url('./../../../assets/animation/menue_4.png');
-    }
 }
 
-.menu-icon-animation-close {
-    animation: icon-animate-close 0.5s forwards;
-    z-index: 2;
-    background-size: cover;
-}
+@keyframes icon-animate-close {
 
-@keyframes icon-animate {
-    0% {
-        background-image: url('./../../../assets/animation/menue_5.png');
+    25% {
+        background-image: url('./../../../assets/animation/menue_3.png');
     }
 
     50% {
-        background-image: url('./../../../assets/animation/menue_6.png');
+        background-image: url('./../../../assets/animation/menue_2.png');
     }
 
-    100% {
-        background-image: url('./../../../assets/animation/menue_7.png');
+    75% {
+        background-image: url('./../../../assets/animation/menue_1.png');
     }
+
 }
