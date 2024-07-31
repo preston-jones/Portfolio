@@ -1,8 +1,6 @@
 <header>
     <img id="logo-header" src="./../../../assets/icons/logo.png">
-    <div id="burger-icon" class="menu-icon-animation-open" (click)="toggleMenu()"
-        [class.menu-icon-animation-open]="openMenu" [class.menu-icon-animation-close]="!openMenu"></div>
-    <!-- <img id="burger-icon" class="menu-icon-animation" src="./../../../assets/animation/menue_default.png" (click)="loadMenu()" [class.menu-icon-animation]="openMenu"> -->
+    <div id="burger-icon" (click)="toggleMenu()" [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''"></div>
 </header>
 <menu [ngClass]="openMenu ? 'openMenu' : 'closeMenu'">
     <div id="menu-container" [class.menu-animation]="openMenu">
@@ -16,6 +14,24 @@
             <div class="menu-link">
                 <a href="#portfolio" (click)="closeMenu()"><span>Portfolio</span></a>
             </div>
+            <div class="menu-link">
+                <a href="#contact" (click)="closeMenu()"><span>Contact</span></a>
+            </div>
         </div>
+    </div>
+    <div class="menu-bottom">
+
+            <div class="section-left">
+                <span>Say Hi!</span>
+                <a href="mailto:mail@prestonjones-developer.de?subject=Hi Preston 👋🏼, I've got a project to talk about!">mail&#64;prestonjones-developer.de</a>
+            </div>
+            <div class="section-right">
+                <div class="social-links">
+                    <a href="https://github.com/preston-jones" target="_blank"><img src="./../../../assets/icons/github_icon.png"></a>
+                    <a href="" target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
+                    <a href="" target="_blank"><img src="./../../../assets/icons/linkedin_icon.png"></a>
+                </div>
+            </div>
+
     </div>
 </menu>

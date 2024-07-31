@@ -6,6 +6,7 @@ header {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #FFFCF3;
+    z-index: 100;
 
     >#logo-header {
         height: 40px;
@@ -21,39 +22,45 @@ header {
     height: 32px;
     width: 32px;
     object-fit: contain;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-image: url('./../../../assets/animation/menue_default.png');
 
     &:hover {
         cursor: pointer;
+    }
+
+    &.menu-icon-animation-open {
+        animation: icon-animate-open 0.5s ease-in-out forwards;
+    }
+
+    &.menu-icon-animation-close {
+        animation: icon-animate-close 0.5s ease-in-out forwards;
     }
 }
 
 menu {
     position: absolute;
     top: 100px;
+    left: 0;
+    padding: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
     background-color: #FFFCF3;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     transition: all 0.25s ease-in-out;
+    z-index: 1;
 }
 
 .openMenu {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 0.5s ease-in-out;
-    transition: opacity 0.25s ease-in-out;
+    animation: slide-in-right 0.5s ease-in-out forwards;
 }
 
 .closeMenu {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform 0.5s ease-in-out;
-    transition: opacity 0.25s ease-in-out;
+    animation: slide-out-right 0.5s ease-in-out forwards;
 }
 
 #menu-container {
@@ -73,13 +80,12 @@ menu {
 }
 
 .menu-link {
+    position: relative;
     padding: 16px;
     background-image: url('../../../assets/animation/link_hover_default.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
-    transition: background-image 1s ease-in-out;
-    color: #000000;
+    transition: background-image 0.5s ease-in-out;
 
     >a {
         font-family: Syne;
@@ -89,26 +95,97 @@ menu {
     }
 
     &:hover {
-        animation: link-hover-animation 0.25s ease-in forwards;
+        animation: link-hover-animation 0.25s ease-in-out forwards;
         cursor: pointer;
         color: #FF9900;
+    }
+
+    &:not(:hover) {
+        animation: link-hover-animation-reverse 0.25s ease-in-out forwards;
     }
 }
 
 
 .menu-icon-animation-open {
-    background-image: url('./../../../assets/animation/menue_4.png');
-    animation: icon-animate-open 0.25s ease-in-out forwards;
+    animation: icon-animate-open 0.5s ease-in-out forwards;
     z-index: 2;
     background-size: cover;
 }
 
 .menu-icon-animation-close {
-    background-image: url('./../../../assets/animation/menue_default.png');
-    animation: icon-animate-close 0.25s ease-in-out forwards;
+    animation: icon-animate-close 0.5s ease-in-out forwards;
     z-index: 2;
     background-size: cover;
 }
+
+.menu-bottom {
+    width: 100%;
+    height: 400px;
+    background-image: url('./../../../assets/imgs/rectangle.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #FFFCF3;
+    padding: 0 100px 48px 100px;
+}
+
+.section-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+
+    >span {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    >a {
+        font-family: Overpass;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 23px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: #FF9900;
+    }
+}
+
+.section-right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+
+    >.social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+    
+        >a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        >img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+    }
+}
+
+/* --- ANIMATIONS --- */
 
 @keyframes link-hover-animation {
     0% {
@@ -124,7 +201,24 @@ menu {
     }
 }
 
+@keyframes link-hover-animation-reverse {
+    0% {
+        background-image: url('../../../assets/animation/link_hover_variant2.png');
+    }
+
+    50% {
+        background-image: url('../../../assets/animation/link_hover_variant1.png');
+    }
+
+    100% {
+        background-image: url('../../../assets/animation/link_hover_default.png');
+    }
+}
+
 @keyframes icon-animate-open {
+    0% {
+        background-image: url('./../../../assets/animation/menue_default.png');
+    }
 
     25% {
         background-image: url('./../../../assets/animation/menue_1.png');
@@ -136,10 +230,17 @@ menu {
 
     75% {
         background-image: url('./../../../assets/animation/menue_3.png');
+    }
+
+    100% {
+        background-image: url('./../../../assets/animation/menue_4.png');
     }
 }
 
 @keyframes icon-animate-close {
+    0% {
+        background-image: url('./../../../assets/animation/menue_4.png');
+    }
 
     25% {
         background-image: url('./../../../assets/animation/menue_3.png');
@@ -153,4 +254,35 @@ menu {
         background-image: url('./../../../assets/animation/menue_1.png');
     }
 
+    100% {
+        background-image: url('./../../../assets/animation/menue_default.png');
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 100;
+    }
+}
+
+@keyframes slide-out-right {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 100;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 0;
+    }
 }
