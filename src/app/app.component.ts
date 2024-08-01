@@ -21,5 +21,17 @@ import { MainContentComponent } from './main-content/main-content.component';
 export class AppComponent {
 
   title = 'Preston Jones Developer';
-  
+  userHasScrolled = false;
+
+
+  constructor() {
+    window.onscroll = (e) => {
+      if (window.scrollY > 60) {
+        this.userHasScrolled = true;
+      }
+      else {
+        this.userHasScrolled = false;
+      }
+    }
+  }
 }

@@ -45,7 +45,7 @@ menu {
     left: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 100px);
     background-color: #FFFCF3;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 64px;
+    margin-top: 8px;
     max-width: 1440px;
 
     >#menu-content {
@@ -75,7 +75,7 @@ menu {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 35px;
+        gap: 32px;
     }
 }
 
@@ -90,8 +90,8 @@ menu {
     >a {
         font-family: Syne;
         font-weight: 700;
-        font-size: 96px;
-        line-height: 96px;
+        font-size: 72px;
+        line-height: 72px;
     }
 
     &:hover {
@@ -129,24 +129,24 @@ menu {
     justify-content: space-between;
     align-items: flex-end;
     color: #FFFCF3;
-    padding: 0 100px 48px 100px;
+    padding: 0 100px 8px 100px;
 }
 
-.section-left {
+.mailto {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     gap: 16px;
 
-    >span {
+    >#mailto-headline {
         font-family: 'Syne', sans-serif;
         font-weight: 800;
         font-size: 56px;
         line-height: 56px;
     }
 
-    >a {
+    >#mail-link {
         font-family: Overpass;
         font-weight: 300;
         font-size: 21px;

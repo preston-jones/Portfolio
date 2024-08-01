@@ -1,6 +1,7 @@
 <header>
-    <img id="logo-header" src="./../../../assets/icons/logo.png">
-    <div id="burger-icon" (click)="toggleMenu()" [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''"></div>
+    <a href="#top" (click)="closeMenu()"><img id="logo-header" src="./../../../assets/icons/logo.png"></a>
+    <div id="burger-icon" (click)="toggleMenu()"
+        [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''"></div>
 </header>
 <menu [ngClass]="openMenu ? 'openMenu' : 'closeMenu'">
     <div id="menu-container" [class.menu-animation]="openMenu">
@@ -20,18 +21,18 @@
         </div>
     </div>
     <div class="menu-bottom">
-
-            <div class="section-left">
-                <span>Say Hi!</span>
-                <a href="mailto:mail@prestonjones-developer.de?subject=Hi Preston 👋🏼, I've got a project to talk about!">mail&#64;prestonjones-developer.de</a>
+        <a class="mailto" href="mailto:mail@prestonjones-developer.de?subject=Hi Preston 👋🏼, I've got a project to talk about!">
+                <span id="mailto-headline">Say Hi!</span>
+                <span id="mail-link">mail&#64;prestonjones-developer.de</span>
+        </a>
+        <div class="section-right">
+            <div class="social-links">
+                <a href="https://github.com/preston-jones" target="_blank"><img
+                        src="./../../../assets/icons/github_icon.png"></a>
+                <a href="" target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
+                <a href="" target="_blank"><img src="./../../../assets/icons/linkedin_icon.png"></a>
             </div>
-            <div class="section-right">
-                <div class="social-links">
-                    <a href="https://github.com/preston-jones" target="_blank"><img src="./../../../assets/icons/github_icon.png"></a>
-                    <a href="" target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
-                    <a href="" target="_blank"><img src="./../../../assets/icons/linkedin_icon.png"></a>
-                </div>
-            </div>
+        </div>
 
     </div>
 </menu>
