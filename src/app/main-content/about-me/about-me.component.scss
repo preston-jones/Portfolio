@@ -87,7 +87,7 @@ img {
 }
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
 
     .headline {
 
@@ -103,20 +103,20 @@ img {
     }
 
     .img-container {
-        width: 349px;
-        height: 349px;
+        // width: 349px;
+        // height: 349px;
     }
 
     img {
-        width: 349px;
-        height: 349px;
-        object-fit: contain;
+        // width: 349px;
+        // height: 349px;
+        // object-fit: contain;
     }
 
     .frame {
-        top: 10px;
-        left: 10px;
-        width: 339px;
-        height: 339px;
+        // top: 10px;
+        // left: 10px;
+        // width: 339px;
+        // height: 339px;
     }
 }

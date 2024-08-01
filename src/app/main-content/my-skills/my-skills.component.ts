@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
+
 export class MySkillsComponent {
 
+  mySkillsScrolledY = false;
+
+  @HostListener('window:scroll', ['$event'])
+  function() {
+    if (window.scrollY >= 1700) {
+      this.mySkillsScrolledY = true;
+    }
+    else {
+      this.mySkillsScrolledY = false
+    }
+  }
 }

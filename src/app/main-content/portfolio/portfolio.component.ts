@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { ProjectTemplateComponent } from '../../shared/project-template/project-template.component';
 import { ProjectsService } from '../../services/projects.service';
 
@@ -14,6 +14,17 @@ import { ProjectsService } from '../../services/projects.service';
 export class PortfolioComponent {
 
   projectsData = inject(ProjectsService).projects;
+  portfolioScrolledY = false;
+
+  @HostListener('window:scroll', ['$event'])
+  function() {
+    if (window.scrollY >= 2700) {
+      this.portfolioScrolledY = true;
+    }
+    else {
+      this.portfolioScrolledY = false
+    }
+  }
 
 
   show() {

@@ -28,6 +28,7 @@ export class MainContentComponent {
   arrowLeft: string = 'arrow_left';
 
   constructor() {
+
   }
 
 }

@@ -224,7 +224,7 @@
 }
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
 
     .headline {
         text-wrap: nowrap;
@@ -243,6 +243,7 @@
     .project-template {
         flex-direction: column;
         // flex-direction: row-reverse; /* if project index is odd */
+        gap: 16px;
 
         >a {
             >img {
@@ -254,6 +255,12 @@
         }
     }
 
+    .project-info {
+        flex-direction: column;
+        gap: 32px;
+        padding: 61px 0 0 0;
+    }
+
     .project-info-content {
         display: flex;
         flex-direction: column;
@@ -261,7 +268,7 @@
         align-items: center;
         gap: 32px;
         height: 339px;
-        width: 316px;
+        width: 100%;
 
         >h3 {
             font-size: 32px;
@@ -274,7 +281,7 @@
     }
 
     .project-counter {
-        top: -280px;
+        top: 0px;
         font-weight: 700;
         font-size: 32px;
         line-height: 57.6px;
