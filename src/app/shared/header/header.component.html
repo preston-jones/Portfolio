@@ -1,7 +1,13 @@
 <header>
     <a href="#top" (click)="closeMenu()"><img id="logo-header" src="./../../../assets/icons/logo.png"></a>
+    <div id="translate-button-container">
+        <span class="translate-button-en">ENG</span>
+        <span class="translate-button-divider">|</span>
+        <span class="translate-button-de">DE</span>
+    </div>
     <div id="burger-icon" (click)="toggleMenu()"
-        [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''"></div>
+        [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">
+    </div>
 </header>
 <menu [ngClass]="openMenu ? 'openMenu' : 'closeMenu'">
     <div id="menu-container" [class.menu-animation]="openMenu">
@@ -21,9 +27,10 @@
         </div>
     </div>
     <div class="menu-bottom">
-        <a class="mailto" href="mailto:mail@prestonjones-developer.de?subject=Hi Preston 👋🏼, I've got a project to talk about!">
-                <span id="mailto-headline">Say Hi!</span>
-                <span id="mail-link">mail&#64;prestonjones-developer.de</span>
+        <a class="mailto"
+            href="mailto:mail@prestonjones-developer.de?subject=Hi Preston 👋🏼, I've got a project to talk about!">
+            <span id="mailto-headline">Say Hi!</span>
+            <span id="mail-link">mail&#64;prestonjones-developer.de</span>
         </a>
         <div class="section-right">
             <div class="social-links">

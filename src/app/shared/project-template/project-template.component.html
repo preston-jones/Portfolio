@@ -19,7 +19,7 @@
                         }
                 </span>
                 <p class="description">{{ this.currentProjectData.description }}</p>
-                <div class="project-links">
+                <div class="project-links" [ngClass]="evenNumber ? 'project-links-left' : 'project-links-right'">
                     @for(link of currentProjectData.links; track link; let index = $index){
                     <button class="projectlink-btn"><a href="{{ this.currentProjectData.links[index].url }}"
                             target="_blank">{{ currentProjectData.links[index].title }}</a></button>

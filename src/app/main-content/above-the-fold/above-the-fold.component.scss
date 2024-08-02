@@ -95,11 +95,11 @@ h1 {
 }
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
 
     h1 {
-        font-size: 45px;
-        line-height: 45px;
+        font-size: 90px;
+        line-height: 90px;
         font-weight: 800;
     }
 
@@ -117,8 +117,8 @@ h1 {
 
         >p {
             font-weight: 700;
-            font-size: 23px;
-            line-height: 23px;
+            font-size: 21px;
+            line-height: 21px;
         }
     }
 }

@@ -231,40 +231,9 @@ input {
     }
 }
 
-@media screen and (max-width: 420px) {
-
-    .headline {
-        margin: 100px 0 80px 0;
-
-        >h2 {
-            font-size: 45px;
-            line-height: 45px;
-            font-weight: 800;
-        }
-    }
-
-    .subheadline {
-        align-items: center;
-
-        >h3 {
-            font-size: 32px;
-            line-height: 38.4px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        >span {
-            font-size: 23px;
-            line-height: 27.6px;
-            text-align: center;
-        }
-    }
+@media screen and (max-width: 960px) {
 
     form {
         width: 100%;
-    }
-
-    .submit-btn {
-        width: 230px;
     }
 }

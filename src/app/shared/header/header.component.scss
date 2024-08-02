@@ -18,6 +18,53 @@ header {
     }
 }
 
+#translate-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.translate-button-de {
+    font-family: Overpass;
+    font-size: 21px;
+    line-height: 21px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+.translate-button-divider {
+    font-family: Overpass;
+    font-size: 21px;
+    line-height: 21px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.translate-button-en {
+    font-family: Overpass;
+    font-size: 21px;
+    line-height: 21px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
 #burger-icon {
     height: 32px;
     width: 32px;
@@ -103,6 +150,10 @@ menu {
     &:not(:hover) {
         animation: link-hover-animation-reverse 0.25s ease-in-out forwards;
     }
+
+    &.active {
+        background-image: url('../../../assets/animation/link_hover_active.png');
+    }
 }
 
 
@@ -170,13 +221,13 @@ menu {
         justify-content: center;
         align-items: center;
         gap: 42px;
-    
+
         >a {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-    
+
         >img {
             width: 40px;
             height: 40px;
