@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   openMenu: boolean = false;
   initialized: boolean = false;
-  translate: any;
+  translationService = inject(TranslationService);
+  currentLang = this.translationService.currentLang;
 
 
   toggleMenu() {
@@ -29,7 +31,7 @@ export class HeaderComponent {
   }
 
   setCurrentLanguage(currentLang: string) {
-    // this.translate.use(currentLang);
-    
+    this.translationService.setCurrentLanguageInService(currentLang);
+    this.currentLang = currentLang;
   }
 }

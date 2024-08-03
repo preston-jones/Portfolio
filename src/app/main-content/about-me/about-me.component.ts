@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,12 +10,15 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AboutMeComponent {
 
+  translationService = inject(TranslationService);
+  currentLang = this.translationService.currentLang;
   aboutMeScrolledY = false;
 
-  @HostListener('window:scroll', ['$event']) 
-  function () {
+  @HostListener('window:scroll', ['$event'])
+  function() {
     console.log(window.scrollY);
-    
+    console.log('Language set to: ' + this.currentLang);
+
     if (window.scrollY >= 400) {
       this.aboutMeScrolledY = true;
     }
@@ -23,9 +27,11 @@ export class AboutMeComponent {
     }
     else {
       this.aboutMeScrolledY = false
+    }
   }
-}
 
   constructor() {
+    this.currentLang = this.translationService.currentLang;
+    console.log('Language set to: ' + this.currentLang);
   }
 }

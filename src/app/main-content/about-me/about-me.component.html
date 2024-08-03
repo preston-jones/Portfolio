@@ -1,30 +1,13 @@
 <section id="aboutme">
     <div class="headline">
-        <h2 [class.headline-color]="aboutMeScrolledY">About me</h2>
+        <h2 [class.headline-color]="aboutMeScrolledY">{{ translationService.aboutMe[currentLang].title }}</h2>
     </div>
     <p id="aboutme-quote" data-aos="fade-left" data-aos-duration="1000">"You start with a simple idea, and
         build around it"</p>
     <div class="content">
         <div class="textblock" data-aos="fade-right" data-aos-duration="1000">
-            <p>
-                <strong>Hi, I'm Preston!</strong><br>
-                I am a passionate frontend developer and musician based in Germany. With over ten years of experience as a
-                professional vocalist and upright bass player, I bring a unique perspective to my work in frontend
-                development.
-                <br>
-                <br>
-                In both music and development, I start with a simple idea, a melody, a few notes, or a line of code and
-                build around it. This approach allows me to create innovative and dynamic user interfaces that are not
-                only functional but also visually appealing and user friendly.
-                <br>
-                <br>
-                Throughout my time as a frontend developer, I have honed my skills in transforming complex problems
-                into elegant solutions. My work emphasizes intuitive design and seamless user experiences, ensuring that
-                each project meets the highest standards of quality and aesthetics.
-                <br>
-                <br>
-                If you are interested in collaborating or simply want to say hello, please feel free to contact me.
-            </p>
+            <p><strong>{{ translationService.aboutMe[currentLang].introduction }}</strong></p>
+            <p>{{ translationService.aboutMe[currentLang].content }}</p>
             <a href="#contact">
                 <button class="btn-prim">Let's talk</button>
             </a>
