@@ -9,7 +9,7 @@
         [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">
     </div>
 </header>
-<menu [ngClass]="openMenu ? 'openMenu' : 'closeMenu'">
+<menu [ngClass]="{'openMenu': openMenu, 'closeMenu': !openMenu, 'hiddeMenu': !initialized}">
     <div id="menu-container" [class.menu-animation]="openMenu">
         <div id="menu-content">
             <div class="menu-link">
