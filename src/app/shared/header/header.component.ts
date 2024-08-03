@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   openMenu: boolean = false;
   initialized: boolean = false;
+  translate: any;
+
 
   toggleMenu() {
     if (!this.initialized) {
@@ -21,7 +23,13 @@ export class HeaderComponent {
     this.openMenu = !this.openMenu;
   }
 
+
   closeMenu() {
     this.openMenu = false;
+  }
+
+  setCurrentLanguage(currentLang: string) {
+    // this.translate.use(currentLang);
+    
   }
 }
