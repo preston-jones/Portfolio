@@ -16,16 +16,16 @@ export class ContactComponent {
   http = inject(HttpClient);
 
   contactData = {
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   };
 
 
   mailTest = true;
 
   post = {
-    endPoint: 'https://prestonjones-developer.de/sendMail.php',
+    endPoint: 'https://prestonjones.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -42,11 +42,11 @@ export class ContactComponent {
     console.log(ngForm.submitted);
     
 
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            alert('Message sent successfully');
             ngForm.resetForm();
           },
           error: (error) => {
@@ -54,9 +54,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
     }
   }
 

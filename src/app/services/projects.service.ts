@@ -23,7 +23,7 @@ export class ProjectsService {
       links: [
         {
           title: 'Live Demo',
-          url: ''
+          url: 'http://dabubble.projects.prestonjones.dev/'
         },
         {
           title: 'GitHub',
@@ -48,7 +48,7 @@ export class ProjectsService {
         },
         {
           title: 'GitHub',
-          url: 'https://github.com/preston-jones/2D_Sidescroller_Game'
+          url: 'http://join.projects.prestonjones.dev/'
         }
       ]
     },
@@ -65,7 +65,7 @@ export class ProjectsService {
       links: [
         {
           title: 'Live Demo',
-          url: 'https://prestonjones-developer.de/projects/cybercity/index.html'
+          url: 'http://cybercity.projects.prestonjones.dev/'
         },
         {
           title: 'GitHub',
@@ -87,7 +87,7 @@ export class ProjectsService {
       links: [
         {
           title: 'Live Demo',
-          url: 'https://prestonjones-developer.de/projects/pokedex/index.html'
+          url: 'http://pokedex.projects.prestonjones.dev/'
         },
         {
           title: 'GitHub',

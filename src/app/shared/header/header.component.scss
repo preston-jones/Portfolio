@@ -137,6 +137,7 @@ menu {
     background-size: contain;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
+    transition: color 125ms ease-in-out;
 
     >a {
         font-family: Syne;
@@ -147,6 +148,7 @@ menu {
 
     &:hover {
         animation: link-hover-animation 0.25s ease-in-out forwards;
+        transition: color 125ms ease-in-out;
         cursor: pointer;
         color: #FF9900;
     }

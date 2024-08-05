@@ -223,17 +223,9 @@ footer {
 }
 
 /* -- Scroll Effects -- */
-h2 {
-  transition: color 125ms ease-in-out;
-
-  &:hover {
-    transition: color 125ms ease-in-out;
-    color: #FF9900;
-    cursor: default;
-  }
-}
 
 .headline-color {
+  transition: color 125ms ease-in-out;
   color: #FF9900 !important;
 }
 
