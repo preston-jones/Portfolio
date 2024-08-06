@@ -37,7 +37,13 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 52px;
+    // gap: 52px;
+
+    >.introduction {
+        width: 100%;
+        margin-bottom: 16px;
+        text-align: left;
+    }
 
     >p {
         font-family: Overpass;
@@ -46,12 +52,17 @@ section {
         font-size: 21px;
         // line-height: 23px;
         line-height: 135%;
+        margin: 0;
     }
 
-    >p::first-letter {
+    >.introduction::first-letter {
         font-size: 36px;
         font-weight: 800;
         color: #000000;
+    }
+
+    >.btn-prim {
+        margin-top: 32px;
     }
 }
 

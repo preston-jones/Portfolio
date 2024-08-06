@@ -1,9 +1,9 @@
 <header>
     <a href="#top" (click)="closeMenu()"><img id="logo-header" src="./../../../assets/icons/logo.png"></a>
     <div id="translate-button-container">
-        <span class="translate-button-en" (click)="setCurrentLanguage('en')">ENG</span>
+        <span class="translate-button-en" (click)="setCurrentLanguage('en')" [class.bold]="translationService.currentLang=='en'">ENG</span>
         <span class="translate-button-divider">|</span>
-        <span class="translate-button-de" (click)="setCurrentLanguage('de')">DE</span>
+        <span class="translate-button-de" (click)="setCurrentLanguage('de')" [class.bold]="translationService.currentLang=='de'">DE</span>
     </div>
     <div id="burger-icon" (click)="toggleMenu()"
         [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">

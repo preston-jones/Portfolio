@@ -44,7 +44,7 @@ export class ProjectsService {
       links: [
         {
           title: 'Live Demo',
-          url: 'https://prestonjones-developer.de/projects/join/index.html'
+          url: 'http://join.projects.prestonjones.dev/'
         },
         {
           title: 'GitHub',

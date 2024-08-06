@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -10,6 +11,8 @@ import { Component, HostListener } from '@angular/core';
 
 export class MySkillsComponent {
 
+  translationService = inject(TranslationService);
+  currentLang = this.translationService.currentLang;
   mySkillsScrolledY = false;
 
   @HostListener('window:scroll', ['$event'])
@@ -20,5 +23,9 @@ export class MySkillsComponent {
     else {
       this.mySkillsScrolledY = false
     }
+  }
+
+    ngOnInit() {
+    this.currentLang = this.translationService.currentLang;
   }
 }

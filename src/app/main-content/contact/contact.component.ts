@@ -13,6 +13,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 export class ContactComponent {
 
+  policy: boolean = false;
   http = inject(HttpClient);
 
   contactData = {
@@ -56,5 +57,4 @@ export class ContactComponent {
         });
     }
   }
-
 }

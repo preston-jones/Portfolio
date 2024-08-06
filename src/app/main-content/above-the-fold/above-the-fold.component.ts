@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
+
+  translationService = inject(TranslationService);
+  currentLang = this.translationService.currentLang;
+
+  ngOnInit() {
+    this.currentLang = this.translationService.currentLang;
+  }
 
 }

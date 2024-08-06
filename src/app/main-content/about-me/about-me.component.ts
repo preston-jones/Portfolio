@@ -30,8 +30,7 @@ export class AboutMeComponent {
     }
   }
 
-  constructor() {
+  ngOnInit() {
     this.currentLang = this.translationService.currentLang;
-    console.log('Language set to: ' + this.currentLang);
   }
 }

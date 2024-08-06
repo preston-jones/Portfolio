@@ -1,13 +1,17 @@
 <section id="aboutme">
     <div class="headline">
-        <h2 [class.headline-color]="aboutMeScrolledY">{{ translationService.aboutMe[currentLang].title }}</h2>
+        <h2 [class.headline-color]="aboutMeScrolledY">{{ translationService.aboutMe[currentLang].headline }}</h2>
     </div>
-    <p id="aboutme-quote" data-aos="fade-left" data-aos-duration="1000">"You start with a simple idea, and
-        build around it"</p>
+    <p id="aboutme-quote" data-aos="fade-left" data-aos-duration="1000">{{ translationService.aboutMe[currentLang].quote }}</p>
     <div class="content">
         <div class="textblock" data-aos="fade-right" data-aos-duration="1000">
-            <p><strong>{{ translationService.aboutMe[currentLang].introduction }}</strong></p>
-            <p>{{ translationService.aboutMe[currentLang].content }}</p>
+            <p class="introduction"><strong>{{ translationService.aboutMe[currentLang].introduction }}</strong></p>
+            <p>{{ translationService.aboutMe[currentLang].content.paragraph1 }}</p>
+            <p>{{ translationService.aboutMe[currentLang].content.paragraph2 }}</p>
+            <br>
+            <p>{{ translationService.aboutMe[currentLang].content.paragraph3 }}</p>
+            <br>
+            <p>{{ translationService.aboutMe[currentLang].content.paragraph4 }}</p>
             <a class="btn-prim" href="#contact">Let's talk</a>
         </div>
         <div class="img-container" data-aos="fade-left" data-aos-duration="1000">

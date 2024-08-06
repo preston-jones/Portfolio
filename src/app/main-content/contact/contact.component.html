@@ -44,7 +44,7 @@
                 <textarea #message="ngModel" minlength="4"
                     [class.input-error]="!message.valid && message.touched && !message.disabled"
                     [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message"
-                    required=></textarea>
+                    required></textarea>
                 @if (!message.valid && message.touched && !message.disabled) {
                 <img class="status-icon" src="../../../assets/icons/error.png" alt="">
                 } @else if (message.valid && message.touched && !message.disabled) {<img class="status-icon"
@@ -56,13 +56,25 @@
                 }
             </label>
         </div>
-        
-        <!-- disable function better in typescript function? -->
-        @if (name.valid && email.valid && message.valid) {
-            <input class="submit-btn" type="submit" value="Send message">
 
-        } @else  {
-            <input class="submit-btn" type="submit" value="Send message" disabled>
+        <div class="policy-container">
+            <input type="checkbox" id="policy" name="policy" [(ngModel)]="policy" required>
+            <div class="policy-container">
+                <label for="policy">I've read the <a href="#">Privacy Policy</a> and agree to the processing of my data
+                    as outlined.</label>
+                @if (!policy) {
+                <span class="form-error">Please agree to the Privacy Policy</span>
+                }
+            </div>
+
+        </div>
+
+        <!-- disable function better in typescript function? -->
+        @if (contactForm.valid && policy) {
+        <input class="submit-btn" type="submit" value="Send message">
+
+        } @else {
+        <input class="submit-btn" type="submit" value="Send message" disabled>
         }
     </form>
     <a href="#top" class="back-to-top"></a>
