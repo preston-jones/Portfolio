@@ -36,10 +36,10 @@ export class ProjectsService {
       img: 'assets/imgs/projectimage_join.png',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       languages: [
-        'Angular',
-        'TypeScript',
+        'JavaScript',
         'Firebase',
-        'SCSS',
+        'CSS',
+        'HTML'
       ],
       links: [
         {
@@ -59,8 +59,8 @@ export class ProjectsService {
       languages: [
         'JavaScript',
         'OOP',
+        'CSS',
         'HTML',
-        'CSS'
       ],
       links: [
         {
