@@ -6,7 +6,7 @@
         <span id="subheadline1">Looking for a Frontend Developer?</span>
         <span id="subheadline2">Say hello! let's discuss your ideas and make it happen</span>
     </div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete>
         <div class="input-container">
             <div class="input-wrapper">
                 <input #name="ngModel" [class.input-error]="!name.valid && name.touched && !name.disabled"
@@ -62,7 +62,7 @@
             <div class="policy-container">
                 <label for="policy">I've read the <a href="#">Privacy Policy</a> and agree to the processing of my data
                     as outlined.</label>
-                @if (!policy) {
+                @if (contactForm.valid && !policy) {
                 <span class="form-error">Please agree to the Privacy Policy</span>
                 }
             </div>
