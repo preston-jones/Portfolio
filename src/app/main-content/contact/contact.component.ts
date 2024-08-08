@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -13,6 +13,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 export class ContactComponent {
 
+  aboutMeScrolledY = false;
   policy: boolean = false;
   http = inject(HttpClient);
 
@@ -55,6 +56,19 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
+    }
+  }
+
+
+  @HostListener('window:scroll', ['$event'])
+  function() {
+    console.log(window.scrollY);
+
+    if (window.scrollY >= 5400) {
+      this.aboutMeScrolledY = true;
+    }
+    else {
+      this.aboutMeScrolledY = false
     }
   }
 }

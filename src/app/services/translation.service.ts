@@ -46,7 +46,7 @@ export class TranslationService {
         paragraph1: 'Ich bin leidenschaftlicher Frontend-Entwickler und Musiker aus Deutschland. Mit über zehn Jahren Erfahrung als professioneller Sänger und Kontrabassist ist es mir möglich, eine einzigartige Perspektive in die Frontend-Entwicklung mit einzubringen.',
         paragraph2: 'Sowohl in der Musik als auch in der Entwicklung beginne ich mit einer einfachen Idee, einer Melodie, ein paar Noten oder einer Codezeile und baue darauf auf. Dieser Ansatz ermöglicht es mir, innovative und dynamische Benutzeroberflächen zu gestalten, die nicht nur funktional, sondern auch optisch ansprechend und anwenderfreundlich sind.',
         paragraph3: 'Im Laufe meiner Zeit als Frontend Entwickler habe ich meine Fähigkeiten darin verfeinert, komplexe Probleme in elegante Lösungen zu verwandeln. Mein Fokus liegt auf intuitivem Design und nahtlosen Nutzererlebnissen, wodurch jedes Projekt höchsten Qualitäts- und Ästhetikansprüchen gerecht wird.',
-        paragraph4: 'Ich lade Sie ein, mein Portfolio zu erkunden und eine Auswahl an Projekten, die ich entwickelt habe. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich über Ihre Nachricht.',
+        paragraph4: 'Ich lade Sie ein mein Portfolio zu erkunden und eine Auswahl an Projekten, die ich entwickelt habe. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich über Ihre Nachricht.',
       }
     }
   }

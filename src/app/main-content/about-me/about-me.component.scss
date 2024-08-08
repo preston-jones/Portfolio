@@ -27,6 +27,7 @@ section {
 }
 
 .content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 52px;
@@ -71,6 +72,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-image: url('../../../assets/imgs/background-profil.png');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
 }
 
 img {
@@ -84,17 +89,17 @@ img {
 
 .frame {
     position: absolute;
-    // top: 81px;
-    // left: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 533px;
-    height: 533px;
-    background-image: url('../../../assets/imgs/background-profil.png');
+    width: 591px;
+    height: 630px;
+    background-image: url(../../../assets/imgs/background-profil.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    top: 0;
+    right: 0;
 }
 
 
@@ -111,23 +116,5 @@ img {
 
     .content {
         flex-direction: column;
-    }
-
-    .img-container {
-        // width: 349px;
-        // height: 349px;
-    }
-
-    img {
-        // width: 349px;
-        // height: 349px;
-        // object-fit: contain;
-    }
-
-    .frame {
-        // top: 10px;
-        // left: 10px;
-        // width: 339px;
-        // height: 339px;
     }
 }

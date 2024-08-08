@@ -16,9 +16,6 @@ export class AboutMeComponent {
 
   @HostListener('window:scroll', ['$event'])
   function() {
-    console.log(window.scrollY);
-    console.log('Language set to: ' + this.currentLang);
-
     if (window.scrollY >= 400) {
       this.aboutMeScrolledY = true;
     }

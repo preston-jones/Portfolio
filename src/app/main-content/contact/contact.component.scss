@@ -139,6 +139,10 @@ form {
         }
     }
 
+    .textarea-icon {
+        top: 15px !important;
+    }
+
     ::placeholder {
         color: #FFFCF3;
         font-family: 'Overpass';
@@ -271,5 +275,34 @@ input {
 
     form {
         width: 100%;
+    }
+}
+
+/* Animation */
+.anim-typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #FFFCF3;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 600ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
     }
 }

@@ -4,7 +4,7 @@
     </div>
     <div class="subheadline">
         <span id="subheadline1">Looking for a Frontend Developer?</span>
-        <span id="subheadline2">Say hello! let's discuss your ideas and make it happen</span>
+        <span id="subheadline2" [class.anim-typewriter]="aboutMeScrolledY">Say hello! let's discuss your ideas and make it happen</span>
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete>
         <div class="input-container">
@@ -46,8 +46,8 @@
                     [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message"
                     required></textarea>
                 @if (!message.valid && message.touched && !message.disabled) {
-                <img class="status-icon" src="../../../assets/icons/error.png" alt="">
-                } @else if (message.valid && message.touched && !message.disabled) {<img class="status-icon"
+                <img class="status-icon textarea-icon" src="../../../assets/icons/error.png" alt="">
+                } @else if (message.valid && message.touched && !message.disabled) {<img class="status-icon textarea-icon"
                     src="../../../assets/icons/success.png" alt="">}
             </div>
             <label for="message">
@@ -62,7 +62,7 @@
             <div class="policy-container">
                 <label for="policy">I've read the <a href="#">Privacy Policy</a> and agree to the processing of my data
                     as outlined.</label>
-                @if (contactForm.valid && !policy) {
+                @if (name.valid && email.valid && message.valid && !policy) {
                 <span class="form-error">Please agree to the Privacy Policy</span>
                 }
             </div>

@@ -1,15 +1,19 @@
 <header>
-    <a href="#top" (click)="closeMenu()">
+    <a href="" (click)="closeMenu()">
         <img id="logo-header" src="./../../../assets/icons/logo.png">
-        <span>Preston Jones</span>
+        <span>PJ</span>
     </a>
-    <div id="translate-button-container">
-        <span class="translate-button-en" (click)="setCurrentLanguage('en')" [class.bold]="translationService.currentLang=='en'">ENG</span>
-        <span class="translate-button-divider">|</span>
-        <span class="translate-button-de" (click)="setCurrentLanguage('de')" [class.bold]="translationService.currentLang=='de'">DE</span>
-    </div>
-    <div id="burger-icon" (click)="toggleMenu()"
-        [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">
+    <div class="header-section-left">
+        <div id="translate-button-container">
+            <span class="translate-button-en" (click)="setCurrentLanguage('en')"
+                [class.bold]="translationService.currentLang=='en'">ENG</span>
+            <span class="translate-button-divider">|</span>
+            <span class="translate-button-de" (click)="setCurrentLanguage('de')"
+                [class.bold]="translationService.currentLang=='de'">DE</span>
+        </div>
+        <div id="burger-icon" (click)="toggleMenu()"
+            [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">
+        </div>
     </div>
 </header>
 <menu [ngClass]="{'openMenu': openMenu, 'closeMenu': !openMenu, 'hiddeMenu': !initialized}">
@@ -30,8 +34,7 @@
         </div>
     </div>
     <div class="menu-bottom">
-        <a class="mailto"
-            href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!">
+        <a class="mailto" href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!">
             <span id="mailto-headline">Say Hi!</span>
             <span id="mail-link">mail&#64;prestonjones-developer.de</span>
         </a>
@@ -39,8 +42,10 @@
             <div class="social-links">
                 <a href="https://github.com/preston-jones" target="_blank"><img
                         src="./../../../assets/icons/github_icon.png"></a>
-                <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!" target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
-                <a href="https://www.linkedin.com/in/preston-jones-25bb912b6/" target="_blank"><img src="./../../../assets/icons/linkedin_icon.png"></a>
+                <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!"
+                    target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
+                <a href="https://www.linkedin.com/in/preston-jones-25bb912b6/" target="_blank"><img
+                        src="./../../../assets/icons/linkedin_icon.png"></a>
             </div>
         </div>
 

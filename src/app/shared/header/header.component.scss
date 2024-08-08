@@ -31,6 +31,13 @@ header {
             }
         }
     }
+
+    >.header-section-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
 }
 
 .hiddeMenu {
@@ -41,7 +48,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .translate-button-de {
@@ -126,11 +133,11 @@ menu {
 }
 
 .openMenu {
-    animation: slide-in-right 0.5s ease-in-out forwards;
+    animation: menu-slide-in 0.5s ease-in-out forwards;
 }
 
 .closeMenu {
-    animation: slide-out-right 0.5s ease-in-out forwards;
+    animation: menu-slide-out 0.5s ease-in-out forwards;
 }
 
 #menu-container {
@@ -335,7 +342,7 @@ menu {
     }
 }
 
-@keyframes slide-in-right {
+@keyframes menu-slide-in {
     from {
         transform: translateY(-100%);
         opacity: 0;
@@ -349,7 +356,7 @@ menu {
     }
 }
 
-@keyframes slide-out-right {
+@keyframes menu-slide-out {
     from {
         transform: translateY(0);
         opacity: 1;
