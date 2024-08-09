@@ -158,7 +158,9 @@ body {
   background-color: #FFFCF3;
 }
 
-app-main-content, app-privacy, app-imprint {
+app-main-content,
+app-privacy,
+app-imprint {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +177,8 @@ h6 {
   color: #1b1819;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-shadow: 9px 9px 2px #9191916e;
 }
 
@@ -340,5 +343,15 @@ body {
   footer {
     padding-right: 25px;
     padding-left: 25px;
+  }
+
+  @media screen and (max-width: 1360px) {
+
+    section,
+    header,
+    footer {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
   }
 }
