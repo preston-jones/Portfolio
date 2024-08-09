@@ -171,7 +171,7 @@
         align-items: center;
         width: 207px;
         height: 68px;
-        border: #000000 4px solid;
+        border: #1b1819 4px solid;
         padding: 20px 60px;
         background-color: transparent;
         font-weight: 400;
@@ -225,7 +225,7 @@
 
 .draw-img-frame-effect {
     opacity: 0;
-    border: #000000 4px solid;
+    border: #1b1819 4px solid;
     mask:
         conic-gradient(from 180deg at top 4px right 4px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(--_i, 4px) border-box no-repeat,
         conic-gradient(at bottom 4px left 4px, #0000 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 4px) 200% border-box no-repeat,

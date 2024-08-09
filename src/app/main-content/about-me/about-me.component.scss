@@ -59,7 +59,7 @@ section {
     >.introduction::first-letter {
         font-size: 36px;
         font-weight: 800;
-        color: #000000;
+        color: #1b1819;
     }
 
     >.btn-prim {
@@ -72,10 +72,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-image: url('../../../assets/imgs/background-profil.png');
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: center;
 }
 
 img {
@@ -83,7 +79,7 @@ img {
     height: 533px;
     object-fit: contain;
     z-index: 1;
-    filter: drop-shadow(1px -4px 10px #00000083);
+    filter: drop-shadow(1px -4px 10px #1b181983);
     // filter: drop-shadow(0 0 0.75rem crimson);
 }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
@@ -24,14 +24,17 @@ export class AppComponent {
   userHasScrolled = false;
 
 
-  constructor() {
-    window.onscroll = (e) => {
-      if (window.scrollY > 60) {
-        this.userHasScrolled = true;
-      }
-      else {
-        this.userHasScrolled = false;
-      }
+  @HostListener('window:scroll', ['$event'])
+  function() {
+    console.log(window.scrollY);
+    console.log(this.userHasScrolled);
+    
+
+    if (window.scrollY >= 60) {
+      this.userHasScrolled = true;
+    }
+    else {
+      this.userHasScrolled = false
     }
   }
 }

@@ -24,8 +24,6 @@ export class ContactComponent {
   };
 
 
-  mailTest = true;
-
   post = {
     endPoint: 'https://prestonjones.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -38,12 +36,6 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-
-    console.log(ngForm.form.valid);
-    console.log(this.mailTest);
-    console.log(ngForm.submitted);
-    
-
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -62,8 +54,6 @@ export class ContactComponent {
 
   @HostListener('window:scroll', ['$event'])
   function() {
-    console.log(window.scrollY);
-
     if (window.scrollY >= 5400) {
       this.aboutMeScrolledY = true;
     }
