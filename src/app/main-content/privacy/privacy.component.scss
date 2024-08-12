@@ -14,9 +14,6 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        font-family: Overpass;
-        font-size: 21px;
-        line-height: 135%;
         gap: 48px;
 
         >h2 {
@@ -39,14 +36,22 @@ section {
                 line-height: 32px;
                 text-align: left;
             }
-    
-            >span {
-                font-weight: 800;
-                font-size: 21px;
-                line-height: 21px;
-                text-align: left;
-            }
         }
+    }
+}
+
+p, ul {
+    font-family: Overpass;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 135%;
+    text-align: left;
+
+    >span {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 21px;
+        text-align: left;
     }
 }
 

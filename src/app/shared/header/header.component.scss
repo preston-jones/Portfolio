@@ -197,7 +197,10 @@ menu {
         animation: link-hover-animation 0.25s ease-in-out forwards;
         transition: color 125ms ease-in-out;
         cursor: pointer;
-        color: #FF9900;
+
+        >a {
+            color: #FF9900;
+        }
     }
 
     &:not(:hover) {
@@ -377,22 +380,41 @@ menu {
     }
 }
 
-@media screen and (max-height: 830px) {
+@media screen and (max-height: 720px) {
     header {
         padding-top: 16px;
         padding-bottom: 16px;
     }
 
     .menu-container {
-        padding-top: 16px;
+        padding-top: 0px;
+
+        // >.menu-content {
+        //     gap: 8px;
+        // }
     }
 
     .menu-link {
         padding: 8px;
+
+        >a {
+            font-size: 56px;
+            line-height: 56px;
+        }
     }
 
     .menu-bottom {
         padding: 0 32px 16px 32px;
+    }
+
+    #mailto-headline {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    #mail-link {
+        font-size: 16px;
+        line-height: 16px;
     }
 
     .mailto {
