@@ -1,11 +1,16 @@
 import { Component, ChangeDetectionStrategy, inject, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogEmailSentComponent } from '../../dialog-email-sent/dialog-email-sent.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,
+    MatDialogModule,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
@@ -24,6 +29,9 @@ export class ContactComponent {
   };
 
 
+  constructor(public matDialog: MatDialog) { }
+
+
   post = {
     endPoint: 'https://prestonjones.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -40,13 +48,12 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            alert('Message sent successfully');
+            this.openDialog();
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
         });
     }
   }
@@ -60,5 +67,10 @@ export class ContactComponent {
     else {
       this.aboutMeScrolledY = false
     }
+  }
+
+
+  openDialog(): void {
+    const dialogRef = this.matDialog.open(DialogEmailSentComponent);
   }
 }

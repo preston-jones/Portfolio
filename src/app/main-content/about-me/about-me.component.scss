@@ -41,9 +41,7 @@ section {
     // gap: 52px;
 
     >.introduction {
-        width: 100%;
         margin-bottom: 16px;
-        text-align: left;
     }
 
     >p {
@@ -51,9 +49,10 @@ section {
         text-wrap: wrap;
         font-weight: 400;
         font-size: 21px;
-        // line-height: 23px;
         line-height: 135%;
         margin: 0;
+        width: 100%;
+        text-align: left;
     }
 
     >.introduction::first-letter {

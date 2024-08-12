@@ -17,7 +17,7 @@ export class TranslationService {
     console.log('IN SERVICE - Language set to: ' + this.currentLang);
   }
 
-  aboveTheFold: { [key: string]: { headline: string} } = {
+  aboveTheFold: { [key: string]: { headline: string } } = {
     en: {
       headline: 'Developer',
     },
@@ -43,15 +43,15 @@ export class TranslationService {
       quote: '"Jede großartige Idee beginnt mit einer einfachen Zeile Code."',
       introduction: 'Hi, ich bin Preston!',
       content: {
-        paragraph1: 'Ich bin leidenschaftlicher Frontend-Entwickler und Musiker aus Deutschland. Mit über zehn Jahren Erfahrung als professioneller Sänger und Kontrabassist ist es mir möglich, eine einzigartige Perspektive in die Frontend-Entwicklung mit einzubringen.',
-        paragraph2: 'Sowohl in der Musik als auch in der Entwicklung beginne ich mit einer einfachen Idee, einer Melodie, ein paar Noten oder einer Codezeile und baue darauf auf. Dieser Ansatz ermöglicht es mir, innovative und dynamische Benutzeroberflächen zu gestalten, die nicht nur funktional, sondern auch optisch ansprechend und anwenderfreundlich sind.',
-        paragraph3: 'Im Laufe meiner Zeit als Frontend Entwickler habe ich meine Fähigkeiten darin verfeinert, komplexe Probleme in elegante Lösungen zu verwandeln. Mein Fokus liegt auf intuitivem Design und nahtlosen Nutzererlebnissen, wodurch jedes Projekt höchsten Qualitäts- und Ästhetikansprüchen gerecht wird.',
-        paragraph4: 'Ich lade Sie ein mein Portfolio zu erkunden und eine Auswahl an Projekten, die ich entwickelt habe. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich über Ihre Nachricht.',
+        paragraph1: 'Frontend Entwickler und Musiker aus Leidenschaft.',
+        paragraph2: 'Mit über zehn Jahren Erfahrung als professioneller Sänger und Kontrabassist bringe ich eine einzigartige Kombination aus Kreativität und technischer Expertise mit und habe gelernt, wie man aus einer einfachen Idee etwas Großes entstehen lässt – seien es ein paar Noten, eine Melodie, oder ein paar Zeilen Code. Diese kreative Herangehensweise ermöglicht es mir, beim Programmieren und Lösen komplexer Aufgaben neue Perspektiven einzunehmen und innovative Lösungen zu entwickeln.',
+        paragraph3: 'Während meiner Ausbildung als Frontend-Entwickler habe ich umfangreiche praktische Erfahrungen in der Entwicklung und Erstellung von Webseiten und Business-Apps gesammelt, insbesondere mit dem Framework Angular und TypeScript.',
+        paragraph4: 'Ich lade Sie herzlich ein, mein Portfolio zu erkunden und sich einen Eindruck von den Projekten zu verschaffen, die ich während meiner Ausbildung realisiert habe. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich darauf, von Ihnen zu hören.',
       }
     }
   }
 
-  mySkills: { [key: string]: { headline: string} } = {
+  mySkills: { [key: string]: { headline: string } } = {
     en: {
       headline: 'My Skills',
     },

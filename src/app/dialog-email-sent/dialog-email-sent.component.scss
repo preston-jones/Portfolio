@@ -1,0 +1,23 @@
+.dialog-email-sent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: Overpass !important;
+    color: #1b1819;
+
+    >img {
+        height: 72px;
+        object-fit: contain;
+    }
+}
+
+h2 {
+    font-family: Overpass !important;
+    text-shadow: none;
+}
+
+p {
+    text-align: center;
+}

@@ -191,6 +191,17 @@ a {
   }
 }
 
+/* -- DIALOG -- */
+
+.mat-mdc-dialog-surface,
+.mdc-dialog__surface {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -- BUTTONS -- */
+
 .btn-prim {
   display: flex;
   justify-content: center;
