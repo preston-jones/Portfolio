@@ -1,19 +1,19 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ProjectTemplateComponent } from '../../shared/project-template/project-template.component';
-import { ProjectsService } from '../../services/projects.service';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
   imports: [
     ProjectTemplateComponent,
+    TranslateModule
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
 
-  projectsData = inject(ProjectsService).projects;
   portfolioScrolledY = false;
 
   @HostListener('window:scroll', ['$event'])
@@ -25,10 +25,4 @@ export class PortfolioComponent {
       this.portfolioScrolledY = false
     }
   }
-
-
-  show() {
-    console.log(this.projectsData);
-  }
-
 }

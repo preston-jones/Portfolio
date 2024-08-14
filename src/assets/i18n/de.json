@@ -27,27 +27,19 @@
     },
     "portfolio": {
         "title": "Portfolio",
-        "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "subtitle": "Erkunden Sie eine Auswahl meiner Projekte - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
         "projects": {
             "dabubble": {
-                "title": "DABuble",
-                "description": "Bla bla bla bla bla bla.",
-                "button": "View Project"
+                "description": "Eine von Slack inspirierte Chat-Messenger-App ermöglicht es Benutzern, über Kanäle oder Direktnachrichten miteinander zu kommunizieren."
             },
             "join": {
-                "title": "Join",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "button": "View Project"
+                "description": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
             },
             "cybercity": {
-                "title": "Project 03",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "button": "View Project"
+                "description": "2D-Pixel-Art-Arcade-Spiel basierend auf einem objektorientierten Ansatz. Rette Cyber ​​City vor der Invasion der Wespen Königin."
             },
             "pokedex": {
-                "title": "Project 03",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "button": "View Project"
+                "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
             }
         }
     },

@@ -30,24 +30,16 @@
         "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
         "projects": {
             "dabubble": {
-                "title": "DABuble",
-                "description": "A chat messenger app inspired by Slack, allows users to communicate with each other through channels or direct messages.",
-                "button": "View Project"
+                "description": "A chat messenger app inspired by Slack, allows users to communicate with each other through channels or direct messages."
             },
             "join": {
-                "title": "Join",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "button": "View Project"
+                "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
             },
             "cybercity": {
-                "title": "Project 03",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "button": "View Project"
+                "description": "2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion."
             },
             "pokedex": {
-                "title": "Project 03",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "button": "View Project"
+                "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
             }
         }
     },

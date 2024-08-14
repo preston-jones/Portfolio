@@ -2,12 +2,10 @@
     <div class="headline">
         <h2 [class.headline-color]="portfolioScrolledY">Portfolio</h2>
         <p>
-            Explore a selection of my work here - Interact with <br> projects to see my skills in action.
+            {{ 'portfolio.subtitle' | translate }}
         </p>
     </div>
     <div class="content">
-        @for(project of projectsData; track projectsData.length; let index = $index){
-        <app-project-template [projectTitle]="project.title" [projectIndex]="index + 1"></app-project-template>
-        }
+        <app-project-template></app-project-template>
     </div>
 </section>

@@ -1,47 +1,99 @@
-import { Component, inject, Input, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../Interfaces/project.interfaces';
+import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 
 @Component({
   selector: 'app-project-template',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   templateUrl: './project-template.component.html',
   styleUrl: './project-template.component.scss'
 })
 export class ProjectTemplateComponent implements AfterViewInit {
 
-  @Input() projectTitle: string = '';
-  @Input() projectIndex: number = 0;
-  currentProjectTitle?: string;
-  currentProjectIndex?: number;
   evenNumber: boolean = false;
   mouseEnter: boolean = false;
 
-  projectsData = inject(ProjectsService).projects;
-  currentProjectData: Project = {
-    title: '',
-    img: '',
-    description: '',
-    languages: [],
-    links: []
-  };
-  
 
-  projectsLength: number = this.projectsData.length;
-
-  constructor() {
-  }
-  
-
-  ngOnInit() {
-    this.currentProjectTitle = this.projectTitle;
-    this.getCurrentProjectData();
-  }
+  projectList: Project[] = [
+    {
+      title: 'DABubble',
+      img: 'assets/imgs/projectimage_dabubble.png',
+      descriptionKey: 'portfolio.projects.dabubble.description',
+      technologies: [
+        'Angular | TypeScript | Firebase | Material Design | SCSS'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'http://dabubble.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: ''
+        }
+      ]
+    },
+    {
+      title: 'Join',
+      img: 'assets/imgs/projectimage_join.png',
+      descriptionKey: 'portfolio.projects.join.description',
+      technologies: [
+        'JavaScript | Firebase | CSS | HTML'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'http://join.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: 'http://join.projects.prestonjones.dev/'
+        }
+      ]
+    },
+    {
+      title: 'Cyber City',
+      img: 'assets/imgs/projectimage_cybercity.png',
+      descriptionKey: 'portfolio.projects.cybercity.description',
+      technologies: [
+        'JavaScript | OOP | CSS | HTML',
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'http://cybercity.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: 'https://github.com/preston-jones/2D_Sidescroller_Game'
+        }
+      ]
+    },
+    {
+      title: 'Pokedex',
+      img: 'assets/imgs/projectimage_pokedex.png',
+      descriptionKey: 'portfolio.projects.pokedex.description',
+      technologies: [
+        'JavaScript | API | CSS | HTML'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'http://pokedex.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: 'https://github.com/preston-jones/pokedex'
+        }
+      ]
+    },
+  ];
 
 
   ngAfterViewInit() {
@@ -49,36 +101,8 @@ export class ProjectTemplateComponent implements AfterViewInit {
   }
 
 
-  getCurrentProjectData() {
-    const project = this.projectsData.find(project => project.title === this.currentProjectTitle);
-    if (project) {
-      this.currentProjectData = project;
-      this.currentProjectIndex = this.projectIndex;
-      this.checkIfNumberIsEven();
-    } else {
-      // Provide a fallback project data here
-      this.currentProjectData = {
-        title: '',
-        img: '',
-        description: '',
-        languages: [],
-        links: []
-      };
-    }
-  }
-
-
   formatNumber(n: number) {
     return n > 9 ? "" + n : "0" + n;
-  }
-
-
-  checkIfNumberIsEven() {
-    if (this.projectIndex % 2 == 0) {
-      this.evenNumber = true;
-    } else {
-      this.evenNumber = false;
-    }
   }
 
 
