@@ -12,7 +12,7 @@
             <div class="input-wrapper">
                 <input #name="ngModel" [class.input-error]="!name.valid && name.touched && !name.disabled"
                     [(ngModel)]="contactData.name" type="text" id="name" name="firstname"
-                    placeholder="{{ 'contact.form.name.placeholder' | translate }}" required>
+                    placeholder="{{ 'contact.form.name.placeholder' | translate }}" autocomplete="off" required>
                 @if (!name.valid && name.touched && !name.disabled) {
                 <img class="status-icon" src="../../../assets/icons/error.png" alt="">
                 } @else if (name.valid && name.touched && !name.disabled) {<img class="status-icon"

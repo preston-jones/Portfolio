@@ -182,7 +182,7 @@ menu {
     background-image: url('../../../assets/animation/link_hover_default.png');
     background-size: contain;
     background-repeat: no-repeat;
-    transition: background-image 0.5s ease-in-out;
+    transition: background-image 125ms ease-in-out;
     transition: color 125ms ease-in-out;
 
     >a {
@@ -194,17 +194,18 @@ menu {
     }
 
     &:hover {
-        animation: link-hover-animation 0.25s ease-in-out forwards;
+        animation: link-hover-animation 0.15s ease-in-out forwards;
         transition: color 125ms ease-in-out;
         cursor: pointer;
 
         >a {
             color: #FF9900;
+            transition: color 125ms ease-in-out;
         }
     }
 
     &:not(:hover) {
-        animation: link-hover-animation-reverse 0.25s ease-in-out forwards;
+        animation: link-hover-animation-reverse 125ms ease-in-out forwards;
     }
 
     &.active {
@@ -231,6 +232,7 @@ menu {
     align-items: flex-end;
     justify-content: center;
     gap: 16px;
+    transition: color 125ms ease-in-out;
 
     >#mailto-headline {
         font-family: 'Syne', sans-serif;
@@ -249,6 +251,7 @@ menu {
     &:hover {
         cursor: pointer;
         color: #FF9900;
+        transition: color 125ms ease-in-out;
     }
 }
 

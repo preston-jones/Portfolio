@@ -54,7 +54,7 @@
     "contact": {
         "title": "Say Hi!",
         "subtitle": "Looking for a Frontend Developer?",
-        "description": "Say hello! let's discuss your ideas and make it happen",
+        "description": "Say hello! let's discuss your ideas and make it happen.",
         "form": {
             "name": {
                 "label": "Your Name",
