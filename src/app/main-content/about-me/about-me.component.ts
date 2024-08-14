@@ -1,18 +1,25 @@
 import { Component, HostListener, inject } from '@angular/core';
-import { TranslationService } from '../../services/translation.service';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
 
-  translationService = inject(TranslationService);
-  currentLang = this.translationService.currentLang;
+  currentLang: string;
   aboutMeScrolledY = false;
+
+
+  constructor(private translate: TranslateService) {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    this.currentLang = savedLang || 'en';
+    this.translate.use(this.currentLang);
+  }
+
 
   @HostListener('window:scroll', ['$event'])
   function() {
@@ -25,9 +32,5 @@ export class AboutMeComponent {
     else {
       this.aboutMeScrolledY = false
     }
-  }
-
-  ngOnInit() {
-    this.currentLang = this.translationService.currentLang;
   }
 }

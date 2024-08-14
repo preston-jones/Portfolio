@@ -1,0 +1,98 @@
+{
+    "aboveTheFold": {
+        "title": "Developer"
+    },
+    "menu": {
+        "navLinks": {
+            "about": "About Me",
+            "skills": "My Skills",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "quote": "Every great Idea starts with a simple line of code.",
+        "introduction": "Hi, I am Preston!",
+        "description": {
+            "paragraph1": "Frontend developer and passionate musician.",
+            "paragraph2": "With over ten years of experience as a professional singer and double bass player, I bring a unique combination of creativity and technical expertise and have learned how to turn a simple idea into something great - be it a few notes, a melody or a few lines of code. This creative approach allows me to take new perspectives and develop innovative solutions when programming and solving complex tasks.",
+            "paragraph3": "During my training as a front-end developer, I gained extensive practical experience in developing and creating websites and business apps, especially with the Angular and TypeScript frameworks.",
+            "paragraph4": "I cordially invite you to explore my portfolio and get an impression of the projects I realized during my training. If you are interested in collaborating or just want to say hello, I look forward to hearing from you."
+        },
+        "button": "Let's talk"
+    },
+    "skills": {
+        "title": "My Skills"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "projects": {
+            "dabubble": {
+                "title": "DABuble",
+                "description": "A chat messenger app inspired by Slack, allows users to communicate with each other through channels or direct messages.",
+                "button": "View Project"
+            },
+            "join": {
+                "title": "Join",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "button": "View Project"
+            },
+            "cybercity": {
+                "title": "Project 03",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "button": "View Project"
+            },
+            "pokedex": {
+                "title": "Project 03",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "button": "View Project"
+            }
+        }
+    },
+    "contact": {
+        "title": "Say Hi!",
+        "subtitle": "Looking for a Frontend Developer?",
+        "description": "Say hello! let's discuss your ideas and make it happen",
+        "form": {
+            "name": {
+                "label": "Your Name",
+                "placeholder": "Your Name",
+                "errors": {
+                    "required": "Please enter your name."
+                }
+            },
+            "email": {
+                "label": "Your email",
+                "placeholder": "Your email",
+                "errors": {
+                    "required": "Please enter your email."
+                }
+            },
+            "message": {
+                "label": "Your message",
+                "placeholder": "Your message",
+                "errors": {
+                    "required": "Please enter a message."
+                }
+            },
+            "privacy": {
+                "title": "Privacy Policy",
+                "label_01": "I've read the ",
+                "label_02": "  and agree to the processing of my data as outlined.",
+                "errors": {
+                    "required": "Please agree to the Privacy Policy."
+                }
+            },
+            "button": {
+                "label": "Send Message"
+            }
+        },
+        "footer": {
+            "imprint": {
+                "title": "Lagal notice"
+            }
+        }
+    }
+}

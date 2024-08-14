@@ -5,11 +5,11 @@
     </a>
     <div class="header-section-left">
         <div id="translate-button-container">
-            <span class="translate-button-en" (click)="setCurrentLanguage('en')"
-                [class.bold]="translationService.currentLang=='en'">ENG</span>
+            <span class="translate-button-en" (click)="changeLanguage('en')"
+                [class.bold]="currentLang ==='en'">ENG</span>
             <span class="translate-button-divider">|</span>
-            <span class="translate-button-de" (click)="setCurrentLanguage('de')"
-                [class.bold]="translationService.currentLang=='de'">DE</span>
+            <span class="translate-button-de" (click)="changeLanguage('de')"
+                [class.bold]="currentLang ==='de'">DE</span>
         </div>
         <div id="burger-icon" (click)="toggleMenu()"
             [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">
@@ -20,16 +20,16 @@
     <div class="menu-container" [class.menu-animation]="openMenu">
         <div class="menu-content">
             <div class="menu-link">
-                <a href="#aboutme" (click)="closeMenu()"><span>About me</span></a>
+                <a href="#aboutme" (click)="closeMenu()"><span>{{ "menu.navLinks.about" | translate }}</span></a>
             </div>
             <div class="menu-link">
-                <a href="#myskills" (click)="closeMenu()"><span>My skills</span></a>
+                <a href="#myskills" (click)="closeMenu()"><span>{{ "menu.navLinks.skills" | translate }}</span></a>
             </div>
             <div class="menu-link">
-                <a href="#portfolio" (click)="closeMenu()"><span>Portfolio</span></a>
+                <a href="#portfolio" (click)="closeMenu()"><span>{{ "menu.navLinks.portfolio" | translate }}</span></a>
             </div>
             <div class="menu-link">
-                <a href="#contact" (click)="closeMenu()"><span>Contact</span></a>
+                <a href="#contact" (click)="closeMenu()"><span>{{ "menu.navLinks.contact" | translate }}</span></a>
             </div>
         </div>
         <div class="menu-bottom">

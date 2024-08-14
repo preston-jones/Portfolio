@@ -1,20 +1,23 @@
 import { Component, inject } from '@angular/core';
-import { TranslationService } from '../../services/translation.service';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
+
+
 export class AboveTheFoldComponent {
 
-  translationService = inject(TranslationService);
-  currentLang = this.translationService.currentLang;
+  currentLang: string;
 
-  ngOnInit() {
-    this.currentLang = this.translationService.currentLang;
+  constructor(private translate: TranslateService) {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    this.currentLang = savedLang || 'en';
+    this.translate.use(this.currentLang);
   }
 
 }

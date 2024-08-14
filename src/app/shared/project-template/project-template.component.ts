@@ -39,9 +39,7 @@ export class ProjectTemplateComponent implements AfterViewInit {
   
 
   ngOnInit() {
-    
     this.currentProjectTitle = this.projectTitle;
-    console.log(this.currentProjectTitle);
     this.getCurrentProjectData();
   }
 
@@ -67,7 +65,6 @@ export class ProjectTemplateComponent implements AfterViewInit {
         links: []
       };
     }
-    console.log(this.currentProjectData);
   }
 
 
@@ -94,9 +91,4 @@ export class ProjectTemplateComponent implements AfterViewInit {
     this.mouseEnter = false;
     console.log(this.mouseEnter);
   }
-
-
-  // animateProject() {
-  //   item.classList.toggle("d-none", !checked);
-  // }
 }

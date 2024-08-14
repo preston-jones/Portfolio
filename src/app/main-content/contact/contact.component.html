@@ -1,17 +1,18 @@
 <section id="contact">
     <div class="headline">
-        <h2 class="change-color">Say Hi!</h2>
+        <h2 class="change-color">{{ "contact.title" | translate }}</h2>
     </div>
     <div class="subheadline">
-        <span id="subheadline1">Looking for a Frontend Developer?</span>
-        <span id="subheadline2" [class.anim-typewriter]="aboutMeScrolledY">Say hello! let's discuss your ideas and make it happen</span>
+        <span id="subheadline1">{{ "contact.subtitle" | translate }}</span>
+        <span id="subheadline2" [class.anim-typewriter]="aboutMeScrolledY">{{ "contact.description" | translate
+            }}</span>
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete>
         <div class="input-container">
             <div class="input-wrapper">
                 <input #name="ngModel" [class.input-error]="!name.valid && name.touched && !name.disabled"
-                    [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="Your name"
-                    required>
+                    [(ngModel)]="contactData.name" type="text" id="name" name="firstname"
+                    placeholder="{{ 'contact.form.name.placeholder' | translate }}" required>
                 @if (!name.valid && name.touched && !name.disabled) {
                 <img class="status-icon" src="../../../assets/icons/error.png" alt="">
                 } @else if (name.valid && name.touched && !name.disabled) {<img class="status-icon"
@@ -19,15 +20,16 @@
             </div>
             <label for="name">
                 @if (!name.valid && name.touched && !name.disabled) {
-                <span class="form-error">Please enter your name</span>
+                <span class="form-error">{{ "contact.form.name.errors.required" | translate }}</span>
                 }
             </label>
         </div>
         <div class="input-container">
             <div class="input-wrapper">
                 <input #email="ngModel" [class.input-error]="!email.valid && email.touched && !email.disabled"
-                    [(ngModel)]="contactData.email" type="text" id="email" name="lastname" placeholder="Your email"
-                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    [(ngModel)]="contactData.email" type="text" id="email" name="lastname"
+                    placeholder="{{ 'contact.form.email.placeholder' | translate }}" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 @if (!email.valid && email.touched && !email.disabled) {
                 <img class="status-icon" src="../../../assets/icons/error.png" alt="">
                 } @else if (email.valid && email.touched && !email.disabled) {<img class="status-icon"
@@ -35,7 +37,7 @@
             </div>
             <label for="email">
                 @if (!email.valid && email.touched && !email.disabled) {
-                <span class="form-error">Please enter your email</span>
+                <span class="form-error">{{ "contact.form.email.errors.required" | translate }}</span>
                 }
             </label>
         </div>
@@ -43,16 +45,16 @@
             <div class="input-wrapper">
                 <textarea #message="ngModel" minlength="4"
                     [class.input-error]="!message.valid && message.touched && !message.disabled"
-                    [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message"
-                    required></textarea>
+                    [(ngModel)]="contactData.message" id="message" name="message"
+                    placeholder="{{ 'contact.form.message.placeholder' | translate }}" required></textarea>
                 @if (!message.valid && message.touched && !message.disabled) {
                 <img class="status-icon textarea-icon" src="../../../assets/icons/error.png" alt="">
-                } @else if (message.valid && message.touched && !message.disabled) {<img class="status-icon textarea-icon"
-                    src="../../../assets/icons/success.png" alt="">}
+                } @else if (message.valid && message.touched && !message.disabled) {<img
+                    class="status-icon textarea-icon" src="../../../assets/icons/success.png" alt="">}
             </div>
             <label for="message">
                 @if (!message.valid && message.touched && !message.disabled) {
-                <span class="form-error">Please enter a message</span>
+                <span class="form-error">{{ "contact.form.message.errors.required" | translate }}</span>
                 }
             </label>
         </div>
@@ -60,10 +62,11 @@
         <div class="policy-container">
             <input type="checkbox" id="policy" name="policy" [(ngModel)]="policy" required>
             <div class="policy-container">
-                <label for="policy">I've read the <a href="privacy">Privacy Policy</a> and agree to the processing of my data
-                    as outlined.</label>
+                <label for="policy">{{ "contact.form.privacy.label_01" | translate }}<a href="privacy">{{
+                        "contact.form.privacy.title" | translate }}</a>{{ "contact.form.privacy.label_02" | translate}}
+                </label>
                 @if (name.valid && email.valid && message.valid && !policy) {
-                <span class="form-error">Please agree to the Privacy Policy</span>
+                <span class="form-error">{{ "contact.form.privacy.errors.required" | translate }}</span>
                 }
             </div>
 
@@ -71,10 +74,10 @@
 
         <!-- disable function better in typescript function? -->
         @if (contactForm.valid && policy) {
-        <input class="submit-btn" type="submit" value="Send message">
+        <input class="submit-btn" type="submit" value="{{ 'contact.form.button.label' | translate }}">
 
         } @else {
-        <input class="submit-btn" type="submit" value="Send message" disabled>
+        <input class="submit-btn" type="submit" value="{{ 'contact.form.button.label' | translate }}" disabled>
         }
     </form>
     <a href="#top" class="back-to-top"></a>

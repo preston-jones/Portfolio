@@ -1,18 +1,18 @@
 <section id="aboutme">
     <div class="headline">
-        <h2 [class.headline-color]="aboutMeScrolledY">{{ translationService.aboutMe[currentLang].headline }}</h2>
+        <h2 [class.headline-color]="aboutMeScrolledY">{{ "about.title" | translate }}</h2>
     </div>
-    <p id="aboutme-quote" data-aos="fade-left" data-aos-duration="1000">{{ translationService.aboutMe[currentLang].quote }}</p>
+    <p id="aboutme-quote" data-aos="fade-left" data-aos-duration="1000">{{ "about.quote" | translate }}</p>
     <div class="content">
         <div class="textblock" data-aos="fade-right" data-aos-duration="1000">
-            <p class="introduction"><strong>{{ translationService.aboutMe[currentLang].introduction }}</strong></p>
-            <p>{{ translationService.aboutMe[currentLang].content.paragraph1 }}</p>
-            <p>{{ translationService.aboutMe[currentLang].content.paragraph2 }}</p>
+            <p class="introduction"><strong>{{ "about.introduction" | translate }}</strong></p>
+            <p>{{ "about.description.paragraph1" | translate }}</p>
+            <p>{{ "about.description.paragraph2" | translate }}</p>
             <br>
-            <p>{{ translationService.aboutMe[currentLang].content.paragraph3 }}</p>
+            <p>{{ "about.description.paragraph3" | translate }}</p>
             <br>
-            <p>{{ translationService.aboutMe[currentLang].content.paragraph4 }}</p>
-            <a class="btn-prim" href="#contact">Let's talk</a>
+            <p>{{ "about.description.paragraph4" | translate }}</p>
+            <a class="btn-prim" href="#contact">{{ "about.button" | translate }}</a>
         </div>
         <div class="img-container" data-aos="fade-left" data-aos-duration="1000">
             <img src="./../../../assets/imgs/portrait_2.png" alt="About me" class="image">

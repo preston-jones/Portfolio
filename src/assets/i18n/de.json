@@ -1,0 +1,98 @@
+{
+    "aboveTheFold": {
+        "title": "Entwickler"
+    },
+    "menu": {
+        "navLinks": {
+            "about": "Über mich",
+            "skills": "Meine Skills",
+            "portfolio": "Portfolio",
+            "contact": "Kontakt"
+        }
+    },
+    "about": {
+        "title": "Über mich",
+        "quote": "Jede großartige Idee beginnt mit einer einfachen Zeile Code.",
+        "introduction": "Hi, ich bin Preston!",
+        "description": {
+            "paragraph1": "Frontend Entwickler und Musiker aus Leidenschaft.",
+            "paragraph2": "Mit über zehn Jahren Erfahrung als professioneller Sänger und Kontrabassist bringe ich eine einzigartige Kombination aus Kreativität und technischer Expertise mit und habe gelernt, wie man aus einer einfachen Idee etwas Großes entstehen lässt – seien es ein paar Noten, eine Melodie oder ein paar Zeilen Code. Diese kreative Herangehensweise ermöglicht es mir, beim Programmieren und Lösen komplexer Aufgaben neue Perspektiven einzunehmen und innovative Lösungen zu entwickeln.",
+            "paragraph3": "Während meiner Ausbildung als Frontend-Entwickler habe ich umfangreiche praktische Erfahrungen in der Entwicklung und Erstellung von Webseiten und Business-Apps gesammelt, insbesondere mit dem Framework Angular und TypeScript.",
+            "paragraph4": "Ich lade Sie herzlich ein, mein Portfolio zu erkunden und sich einen Eindruck von den Projekten zu verschaffen, die ich während meiner Ausbildung realisiert habe. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich darauf, von Ihnen zu hören."
+        },
+        "button": "Lass uns reden"
+    },
+    "skills": {
+        "title": "Meine Skills"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "projects": {
+            "dabubble": {
+                "title": "DABuble",
+                "description": "Bla bla bla bla bla bla.",
+                "button": "View Project"
+            },
+            "join": {
+                "title": "Join",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "button": "View Project"
+            },
+            "cybercity": {
+                "title": "Project 03",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "button": "View Project"
+            },
+            "pokedex": {
+                "title": "Project 03",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "button": "View Project"
+            }
+        }
+    },
+    "contact": {
+        "title": "Sag Hi!",
+        "subtitle": "Sie sind auf der Suche nach einem Frontend Entwickler?",
+        "description": "Lass uns über deine Ideen sprechen und wie wir sie verwirklichen.",
+        "form": {
+            "name": {
+                "label": "Ihr Name",
+                "placeholder": "Ihr Name",
+                "errors": {
+                    "required": "Bitte geben Sie Ihren Namen ein."
+                }
+            },
+            "email": {
+                "label": "Ihre Email",
+                "placeholder": "Ihre Email",
+                "errors": {
+                    "required": "Bitte geben Sie Ihre Email Adresse ein."
+                }
+            },
+            "message": {
+                "label": "Ihre Nachricht",
+                "placeholder": "Ihre Nachricht",
+                "errors": {
+                    "required": "Bitte geben Sie eine Nachricht."
+                }
+            },
+            "privacy": {
+                "title": "Datenschutzerklärung",
+                "label_01": "Ich habe die ",
+                "label_02": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+                "errors": {
+                    "required": "Bitte stimmen Sie der Datenschutzerklärung zu."
+                }
+            },
+            "button": {
+                "label": "Nachricht senden"
+            }
+        },
+        "footer": {
+            "imprint": {
+                "title": "Impressum"
+            }
+        }
+    }
+}

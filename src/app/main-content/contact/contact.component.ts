@@ -4,12 +4,14 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogEmailSentComponent } from '../../dialog-email-sent/dialog-email-sent.component';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [FormsModule,
     MatDialogModule,
+    TranslateModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.component.html',
@@ -18,6 +20,7 @@ import { DialogEmailSentComponent } from '../../dialog-email-sent/dialog-email-s
 
 export class ContactComponent {
 
+  currentLang: string;
   aboutMeScrolledY = false;
   policy: boolean = false;
   http = inject(HttpClient);
@@ -29,7 +32,11 @@ export class ContactComponent {
   };
 
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(private translate: TranslateService, public matDialog: MatDialog) {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    this.currentLang = savedLang || 'en';
+    this.translate.use(this.currentLang);
+  }
 
 
   post = {
