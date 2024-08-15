@@ -47,6 +47,7 @@ section {
     }
 
     >#subheadline2 {
+        display: flex;
         font-weight: 400;
         font-size: 21px;
         line-height: 23px;
@@ -254,6 +255,5 @@ input {
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid #FFFCF3;
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-        blinkTextCursor 600ms steps(44) infinite normal;
+    animation: typewriter 3s steps(68, end) 1s 1 normal both, blinkTextCursor 600ms steps(68) infinite normal;
 }

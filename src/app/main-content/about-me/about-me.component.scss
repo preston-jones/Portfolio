@@ -32,7 +32,7 @@ section {
     position: relative;
     display: flex;
     justify-content: space-between;
-    gap: 52px;
+    gap: 24px;
 }
 
 .textblock {
@@ -69,15 +69,19 @@ section {
 }
 
 .img-container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../../assets/imgs/background-profil.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    height: 100%;
 }
 
 img {
     width: 540px;
-    height: 533px;
+    height: 100%;
     object-fit: contain;
     z-index: 1;
     filter: drop-shadow(1px -4px 10px #1b181983);
