@@ -13,22 +13,10 @@ footer {
     background-color: #1b1819;
 }
 
-.footer-top {
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    >p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 23px;
-    }
 }
 
 .legal-notice {
@@ -46,6 +34,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    height: 100%;
     gap: 16px;
 
     >a {
@@ -74,7 +63,9 @@ footer {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 16px;
 
     >.social-links {
         display: flex;
@@ -86,6 +77,12 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            >p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+            }
         }
 
         >img {
