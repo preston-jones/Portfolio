@@ -1,3 +1,5 @@
+@import url('./my-skills.responsive.scss');
+
 section {
     padding-top: 110px;
 }
@@ -63,36 +65,5 @@ section {
         transform: scale(1.1);
         transition: all 125ms ease-in-out;
         color: #FF9900;
-    }
-}
-
-
-@media screen and (max-width: 420px) {
-
-    .headline {
-        text-wrap: nowrap;
-
-        >h2 {
-            font-size: 45px;
-            line-height: 45px;
-            font-weight: 800;
-        }
-    }
-
-    .skill {
-        gap: 24px;
-    }
-
-    .skill {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-    
-        >img {
-            height: 56px;
-            object-fit: contain;
-        }
     }
 }

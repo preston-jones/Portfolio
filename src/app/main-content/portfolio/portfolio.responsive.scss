@@ -1,0 +1,21 @@
+@media screen and (max-width: 420px) {
+
+    .headline {
+        text-wrap: nowrap;
+        margin-bottom: 80px;
+
+        >h2 {
+            font-size: 45px;
+            line-height: 45px;
+            font-weight: 800;
+        }
+
+        >p {
+            text-wrap: wrap;
+        }
+    }
+
+    .content {
+        gap: 160px;
+    }
+}

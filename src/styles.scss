@@ -1,125 +1,9 @@
-/* -- FONTS -- */
-/* syne-regular - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../src/assets/fonts/syne-v22-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+@import url('./assets/fonts/fonts.scss');
+@import url('./styles.animations.scss');
+@import url('./styles.responsive.scss');
+@import '../node_modules/aos/dist/aos.css';
 
-/* syne-500 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../src/assets/fonts/syne-v22-latin-500.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* syne-600 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../src/assets/fonts/syne-v22-latin-600.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* syne-700 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../src/assets/fonts/syne-v22-latin-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* syne-800 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: 800;
-  src: url('../src/assets/fonts/syne-v22-latin-800.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* overpass-300 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../src/assets/fonts/overpass-v13-latin-300.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* overpass-regular - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../src/assets/fonts/overpass-v13-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* overpass-500 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../src/assets/fonts/overpass-v13-latin-500.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* overpass-600 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../src/assets/fonts/overpass-v13-latin-600.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* overpass-700 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../src/assets/fonts/overpass-v13-latin-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* rock-salt-regular - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rock Salt';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../src/assets/fonts/rock-salt-v22-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
+/* -- FONT-FAMILY -- */
 .font-syne {
   font-family: 'Syne', sans-serif;
 }
@@ -143,9 +27,6 @@
   height: 103px;
 }
 
-/* -- ANIMATION OF SCROLL -- */
-@import '../node_modules/aos/dist/aos.css';
-
 /* -- GLOBAL STYLES -- */
 * {
   margin: 0;
@@ -156,6 +37,11 @@
 body {
   font-family: 'Overpass', sans-serif;
   background-color: #FFFCF3;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 app-main-content,
@@ -192,7 +78,6 @@ a {
 }
 
 /* -- DIALOG -- */
-
 .mat-mdc-dialog-surface,
 .mdc-dialog__surface {
   display: flex;
@@ -201,7 +86,6 @@ a {
 }
 
 /* -- BUTTONS -- */
-
 .btn-prim {
   display: flex;
   justify-content: center;
@@ -236,8 +120,7 @@ footer {
   padding-left: 100px;
 }
 
-/* -- Scroll Effects -- */
-
+/* -- ANIMATION OF SCROLL -- */
 .headline-color {
   transition: color 125ms ease-in-out;
   color: #FF9900 !important;
@@ -255,114 +138,4 @@ footer {
 .draw-frame-effect:hover {
   --_i: 100%;
   transition: 125ms, mask-size 125ms 125ms;
-}
-
-/* -- ANIMATIONS -- */
-@keyframes arrowTopDown {
-  from {
-    transform: translateY(-200px);
-  }
-
-  to {
-    transform: translateY(200px);
-  }
-}
-
-.slide-to-right-animation {
-  opacity: 0;
-  animation: 1.5s slide-to-right 0s forwards;
-  transform: translateX(-100%);
-}
-
-@keyframes slide-to-right {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-}
-
-.slide-to-left-animation {
-  opacity: 0;
-  animation: 2s slide-to-left 0s forwards;
-  transform: translateX(100%);
-}
-
-@keyframes slide-to-left {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-}
-
-.slide-down-animation {
-  opacity: 0;
-  animation: 2s slide-down 0s forwards;
-  transform: translateY(-250%);
-}
-
-@keyframes slide-down {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.diagonal-left-animation {
-  animation: 1.5s diagonal-left 0s forwards;
-  transform: translateY(-250%);
-}
-
-@keyframes diagonal-left {
-  to {
-    transform: translate3d(100px, -100px, 0);
-  }
-}
-
-.grow-animation {
-  animation: grow 1s ease-out forwards;
-  transform: scale(1);
-}
-
-@keyframes grow {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-@media screen and (max-width: 390px) {
-
-  section,
-  header,
-  footer {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
-  @media screen and (max-width: 1360px) {
-
-    section,
-    header,
-    footer {
-      padding-right: 48px;
-      padding-left: 48px;
-    }
-  }
 }

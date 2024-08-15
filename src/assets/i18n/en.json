@@ -80,10 +80,67 @@
             "button": {
                 "label": "Send Message"
             }
+        }
+    },
+    "footer": {
+        "imprint": {
+            "title": "Lagal notice"
+        }
+    },
+    "imprint": {
+        "title": "Imprint",
+        "subtitle": "Responsible according to § 5 TMG is:"
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "preamble": {
+            "paragraph1": "Personal data (usually referred to just as 'data' below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.",
+            "paragraph2": "Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the 'GDPR'), 'processing' refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.",
+            "paragraph3": "The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.",
+            "structure": {
+                "title": "Our privacy policy is structured as follows:",
+                "list": {
+                    "section1": "1. Information about the person responsible",
+                    "section2": "2. The rights of users and data subjects",
+                    "section3": "3. Information about the data processing"
+                }
+            }
         },
-        "footer": {
-            "imprint": {
-                "title": "Lagal notice"
+        "section1": {
+            "title": "I. Information about the person responsible",
+            "paragraph1": "The responsible provider of this website in terms of data protection law is:",
+            "phone": "Phone: ",
+            "mail": "E-Mail: "
+        },
+        "section2": {
+            "title": "II. The rights of users and data subjects",
+            "paragraph1": "With regard to the data processing to be described in more detail below, users and data subjects have the right",
+            "list": {
+                "point1": "to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR)",
+                "point2": "to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR)",
+                "point3": "to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR",
+                "point4": "to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR)",
+                "point5": "to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR)."
+            },
+            "paragraph2": "In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.",
+            "paragraph3": "Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller's future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible."
+        },
+        "section3": {
+            "title": "III. Information about the data processing",
+            "paragraph1": "Your data processed when using this website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.",
+            "paragraph2": {
+                "title": "Contact",
+                "content1": "If you contact us via email or the contact form, the data you provide will be used for the purpose of processing your request. We must have this data in order to process and answer your inquiry; otherwise we will not be able to answer it in full or at all.",
+                "content2": "The legal basis for this data processing is Art. 6 Para. 1 lit. b) GDPR.",
+                "content3": "Your data will be deleted once we have fully answered your inquiry and there is no further legal obligation to store your data, such as if an order or contract resulted therefrom."
+            },
+            "paragraph3": {
+                "title": "LinkedIn",
+                "content": "LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland, a subsidiary of LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085 USA."
+            },
+            "paragraph4": {
+                "title": "GitHub",
+                "content": "GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA, a subsidiary of Microsoft Corporation."
             }
         }
     }

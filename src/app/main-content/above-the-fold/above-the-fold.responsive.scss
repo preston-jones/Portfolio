@@ -1,0 +1,27 @@
+@media screen and (max-width: 960px) {
+
+    h1 {
+        font-size: 90px;
+        line-height: 90px;
+        font-weight: 800;
+    }
+
+    .headline-underline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 16px;
+        gap: 16px;
+
+        >hr {
+            border-top: 3px solid #1b1819;
+            width: 160px;
+        }
+
+        >p {
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 21px;
+        }
+    }
+}

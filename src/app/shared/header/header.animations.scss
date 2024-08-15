@@ -1,0 +1,101 @@
+/* --- HEADER ANIMATIONS --- */
+
+@keyframes menu-slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 100;
+    }
+}
+
+@keyframes menu-slide-out {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 100;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes link-hover-animation {
+    0% {
+        background-image: url('../../../assets/animation/link_hover_default.png');
+    }
+
+    50% {
+        background-image: url('../../../assets/animation/link_hover_variant1.png');
+    }
+
+    100% {
+        background-image: url('../../../assets/animation/link_hover_variant2.png');
+    }
+}
+
+@keyframes link-hover-animation-reverse {
+    0% {
+        background-image: url('../../../assets/animation/link_hover_variant2.png');
+    }
+
+    50% {
+        background-image: url('../../../assets/animation/link_hover_variant1.png');
+    }
+
+    100% {
+        background-image: url('../../../assets/animation/link_hover_default.png');
+    }
+}
+
+@keyframes icon-animate-open {
+    0% {
+        background-image: url('./../../../assets/animation/menue_default.png');
+    }
+
+    25% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    50% {
+        background-image: url('./../../../assets/animation/menue_2.png');
+    }
+
+    75% {
+        background-image: url('./../../../assets/animation/menue_3.png');
+    }
+
+    100% {
+        background-image: url('./../../../assets/animation/menue_4.png');
+    }
+}
+
+@keyframes icon-animate-close {
+    0% {
+        background-image: url('./../../../assets/animation/menue_4.png');
+    }
+
+    25% {
+        background-image: url('./../../../assets/animation/menue_3.png');
+    }
+
+    50% {
+        background-image: url('./../../../assets/animation/menue_2.png');
+    }
+
+    75% {
+        background-image: url('./../../../assets/animation/menue_1.png');
+    }
+
+    100% {
+        background-image: url('./../../../assets/animation/menue_default.png');
+    }
+}

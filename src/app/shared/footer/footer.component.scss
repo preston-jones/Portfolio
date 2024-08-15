@@ -1,3 +1,5 @@
+@import url('./footer.responsive.scss');
+
 footer {
     width: 100%;
     display: flex;
@@ -90,42 +92,6 @@ footer {
             width: 40px;
             height: 40px;
             object-fit: contain;
-        }
-    }
-}
-
-@media screen and (max-width: 420px) {
-
-    footer {
-        gap: 24px;
-    }
-
-    .footer-top {
-        flex-direction: column-reverse;
-        gap: 24px;
-
-        >.social-links {
-            width: 100%;
-        }
-
-        >.section-left {
-            align-items: center;
-            gap: 24px;
-
-            >#copyright {
-                font-weight: 300;
-                font-size: 23px;
-                line-height: 23px;
-            }
-        }
-    }
-
-    .footer-bottom {
-        justify-content: center;
-
-        >p {
-            font-size: 16px;
-            line-height: 19.2px;
         }
     }
 }

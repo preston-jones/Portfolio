@@ -10,7 +10,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
     TranslateModule
   ],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss',]
 })
 export class HeaderComponent {
   openMenu: boolean = false;

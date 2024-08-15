@@ -1,0 +1,44 @@
+@keyframes change-color-animation {
+    0% {
+        color: #FFFCF3;
+    }
+
+    50% {
+        color: #FF9900;
+    }
+
+    100% {
+        color: #FFFCF3;
+    }
+}
+
+@keyframes back-to-top-animation {
+    0% {
+        background-image: url('./../../../assets/animation/arrow_up_default.png');
+    }
+
+    100% {
+        background-image: url('./../../../assets/animation/arrow_up_variant.png');
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        // width: 24em;
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}

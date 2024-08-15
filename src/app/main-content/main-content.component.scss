@@ -1,6 +1,4 @@
-// .margin-btm {
-//     margin-bottom: 64px;
-// }
+@import url('./main-content.responsive.scss');
 
 app-above-the-fold {
     height: 100vh;
@@ -12,14 +10,6 @@ app-contact {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1064px; /*wird noch dynamisch gemacht*/
     display: flex;
     justify-content: center;
-}
-
-@media screen and (max-width: 420px) {
-
-    app-contact {
-        height: auto;
-    }
 }

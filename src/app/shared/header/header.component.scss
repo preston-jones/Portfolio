@@ -1,3 +1,6 @@
+@import url('./header.animations.scss');
+@import url('./header.responsive.scss');
+
 header {
     width: 100%;
     display: flex;
@@ -51,11 +54,13 @@ header {
     gap: 4px;
 }
 
-.translate-button-de {
+.translate-button-de,
+.translate-button-en {
     font-family: Overpass;
     font-size: 21px;
     line-height: 21px;
     height: 32px;
+    width: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +68,13 @@ header {
     &:hover {
         cursor: pointer;
         font-weight: bold;
+        color: #FF9900;
     }
+}
+
+.translate-button-active {
+    font-weight: bold;
+    color: #FF9900;
 }
 
 .translate-button-divider {
@@ -74,25 +85,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 4px;
 }
 
-.translate-button-en {
-    font-family: Overpass;
-    font-size: 21px;
-    line-height: 21px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        cursor: pointer;
-        font-weight: bold;
-    }
+.width-auto {
+    width: auto;
 }
 
-.bold {
-    font-weight: 800;
+.width-32 {
+    width: 32px;
 }
 
 #burger-icon {
@@ -278,153 +279,5 @@ menu {
             height: 40px;
             object-fit: contain;
         }
-    }
-}
-
-/* --- ANIMATIONS --- */
-
-@keyframes link-hover-animation {
-    0% {
-        background-image: url('../../../assets/animation/link_hover_default.png');
-    }
-
-    50% {
-        background-image: url('../../../assets/animation/link_hover_variant1.png');
-    }
-
-    100% {
-        background-image: url('../../../assets/animation/link_hover_variant2.png');
-    }
-}
-
-@keyframes link-hover-animation-reverse {
-    0% {
-        background-image: url('../../../assets/animation/link_hover_variant2.png');
-    }
-
-    50% {
-        background-image: url('../../../assets/animation/link_hover_variant1.png');
-    }
-
-    100% {
-        background-image: url('../../../assets/animation/link_hover_default.png');
-    }
-}
-
-@keyframes icon-animate-open {
-    0% {
-        background-image: url('./../../../assets/animation/menue_default.png');
-    }
-
-    25% {
-        background-image: url('./../../../assets/animation/menue_1.png');
-    }
-
-    50% {
-        background-image: url('./../../../assets/animation/menue_2.png');
-    }
-
-    75% {
-        background-image: url('./../../../assets/animation/menue_3.png');
-    }
-
-    100% {
-        background-image: url('./../../../assets/animation/menue_4.png');
-    }
-}
-
-@keyframes icon-animate-close {
-    0% {
-        background-image: url('./../../../assets/animation/menue_4.png');
-    }
-
-    25% {
-        background-image: url('./../../../assets/animation/menue_3.png');
-    }
-
-    50% {
-        background-image: url('./../../../assets/animation/menue_2.png');
-    }
-
-    75% {
-        background-image: url('./../../../assets/animation/menue_1.png');
-    }
-
-    100% {
-        background-image: url('./../../../assets/animation/menue_default.png');
-    }
-}
-
-@keyframes menu-slide-in {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-        z-index: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-        z-index: 100;
-    }
-}
-
-@keyframes menu-slide-out {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-        z-index: 100;
-    }
-
-    to {
-        transform: translateY(-100%);
-        opacity: 0;
-        z-index: 0;
-    }
-}
-
-@media screen and (max-height: 720px) {
-    header {
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-
-    .menu-container {
-        padding-top: 0px;
-
-        // >.menu-content {
-        //     gap: 8px;
-        // }
-    }
-
-    .menu-link {
-        padding: 8px;
-
-        >a {
-            font-size: 56px;
-            line-height: 56px;
-        }
-    }
-
-    .menu-bottom {
-        padding: 0 32px 16px 32px;
-    }
-
-    #mailto-headline {
-        font-size: 48px;
-        line-height: 48px;
-    }
-
-    #mail-link {
-        font-size: 16px;
-        line-height: 16px;
-    }
-
-    .mailto {
-        gap: 8px;
-    }
-
-    .social-links {
-        gap: 16px;
     }
 }
