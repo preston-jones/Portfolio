@@ -112,21 +112,21 @@ form {
         border: 2px solid transparent;
         outline: none;
         border-bottom: 2px solid #FFFCF3;
-        color: #FFFCF3;
         width: 100%;
         display: flex;
         justify-content: flex-start;
         padding: 15px 8px;
-        text-align: left;
+        border-radius: 2px;
+        color: #FFFCF3;
         font-family: 'Overpass';
+        font-weight: 400;
         font-size: 16px;
         line-height: 23px;
-        font-weight: 400;
-        border-radius: 2px;
+        text-align: left;
 
         &:hover {
             cursor: pointer;
-            border: 2px solid #FFFCF3;
+            border: 2px solid #FF9900;
         }
 
         &:focus {
@@ -146,12 +146,17 @@ form {
         top: 15px !important;
     }
 
-    ::placeholder {
+    input::placeholder, textarea::placeholder {
         color: #FFFCF3;
         font-family: 'Overpass';
         font-weight: 400;
         font-size: 16px;
         line-height: 23px;
+        text-align: left;
+    }
+
+    input:focus::placeholder, textarea:focus::placeholder {
+        opacity: 0;
     }
 }
 
