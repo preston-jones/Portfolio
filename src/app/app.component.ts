@@ -25,11 +25,7 @@ export class AppComponent {
 
 
   @HostListener('window:scroll', ['$event'])
-  function() {
-    console.log(window.scrollY);
-    console.log(this.userHasScrolled);
-    
-
+  function() {    
     if (window.scrollY >= 60) {
       this.userHasScrolled = true;
     }

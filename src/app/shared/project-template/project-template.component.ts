@@ -108,11 +108,9 @@ export class ProjectTemplateComponent implements AfterViewInit {
 
   onMouseEnter() {
     this.mouseEnter = true;
-    console.log(this.mouseEnter);
   }
 
   onMouseLeave() {
     this.mouseEnter = false;
-    console.log(this.mouseEnter);
   }
 }
