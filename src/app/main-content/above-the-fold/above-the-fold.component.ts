@@ -6,7 +6,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  styleUrls: ['./above-the-fold.component.scss', './above-the-fold.responsive.scss']
 })
 
 

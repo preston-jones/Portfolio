@@ -1,19 +1,26 @@
-@media screen and (max-width: 390px) {
-
+@media screen and (max-width: 1200px) {
     section,
     header,
     footer {
-      padding-right: 25px;
-      padding-left: 25px;
+      padding-right: 56px;
+      padding-left: 56px;
     }
+  }
   
-    @media screen and (max-width: 1360px) {
+  @media screen and (max-width: 960px) {
+    section,
+    header,
+    footer {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
   
-      section,
-      header,
-      footer {
-        padding-right: 48px;
-        padding-left: 48px;
-      }
+  @media screen and (max-width: 480px) {
+    section,
+    header,
+    footer {
+      padding-right: 21px;
+      padding-left: 21px;
     }
   }

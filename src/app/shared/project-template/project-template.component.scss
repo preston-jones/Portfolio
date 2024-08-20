@@ -18,9 +18,29 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 400px;
+    // gap: 64px;
 
     >a {
+        position: relative;
+        display: block;
         width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: all 225ms ease-in-out;
+        filter: grayscale(100%);
+
+        &:hover {
+            transform: scale(1.025);
+            animation: drop-shadow-animation 225ms ease-in-out forwards;
+            transition: all 225ms ease-in-out;
+        }
+
+        &:not(:hover) {
+            animation: drop-shadow-animation-reverse 225ms ease-in-out forwards;
+        }
     }
 }
 
@@ -32,46 +52,6 @@
     object-fit: cover;
     // padding: 20px 0;
     z-index: 1;
-}
-
-.frame {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 620px;
-    height: 345px;
-    z-index: 2;
-
-    &:hover {
-        cursor: pointer;
-        opacity: 1;
-        cursor: pointer;
-        --_i: 100%;
-        transition: 125ms, mask-size 125ms 125ms;
-    }
-}
-
-.frame-left {
-    top: 20px;
-    left: 20px;
-}
-
-.frame-right {
-    top: 20px;
-    right: 20px;
-}
-
-.filter-grayscale {
-    filter: grayscale(100%);
-}
-
-[data-aos="change-to-color"] {
-    // filter: grayscale(100%);
-
-    &.aos-animate {
-        filter: grayscale(0%);
-    }
 }
 
 .flex-row-reverse {
@@ -120,11 +100,10 @@
 
 .project-info {
     display: flex;
-    justify-content: flex-start;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 61px 0 0 0;
-    gap: 32px;
+    height: 100%;
 
     >span,
     p {
@@ -137,9 +116,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
+    gap: 21px;
     height: 339px;
-    width: 501px;
+    width: clamp(360px, 80%, 450px);
 
     >h3 {
         font-weight: 800;
@@ -172,20 +151,25 @@
 
 .project-links {
     display: flex;
-    justify-content: center;
-    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 
     >.projectlink-btn {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 207px;
-        height: 68px;
+        // width: 180px;
+        width: 36%;
+        height: 64px;
         border: #1b1819 4px solid;
-        padding: 20px 60px;
+        // padding: 20px 60px;
+        padding: 16px 48px;
+        padding-left: 50px;
         background-color: transparent;
         font-weight: 400;
-        font-size: 21px;
+        // font-size: 21px;
+        font-size: 1.2rem;
         line-height: 23px;
         white-space: nowrap;
         transition: all 125ms ease-in-out;
@@ -194,9 +178,17 @@
         &:hover {
             cursor: pointer;
             transition: all 125ms ease-in-out;
-            width: 240px;
-            padding: 20px 80px;
             font-weight: 700;
+        }
+
+        &:hover:nth-child(odd) {
+            width: 45%;
+            padding-left: 50px;
+        }
+
+        &:hover:nth-child(even) {
+            width: 45%;
+            padding-right: 50px;
         }
     }
 }

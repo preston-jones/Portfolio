@@ -11,8 +11,7 @@
 
 h1 {
     font-weight: 800;
-    font-size: 120px;
-    line-height: 120px;
+    font-size: clamp(32px, 10vw, 120px);
     text-align: center;
 }
 
@@ -49,24 +48,24 @@ h1 {
 }
 
 .headline-bottom {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
-    // height: 300px;
-    // padding: 32px 0;
     margin-top: -72px;
+    font-size: clamp(1.1rem, 2.5vw, 1.31rem);
 }
 
 .headline-email {
+    position: absolute;
+    left: -90px;
     transform: rotate(-90deg);
-    height: 100%;
+    // height: 90%;
 
     >a {
         text-decoration: none;
         font-weight: 300;
-        font-size: 21px;
-        line-height: 23px;
         color: #1b1819;
 
         &:hover {
@@ -81,12 +80,13 @@ h1 {
     align-items: center;
     flex-direction: column;
     height: 100%;
+    width: clamp(56px, 8vw, 115px);
 
     >#scroll-down-text {
         width: 100%;
         font-weight: 300;
-        font-size: 21px;
-        line-height: 23px;
+        // font-size: 21px;
+        // line-height: 23px;
         text-align: center;
 
         &:hover {
@@ -97,6 +97,11 @@ h1 {
 
 .arrow-container {
     overflow: hidden;
+
+    >img {
+        width: 100%;
+        object-fit: contain;
+    }
 
     >.arrow-down {
         animation: arrowTopDown 1.5s ease-out;

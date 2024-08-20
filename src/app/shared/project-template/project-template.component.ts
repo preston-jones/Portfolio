@@ -12,7 +12,7 @@ import AOS from 'aos';
     TranslateModule
   ],
   templateUrl: './project-template.component.html',
-  styleUrl: './project-template.component.scss'
+  styleUrls: ['./project-template.component.scss', './project-template.responsive.scss']
 })
 export class ProjectTemplateComponent implements AfterViewInit {
 

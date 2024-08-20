@@ -11,3 +11,21 @@
         transform: translateX(0);
     }
 }
+
+@keyframes drop-shadow-animation {
+    0% {
+        filter: grayscale(100%) drop-shadow(1px -4px 10px #1b181900);
+    }
+    100% {
+        filter: grayscale(0%) drop-shadow(1px -4px 10px #1b181983);
+    }
+}
+
+@keyframes drop-shadow-animation-reverse {
+    0% {
+        filter: grayscale(0%) drop-shadow(1px -4px 10px #1b181983);
+    }
+    100% {
+        filter: grayscale(100%) drop-shadow(1px -4px 10px #1b181900);
+    }
+}

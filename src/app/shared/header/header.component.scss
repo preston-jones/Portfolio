@@ -35,7 +35,7 @@ header {
         }
     }
 
-    >.header-section-left {
+    >.header-section-right {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,12 +43,15 @@ header {
     }
 }
 
-.hiddeMenu {
+.display-none {
     display: none;
 }
 
-#translate-button-container {
+.display-flex {
     display: flex;
+}
+
+#translate-button-container {
     justify-content: center;
     align-items: center;
     gap: 4px;
@@ -189,7 +192,7 @@ menu {
     >a {
         font-family: Syne;
         font-weight: 700;
-        font-size: 72px;
+        font-size: clamp(32px, 5rem, 72px);
         line-height: 72px;
         color: #1b1819;
     }

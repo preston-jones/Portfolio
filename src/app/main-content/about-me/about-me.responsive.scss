@@ -1,15 +1,73 @@
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
 
-    .headline {
+    .textblock {
 
-        >h2 {
-            // font-size: 45px;
-            // line-height: 45px;
+        >.introduction {
+            margin-bottom: 16px;
+        }
+
+        >p {
+            font-family: Overpass;
+            text-wrap: wrap;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 135%;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        >.introduction::first-letter {
+            font-size: 32px;
             font-weight: 800;
+            color: #1b1819;
+        }
+
+        >.btn-prim {
+            font-size: 20px;
+            margin-top: 32px;
         }
     }
 
+    img {
+        width: 480px;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+
     .content {
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    #aboutme-quote {
+        font-size: 21px;
+    }
+
+    .textblock {
+        align-items: center;
+        gap: 8px;
+    }
+
+    img {
+        width: 65%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #aboutme-quote {
+        font-size: clamp(16px, 1.2rem, 20px);
+    }
+
+    .textblock {
+
+        >p {
+            font-size: clamp(16px, 1.1rem, 20px);
+        }
     }
 }

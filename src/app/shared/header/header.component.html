@@ -3,8 +3,8 @@
         <img id="logo-header" src="./../../../assets/icons/logo.png">
         <span>PJ</span>
     </a>
-    <div class="header-section-left">
-        <div id="translate-button-container">
+    <div class="header-section-right">
+        <div id="translate-button-container" class=" display-none">
             <span class="translate-button-en width-auto" (click)="changeLanguage('en')"
                 [class.translate-button-active]="currentLang ==='en'">ENG</span>
             <span class="translate-button-divider">|</span>
@@ -16,7 +16,7 @@
         </div>
     </div>
 </header>
-<menu [ngClass]="{'openMenu': openMenu, 'closeMenu': !openMenu, 'hiddeMenu': !initialized}">
+<menu [ngClass]="{'openMenu': openMenu, 'closeMenu': !openMenu, 'display-none': !initialized}">
     <div class="menu-container" [class.menu-animation]="openMenu">
         <div class="menu-content">
             <div class="menu-link">

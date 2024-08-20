@@ -43,3 +43,23 @@
         gap: 16px;
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    #burger-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    header {
+        padding-top: 21px;
+        padding-bottom: 21px;
+
+        >a {
+
+            #logo-header {
+                height: 36px;
+            }
+        }
+    }
+}
