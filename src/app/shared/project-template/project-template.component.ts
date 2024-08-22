@@ -53,7 +53,7 @@ export class ProjectTemplateComponent implements AfterViewInit {
         },
         {
           title: 'GitHub',
-          url: 'http://join.projects.prestonjones.dev/'
+          url: 'https://github.com/preston-jones/Join'
         }
       ]
     },
