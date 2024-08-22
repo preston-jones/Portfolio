@@ -24,6 +24,8 @@ export class ContactComponent {
   aboutMeScrolledY = false;
   policy: boolean = false;
   http = inject(HttpClient);
+  scrHeight: any;
+  scrWidth: any;
 
   contactData = {
     name: "",
@@ -74,6 +76,13 @@ export class ContactComponent {
     else {
       this.aboutMeScrolledY = false
     }
+  }
+
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+    this.scrHeight = window.innerHeight;
+    this.scrWidth = window.innerWidth;
   }
 
 

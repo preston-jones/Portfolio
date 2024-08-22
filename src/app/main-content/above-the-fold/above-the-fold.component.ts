@@ -7,7 +7,7 @@ import { HostListener } from "@angular/core";
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './above-the-fold.component.html',
-  styleUrls: ['./above-the-fold.component.scss', './above-the-fold.responsive.scss']
+  styleUrls: ['./above-the-fold.component.scss', './above-the-fold.responsive.scss', '../../../styles.animations.scss']
 })
 
 

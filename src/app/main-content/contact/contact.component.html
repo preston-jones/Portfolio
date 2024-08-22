@@ -4,7 +4,7 @@
     </div>
     <div class="subheadline">
         <span id="subheadline1">{{ "contact.subtitle" | translate }}</span>
-        <span id="subheadline2"><span [class.anim-typewriter]="aboutMeScrolledY">{{ "contact.description" | translate }}</span></span>
+        <span id="subheadline2"><span [class.anim-typewriter]="aboutMeScrolledY && scrWidth >= 490">{{ "contact.description" | translate }}</span></span>
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete>
         <div class="input-container">
