@@ -12,7 +12,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
     TranslateModule
   ],
   templateUrl: './privacy.component.html',
-  styleUrl: './privacy.component.scss'
+  styleUrls: ['./privacy.component.scss', './privacy.responsive.scss']
 })
 export class PrivacyComponent {
 

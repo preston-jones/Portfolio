@@ -1,3 +1,49 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 960px) {
 
+    section {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    
+    .skill {
+        >img {
+            height: 65px;
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+
+    .skill {
+        >img {
+            height: 55px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .skill {
+        >img {
+            height: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .skills {
+        padding: 0px;
+        row-gap: 32px;
+    }
+
+    .skill {
+        flex: none;
+
+        >img {
+            height: 36px;
+        }
+    }
 }

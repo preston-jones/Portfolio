@@ -1,5 +1,6 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-about-me',
@@ -12,12 +13,21 @@ export class AboutMeComponent {
 
   currentLang: string;
   aboutMeScrolledY = false;
+  scrHeight: any;
+  scrWidth: any;
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+    this.scrHeight = window.innerHeight;
+    this.scrWidth = window.innerWidth;
+  }
 
 
   constructor(private translate: TranslateService) {
     const savedLang = localStorage.getItem('preferredLanguage');
     this.currentLang = savedLang || 'en';
     this.translate.use(this.currentLang);
+    this.getScreenSize();
   }
 
 
@@ -32,5 +42,11 @@ export class AboutMeComponent {
     else {
       this.aboutMeScrolledY = false
     }
+  }
+
+  
+  @HostListener('window:scroll', ['$event'])
+  initAos() {
+    AOS.init();
   }
 }

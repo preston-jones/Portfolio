@@ -7,3 +7,32 @@
         margin-right: 100px;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    [data-aos="arrow-left-animation"] {
+        height: 240px;
+    }
+    
+    [data-aos="arrow-right-animation"] {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    [data-aos="arrow-left-animation"] {
+        margin-left: 0px;
+    }
+
+    [data-aos="arrow-right-animation"] {
+        margin-right: 0px;
+    }
+
+    [data-aos="arrow-left-animation"] {
+        height: 160px;
+    }
+    
+    [data-aos="arrow-right-animation"] {
+        height: 160px;
+    }
+}

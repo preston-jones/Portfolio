@@ -67,5 +67,11 @@
 
 @media screen and (max-width: 480px) {
 
-   
+   .above-the-fold {
+    gap: 64px;
+
+    >.headline-container {
+        margin-top: 100px;
+    }
+   }
 }

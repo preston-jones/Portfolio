@@ -7,7 +7,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 110px;
 }
 
 .headline {
@@ -39,12 +38,14 @@ section {
     align-items: center;
     gap: 16px;
     font-family: Overpass;
+    width: 100%;
 
     >#subheadline1 {
         font-weight: 700;
         font-size: 32px;
         line-height: 32px;
         color: #FF9900;
+        text-align: center;
     }
 
     >#subheadline2 {
@@ -53,6 +54,7 @@ section {
         font-size: 21px;
         line-height: 23px;
         color: #FFFCF3;
+        text-align: center;
     }
 }
 
@@ -169,7 +171,7 @@ form {
     cursor: pointer;
     width: 269px;
     height: 68px;
-    border: 4px solid #FFFCF3;
+    border: 3px solid #FFFCF3;
     font-family: 'Overpass';
     font-weight: 400;
     font-size: 21px;
@@ -181,7 +183,7 @@ form {
     &:disabled {
         opacity: 30%;
         cursor: not-allowed;
-        border: 4px solid #BBBBBB;
+        border: 3px solid #BBBBBB;
         // background-color: #bbbbbb41;
         color: #BBBBBB;
     }

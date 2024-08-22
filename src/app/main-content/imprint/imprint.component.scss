@@ -1,5 +1,6 @@
 @import url(../../main-content/contact/contact.component.scss);
 @import url(../../main-content/main-content.component.scss);
+@import url('./imprint.responsive.scss');
 
 section {
     display: flex;
@@ -15,14 +16,14 @@ section {
         justify-content: center;
         align-items: flex-start;
         font-family: Overpass;
-        font-size: 21px;
+        font-size: clamp(1rem, 5.4vw, 21px);
         line-height: 135%;
         gap: 48px;
         width: 100%;
 
         >h2 {
             font-weight: 800;
-            font-size: 56px;
+            font-size: clamp(1rem, 10vw, 56px);
             line-height: 56px;
             text-align: left;
         }

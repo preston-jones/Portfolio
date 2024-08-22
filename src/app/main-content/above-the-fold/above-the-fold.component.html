@@ -7,6 +7,9 @@
             <p>Preston Jones</p>
         </div>
     </div>
+    @if (scrWidth <= 960) {
+        <a class="btn-prim btn-font" href="#contact">{{ "aboveTheFold.sendMessageBtn" | translate }}</a>
+    }
     <div class="headline-bottom slide-down-animation">
         <div class="headline-email">
             <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!" target="_blank">

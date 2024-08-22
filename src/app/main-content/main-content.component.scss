@@ -13,3 +13,11 @@ app-contact {
     display: flex;
     justify-content: center;
 }
+
+#aboutme, #myskills, #portfolio {
+    scroll-margin-top: 110px;
+}
+
+#contact {
+    scroll-margin-top: 30px;
+}

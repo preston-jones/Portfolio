@@ -1,6 +1,7 @@
 {
     "aboveTheFold": {
-        "title": "Entwickler"
+        "title": "Entwickler",
+        "sendMessageBtn": "Nachricht senden"
     },
     "menu": {
         "navLinks": {
@@ -13,12 +14,11 @@
     "about": {
         "title": "Über mich",
         "quote": "Jede großartige Idee beginnt mit einer einfachen Zeile Code.",
-        "introduction": "Hi, ich bin Preston!",
+        "introduction": "Hi, ich bin Preston,",
         "description": {
-            "paragraph1": "Frontend Entwickler und Musiker aus Leidenschaft.",
-            "paragraph2": "Mit über zehn Jahren Erfahrung als professioneller Sänger und Kontrabassist bringe ich eine einzigartige Kombination aus Kreativität und technischer Expertise mit und habe gelernt, wie man aus einer einfachen Idee etwas Großes entstehen lässt – seien es ein paar Noten, eine Melodie oder ein paar Zeilen Code. Diese kreative Herangehensweise ermöglicht es mir, beim Programmieren und Lösen komplexer Aufgaben neue Perspektiven einzunehmen und innovative Lösungen zu entwickeln.",
-            "paragraph3": "Während meiner Ausbildung als Frontend-Entwickler habe ich umfangreiche praktische Erfahrungen in der Entwicklung und Erstellung von Webseiten und Business-Apps gesammelt, insbesondere mit dem Framework Angular und TypeScript.",
-            "paragraph4": "Ich lade Sie herzlich ein, mein Portfolio zu erkunden und sich einen Eindruck von den Projekten zu verschaffen, die ich während meiner Ausbildung realisiert habe. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich darauf, von Ihnen zu hören."
+            "paragraph1": "Frontend Entwickler aus Leidenschaft.",
+            "paragraph2": "Während meiner Ausbildung als Frontend-Entwickler habe ich umfangreiche praktische Erfahrungen in der Entwicklung und Erstellung von Webseiten und Business-Apps gesammelt, insbesondere mit dem Framework Angular und TypeScript.",
+            "paragraph3": "Ich lade Sie herzlich ein, mein Portfolio und eine Auswahl meiner Projekte zu erkunden. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich darauf, von Ihnen zu hören."
         },
         "button": "Lass uns reden"
     },

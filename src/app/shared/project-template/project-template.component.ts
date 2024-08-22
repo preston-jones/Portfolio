@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../Interfaces/project.interfaces';
 import { TranslateModule } from '@ngx-translate/core';
@@ -97,6 +97,12 @@ export class ProjectTemplateComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
+    AOS.init();
+  }
+
+  
+  @HostListener('window:scroll', ['$event'])
+  initAos() {
     AOS.init();
   }
 

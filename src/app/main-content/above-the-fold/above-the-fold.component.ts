@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { HostListener } from "@angular/core";
 
 @Component({
   selector: 'app-above-the-fold',
@@ -13,11 +14,23 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class AboveTheFoldComponent {
 
   currentLang: string;
+  scrHeight:any;
+  scrWidth:any;
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+        this.scrHeight = window.innerHeight;
+        this.scrWidth = window.innerWidth;
+        console.log(this.scrHeight, this.scrWidth);
+  }
+
 
   constructor(private translate: TranslateService) {
     const savedLang = localStorage.getItem('preferredLanguage');
     this.currentLang = savedLang || 'en';
     this.translate.use(this.currentLang);
+
+    this.getScreenSize();
   }
 
 }

@@ -29,17 +29,17 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        transition: all 225ms ease-in-out;
-        filter: grayscale(100%);
+        filter: drop-shadow(1px -4px 5px #1b18192f) grayscale(100%);
 
         &:hover {
             transform: scale(1.025);
-            animation: drop-shadow-animation 225ms ease-in-out forwards;
-            transition: all 225ms ease-in-out;
+            animation: drop-shadow-animation 125ms ease-in-out forwards;
+            transition: all 125ms ease-in-out;
         }
 
         &:not(:hover) {
-            animation: drop-shadow-animation-reverse 225ms ease-in-out forwards;
+            animation: drop-shadow-animation-reverse 125ms ease-in-out forwards;
+            filter: drop-shadow(1px -4px 5px #1b18192f) grayscale(100%);
         }
     }
 }
@@ -162,7 +162,7 @@
         // width: 180px;
         width: 36%;
         height: 64px;
-        border: #1b1819 4px solid;
+        border: #1b1819 3px solid;
         // padding: 20px 60px;
         padding: 16px 48px;
         padding-left: 50px;

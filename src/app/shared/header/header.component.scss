@@ -187,12 +187,14 @@ menu {
     background-size: contain;
     background-repeat: no-repeat;
     transition: background-image 125ms ease-in-out;
+    background-position-y: bottom;
+    background-position-x: left;
     transition: color 125ms ease-in-out;
 
     >a {
         font-family: Syne;
         font-weight: 700;
-        font-size: clamp(32px, 5rem, 72px);
+        font-size: clamp(2rem, 12vw, 72px);
         line-height: 72px;
         color: #1b1819;
     }
@@ -241,14 +243,15 @@ menu {
     >#mailto-headline {
         font-family: 'Syne', sans-serif;
         font-weight: 800;
-        font-size: 56px;
+        // font-size: 56px;
+        font-size: clamp(1.1rem, 10vw, 56px);
         line-height: 56px;
     }
 
     >#mail-link {
         font-family: Overpass;
         font-weight: 300;
-        font-size: 21px;
+        font-size: clamp(1rem, 5.4vw, 21px);
         line-height: 23px;
     }
 

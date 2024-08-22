@@ -1,4 +1,4 @@
-<section id="aboutme">
+<section>
     <div class="headline">
         <h2 [class.headline-color]="aboutMeScrolledY">{{ "about.title" | translate }}</h2>
     </div>
@@ -10,9 +10,7 @@
             <p>{{ "about.description.paragraph2" | translate }}</p>
             <br>
             <p>{{ "about.description.paragraph3" | translate }}</p>
-            <br>
-            <p>{{ "about.description.paragraph4" | translate }}</p>
-            <a class="btn-prim" href="#contact">{{ "about.button" | translate }}</a>
+            <a class="btn-prim" href="#contact" [class.d-none]="scrWidth <= 960" >{{ "about.button" | translate }}</a>
         </div>
         <div class="img-container" data-aos="fade-left" data-aos-duration="1000">
             <img src="./../../../assets/imgs/portrait_2.png" alt="About me" class="image">

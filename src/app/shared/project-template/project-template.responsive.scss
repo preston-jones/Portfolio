@@ -41,33 +41,64 @@
     }
 }
 
-@media screen and (max-width: 480x) {
+@media screen and (max-width: 480px) {
 
     .project-template {
-        padding-top: 48px;
+        padding-top: 36px;
     }
 
     .project-counter {
-        font-size: 32px;
-        line-height: 32px;
+        font-size: 28px;
+        line-height: 28px;
     }
 
     .project-info-content {
         width: 100%;
+        font-size: 18px;
     }
 
     .project-info-content {
 
         >h3 {
-            font-size: 32px;
-            line-height: 32px;
+            font-size: 1.8rem;
+            line-height: 21px;
+        }
+    }
+
+    .technologie-list {
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .project-links {
+
+        .projectlink-btn {
+            font-size: 1.05rem;
+            height: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .project-template {
+        padding-top: 0px;
+    }
+
+    // .project-info {
+    //     margin-top: -100px;
+    // }
+
+    .project-info-content {
+        margin-top: -100px;
+        >h3 {
+            font-size: 28px;
+            line-height: 21px;
         }
     }
 }
 
 @media screen and (max-width: 320px) {
 
-    .project-template {
-        padding-top: 0px;
-    }
+
 }

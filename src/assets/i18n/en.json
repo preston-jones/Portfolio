@@ -1,6 +1,7 @@
 {
     "aboveTheFold": {
-        "title": "Developer"
+        "title": "Developer",
+        "sendMessageBtn": "Send A Message"
     },
     "menu": {
         "navLinks": {
@@ -13,12 +14,11 @@
     "about": {
         "title": "About Me",
         "quote": "Every great Idea starts with a simple line of code.",
-        "introduction": "Hi, I am Preston!",
+        "introduction": "Hi, I am Preston,",
         "description": {
-            "paragraph1": "Frontend developer and passionate musician.",
-            "paragraph2": "With over ten years of experience as a professional singer and double bass player, I bring a unique combination of creativity and technical expertise and have learned how to turn a simple idea into something great - be it a few notes, a melody or a few lines of code. This creative approach allows me to take new perspectives and develop innovative solutions when programming and solving complex tasks.",
-            "paragraph3": "During my training as a front-end developer, I gained extensive practical experience in developing and creating websites and business apps, especially with the Angular and TypeScript frameworks.",
-            "paragraph4": "I cordially invite you to explore my portfolio and get an impression of the projects I realized during my training. If you are interested in collaborating or just want to say hello, I look forward to hearing from you."
+            "paragraph1": "a passionate Frontend developer.",
+            "paragraph2": "During my training as a front-end developer, I gained extensive practical experience in developing and creating websites and business apps, especially with the Angular and TypeScript frameworks.",
+            "paragraph3": "I cordially invite you to explore my portfolio and a selection of my projects. If you are interested in collaborating or just want to say hello, I look forward to hearing from you."
         },
         "button": "Let's talk"
     },

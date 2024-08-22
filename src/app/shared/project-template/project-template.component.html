@@ -3,11 +3,11 @@
     @for ( project of projectList; track project.title) {
     <div class="project-template" [class.flex-row-reverse]="$index % 2 != 0" (mouseenter)="onMouseEnter()"
         (mouseleave)="onMouseLeave()">
-        <a href="{{ project.links[0].url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000" style="background-image: url('{{ project.img }}');">
+        <a href="{{ project.links[0].url }}" target="_blank" data-aos="zoom-in" data-aos-duration="500" style="background-image: url('{{ project.img }}');">
         </a>
         <div class="project-info" [class.project-info-default]="$index % 2 == 0"
             [class.project-info-reverse]="$index % 2 != 0"
-            [attr.data-aos]="$index % 2 != 0 ? 'fade-left' : 'fade-right'" data-aos-duration="1000">
+            [attr.data-aos]="$index % 2 != 0 ? 'fade-left' : 'fade-right'" data-aos-duration="500">
             <div class="project-info-content">
                 <h3 class="font-syne">{{ project.title }}</h3>
                 <div class="technologies">

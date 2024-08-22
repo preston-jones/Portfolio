@@ -14,7 +14,7 @@
 
 @keyframes drop-shadow-animation {
     0% {
-        filter: grayscale(100%) drop-shadow(1px -4px 10px #1b181900);
+        filter: drop-shadow(1px -4px 5px #1b18192f) grayscale(100%);
     }
     100% {
         filter: grayscale(0%) drop-shadow(1px -4px 10px #1b181983);
@@ -26,6 +26,6 @@
         filter: grayscale(0%) drop-shadow(1px -4px 10px #1b181983);
     }
     100% {
-        filter: grayscale(100%) drop-shadow(1px -4px 10px #1b181900);
+filter: drop-shadow(1px -4px 5px #1b18192f) grayscale(100%);
     }
 }

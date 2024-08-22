@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit } from '@angular/core'
+import { Component, Input, AfterViewInit, HostListener } from '@angular/core'
 import { CommonModule } from '@angular/common';
 import AOS from 'aos';
 
@@ -9,7 +9,7 @@ import AOS from 'aos';
     CommonModule
   ],
   templateUrl: './arrow.component.html',
-  styleUrl: './arrow.component.scss',
+  styleUrls: ['./arrow.component.scss', './arrow.responsive.scss'],
 })
 export class ArrowComponent implements AfterViewInit  {
 
@@ -26,6 +26,12 @@ export class ArrowComponent implements AfterViewInit  {
   }
 
   ngAfterViewInit() {
+    AOS.init();
+  }
+
+
+  @HostListener('window:scroll', ['$event'])
+  initAos() {
     AOS.init();
   }
 

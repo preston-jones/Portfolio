@@ -15,7 +15,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss', './contact.responsive.scss']
 })
 
 export class ContactComponent {

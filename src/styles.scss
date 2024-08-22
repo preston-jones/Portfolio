@@ -78,6 +78,14 @@ a {
   }
 }
 
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
 /* -- DIALOG -- */
 .mat-mdc-dialog-surface,
 .mdc-dialog__surface {
@@ -93,7 +101,7 @@ a {
   align-items: center;
   width: 207px;
   height: 68px;
-  border: #1b1819 4px solid;
+  border: #1b1819 3px solid;
   padding: 20px 60px;
   background-color: transparent;
   font-weight: 400;
@@ -165,8 +173,9 @@ footer {
 @media screen and (max-width: 768px) {
 
   .headline {
-    h2 {
-      font-size: clamp(1rem, 5vw, 72px) !important;
+
+    >h2 {
+      font-size: clamp(1rem, 10vw, 72px) !important;
       line-height: normal;
     }
   }
@@ -185,6 +194,14 @@ footer {
     footer {
       padding-right: 21px;
       padding-left: 21px;
+    }
+
+    .headline {
+
+      >h2 {
+        font-size: clamp(1rem, 10vw, 72px) !important;
+        line-height: normal;
+      }
     }
   }
 }

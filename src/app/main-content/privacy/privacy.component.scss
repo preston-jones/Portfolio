@@ -1,5 +1,6 @@
 @import url(../../main-content/contact/contact.component.scss);
 @import url(../../main-content/main-content.component.scss);
+@import url('./privacy.responsive.scss');
 
 section {
     display: flex;
@@ -18,7 +19,7 @@ section {
 
         >h2 {
             font-weight: 800;
-            font-size: 56px;
+            font-size: clamp(1.2rem, 10vw, 56px);
             line-height: 56px;
             text-align: left;
         }
@@ -32,7 +33,7 @@ section {
     
             >h3 {
                 font-weight: 800;
-                font-size: 32px;
+                font-size: clamp(1.1rem, 5.4vw, 32px);
                 line-height: 32px;
                 text-align: left;
             }
@@ -43,13 +44,13 @@ section {
 p, ul {
     font-family: Overpass;
     font-weight: 400;
-    font-size: 21px;
+    font-size: clamp(1rem, 5.4vw, 21px);
     line-height: 135%;
     text-align: left;
 
     >span {
         font-weight: 700;
-        font-size: 21px;
+        font-size: clamp(1rem, 5.4vw, 21px);
         line-height: 21px;
         text-align: left;
     }

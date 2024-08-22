@@ -12,7 +12,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
     TranslateModule
   ],
   templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.scss'
+  styleUrls: ['./imprint.component.scss', './imprint.responsive.scss']
 })
 export class ImprintComponent {
 
