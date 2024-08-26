@@ -13,12 +13,12 @@
     },
     "about": {
         "title": "About Me",
-        "quote": "Every great Idea starts with a simple line of code.",
-        "introduction": "Hi, I am Preston,",
+        "quote": "Efficient and clear code structures are the basis for innovative and sustainable solutions.",
+        "introduction": "Hi, I am Preston!",
         "description": {
-            "paragraph1": "a passionate Frontend developer.",
-            "paragraph2": "During my training as a front-end developer, I gained extensive practical experience in developing and creating websites and business apps, especially with the Angular and TypeScript frameworks.",
-            "paragraph3": "I cordially invite you to explore my portfolio and a selection of my projects. If you are interested in collaborating or just want to say hello, I look forward to hearing from you."
+            "paragraph1": "I am a passionate frontend developer from Germany with experience in JavaScript, TypeScript, and Angular. I help designers and companies bring their ideas to life, with a strong focus on future-proof, project-oriented solutions.",
+            "paragraph2": "Thanks to my previous experience as a musician, I work with discipline and develop creative, precise solutions. I look forward to bringing my skills and ideas to challenging and sustainable projects.",
+            "paragraph3": "If you think I would be a good fit for your projects, I would be happy to hear from you!"
         },
         "button": "Let's talk"
     },

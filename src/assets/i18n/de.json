@@ -13,12 +13,12 @@
     },
     "about": {
         "title": "Über mich",
-        "quote": "Jede großartige Idee beginnt mit einer einfachen Zeile Code.",
-        "introduction": "Hi, ich bin Preston,",
+        "quote": "Effiziente und klare Code-Strukturen bilden die Grundlage für innovative und nachhaltige Lösungen.",
+        "introduction": "Hi, ich bin Preston!",
         "description": {
-            "paragraph1": "Frontend Entwickler aus Leidenschaft.",
-            "paragraph2": "Während meiner Ausbildung als Frontend-Entwickler habe ich umfangreiche praktische Erfahrungen in der Entwicklung und Erstellung von Webseiten und Business-Apps gesammelt, insbesondere mit dem Framework Angular und TypeScript.",
-            "paragraph3": "Ich lade Sie herzlich ein, mein Portfolio und eine Auswahl meiner Projekte zu erkunden. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur Hallo sagen möchten, freue ich mich darauf, von Ihnen zu hören."
+            "paragraph1": "Ich bin leidenschaftlicher Frontend-Entwickler aus Deutschland mit Erfahrung in JavaScript, TypeScript und Angular. Ich unterstütze Designer und Unternehmen dabei, ihre Ideen in die Realität umzusetzen, und lege großen Wert auf zukunftssichere, projektorientierte Lösungen.",
+            "paragraph2": "Durch meine frühere Tätigkeit als Musiker arbeite ich diszipliniert und entwickle kreative, präzise Lösungen. Ich freue mich darauf, meine Fähigkeiten und Ideen in anspruchsvolle und nachhaltige Projekte einzubringen.",
+            "paragraph3": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, freue ich mich über Ihre Kontaktaufnahme!."
         },
         "button": "Lass uns reden"
     },
