@@ -75,24 +75,24 @@ export class ProjectTemplateComponent implements AfterViewInit {
         }
       ]
     },
-    {
-      title: 'Pokedex',
-      img: 'assets/imgs/projectimage_pokedex.png',
-      descriptionKey: 'portfolio.projects.pokedex.description',
-      technologies: [
-        'JavaScript | API | CSS | HTML'
-      ],
-      links: [
-        {
-          title: 'Live Demo',
-          url: 'http://pokedex.projects.prestonjones.dev/'
-        },
-        {
-          title: 'GitHub',
-          url: 'https://github.com/preston-jones/pokedex'
-        }
-      ]
-    },
+    // {
+    //   title: 'Pokedex',
+    //   img: 'assets/imgs/projectimage_pokedex.png',
+    //   descriptionKey: 'portfolio.projects.pokedex.description',
+    //   technologies: [
+    //     'JavaScript | API | CSS | HTML'
+    //   ],
+    //   links: [
+    //     {
+    //       title: 'Live Demo',
+    //       url: 'http://pokedex.projects.prestonjones.dev/'
+    //     },
+    //     {
+    //       title: 'GitHub',
+    //       url: 'https://github.com/preston-jones/pokedex'
+    //     }
+    //   ]
+    // },
   ];
 
 
