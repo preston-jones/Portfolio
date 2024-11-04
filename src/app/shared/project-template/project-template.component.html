@@ -4,12 +4,14 @@
     <div class="project-template" [class.flex-row-reverse]="$index % 2 != 0" (mouseenter)="onMouseEnter()"
         (mouseleave)="onMouseLeave()">
 
-        <div class="img-container" data-aos="fade-left" data-aos-duration="1000">
-            <a href="{{ project.links[0].url }}" target="_blank" data-aos="zoom-in" data-aos-duration="500">
-                <img class="project-img" src="{{ project.img }}" alt="">
-                <div class="frame"></div>
-            </a>
-        </div>
+        <a href="{{ project.links[0].url }}" target="_blank" data-aos="zoom-in" data-aos-duration="500" class="project-img-link">
+            <div class="img-container" data-aos="fade-left" data-aos-duration="1000">
+
+                <img class="project-img" src="{{ project.img }}" alt="" data-aos="color-filter" data-aos-duration="500" data-aos-anchor-placement="bottom-bottom">
+                <div class="frame" [ngClass]="$index % 2 != 0 ? 'frame-position-right' : 'frame-position-left'"></div>
+                
+            </div>
+        </a>
 
         <div class="project-info" [class.project-info-default]="$index % 2 == 0"
             [class.project-info-reverse]="$index % 2 != 0"

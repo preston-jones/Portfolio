@@ -21,24 +21,24 @@ export class ProjectTemplateComponent implements AfterViewInit {
 
 
   projectList: Project[] = [
-    // {
-    //   title: 'DABubble',
-    //   img: 'assets/imgs/projectimage_dabubble.png',
-    //   descriptionKey: 'portfolio.projects.dabubble.description',
-    //   technologies: [
-    //     'Angular | TypeScript | Firebase | Material Design | SCSS'
-    //   ],
-    //   links: [
-    //     {
-    //       title: 'Live Demo',
-    //       url: 'http://dabubble.projects.prestonjones.dev/'
-    //     },
-    //     {
-    //       title: 'GitHub',
-    //       url: ''
-    //     }
-    //   ]
-    // },
+    {
+      title: 'DABubble',
+      img: 'assets/imgs/projectimage_dabubble.png',
+      descriptionKey: 'portfolio.projects.dabubble.description',
+      technologies: [
+        'Angular | TypeScript | Firebase | Material Design | SCSS'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'http://dabubble.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: ''
+        }
+      ]
+    },
     {
       title: 'Join',
       img: 'assets/imgs/projectimage_join.png',
