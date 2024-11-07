@@ -128,7 +128,7 @@ form {
         text-align: left;
 
         &:hover {
-            cursor: pointer;
+            cursor: text;
             border: 2px solid #FF9900;
         }
 
@@ -213,6 +213,11 @@ input {
         display: flex;
         justify-content: center;
         align-items: flex-start;
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid #FF9900;
+        }
     }
 
     >.policy-container {
