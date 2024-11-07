@@ -112,9 +112,9 @@ form {
     >input,
     textarea {
         background-color: transparent;
-        border: 2px solid transparent;
+        border: 1px solid transparent;
         outline: none;
-        border-bottom: 2px solid #FFFCF3;
+        border-bottom: 1px solid #FFFCF3;
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -129,7 +129,7 @@ form {
 
         &:hover {
             cursor: text;
-            border: 2px solid #FF9900;
+            border: 1px solid #FF9900;
         }
 
         &:focus {
@@ -169,7 +169,7 @@ form {
 
 .submit-btn {
     cursor: pointer;
-    width: 269px;
+    width: 207px;
     height: 68px;
     border: 3px solid #FFFCF3;
     font-family: 'Overpass';
