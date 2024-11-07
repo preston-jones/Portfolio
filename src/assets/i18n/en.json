@@ -14,11 +14,11 @@
     "about": {
         "title": "About Me",
         "quote": "Efficient and clear code structures are the basis for innovative and sustainable solutions.",
-        "introduction": "Hi, I am Preston!",
+        "introduction": "Hello, I am Preston!",
         "description": {
-            "paragraph1": "I am a passionate frontend developer from Germany with experience in JavaScript, TypeScript, and Angular. I help designers and companies bring their ideas to life, with a strong focus on future-proof, project-oriented solutions.",
-            "paragraph2": "Thanks to my previous experience as a musician, I work with discipline and develop creative, precise solutions. I look forward to bringing my skills and ideas to challenging and sustainable projects.",
-            "paragraph3": "If you think I would be a good fit for your projects, I would be happy to hear from you!"
+            "paragraph1": "a passionate frontend developer from Germany with a focus on clean code and best practices. My strengths lie in Angular, TypeScript, JavaScript, HTML, and CSS.",
+            "paragraph2": "I am dedicated to developing efficient and well-architected solutions to build dynamic and modern business applications that prioritize sustainability, scalability, and user-friendly interfaces.",
+            "paragraph3": "If you think I'd be a great fit for your projects, I look forward to hearing from you."
         },
         "button": "Let's talk"
     },

@@ -39,13 +39,17 @@
         padding-top: 56px;
         height: 640px;
     }
+
+    .img-container>.project-img {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
 
-    .project-template {
-        padding-top: 36px;
-    }
+    // .project-template {
+    //     padding-top: 36px;
+    // }
 
     .project-counter {
         font-size: 28px;
@@ -81,9 +85,9 @@
 
 @media screen and (max-width: 420px) {
 
-    .project-template {
-        padding-top: 0px;
-    }
+    // .project-template {
+    //     padding-top: 0px;
+    // }
 
     // .project-info {
     //     margin-top: -100px;
@@ -96,9 +100,4 @@
             line-height: 21px;
         }
     }
-}
-
-@media screen and (max-width: 320px) {
-
-
 }

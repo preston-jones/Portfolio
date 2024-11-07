@@ -14,11 +14,11 @@
     "about": {
         "title": "Über mich",
         "quote": "Effiziente und klare Code-Strukturen bilden die Grundlage für innovative und nachhaltige Lösungen.",
-        "introduction": "Hi, ich bin Preston!",
+        "introduction": "Hallo, ich bin Preston,",
         "description": {
-            "paragraph1": "Ich bin leidenschaftlicher Frontend-Entwickler aus Deutschland mit Erfahrung in JavaScript, TypeScript und Angular. Ich unterstütze Designer und Unternehmen dabei, ihre Ideen in die Realität umzusetzen, und lege großen Wert auf zukunftssichere, projektorientierte Lösungen.",
-            "paragraph2": "Durch meine frühere Tätigkeit als Musiker arbeite ich diszipliniert und entwickle kreative, präzise Lösungen. Ich freue mich darauf, meine Fähigkeiten und Ideen in anspruchsvolle und nachhaltige Projekte einzubringen.",
-            "paragraph3": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, freue ich mich über Ihre Kontaktaufnahme!."
+            "paragraph1": "leidenschaftlicher Frontend-Entwickler aus Deutschland mit einem Fokus auf Clean Code und Best Practices. Meine Stärken liegen in Angular, TypeScript, JavaScript, HTML und CSS.",
+            "paragraph2": "Ich konzentriere mich darauf, effiziente und durchdachte Lösungen zu entwickeln, um dynamische und moderne Business Applikationen zu schaffen, die sowohl ansprechend als auch nachhaltig und skalierbar sind.",
+            "paragraph3": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, freue ich mich auf Ihre Kontaktaufnahme."
         },
         "button": "Lass uns reden"
     },

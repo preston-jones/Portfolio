@@ -1,4 +1,21 @@
 /* -- ANIMATIONS -- */
+/* -- ANIMATION OF SCROLL -- */
+[data-aos="headline-color"] {
+
+  &.aos-animate {
+    transition: color 125ms ease-in-out;
+    color: #FF9900 !important;
+    }
+}
+
+[data-aos="color-filter"] {
+
+  &.aos-animate {
+      filter: drop-shadow(1px -4px 5px #1b18192f) grayscale(0%);
+      transition: all 225ms ease-in-out;
+    }
+}
+
 @keyframes arrowTopDown {
     from {
       transform: translateY(-200px);

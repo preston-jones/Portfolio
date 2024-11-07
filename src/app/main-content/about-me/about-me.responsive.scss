@@ -29,7 +29,7 @@
         }
     }
 
-    img {
+    .img-container>img {
         width: 480px;
         height: 100%;
     }
@@ -44,6 +44,7 @@
 
     .content {
         flex-direction: column;
+        gap: 48px;
     }
 
     #aboutme-quote {
@@ -55,8 +56,8 @@
         gap: 8px;
     }
 
-    img {
-        width: 60%;
+    .img-container>img {
+        width: 100%;
         height: auto;
     }
 
@@ -78,8 +79,8 @@
 
 @media screen and (max-width: 480px) {
 
-    img {
-        width: 80%;
+    .img-container>img {
+        width: 100%;
         height: auto;
     }
 }

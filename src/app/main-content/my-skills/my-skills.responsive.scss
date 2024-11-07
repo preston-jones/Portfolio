@@ -18,7 +18,7 @@
 
     .skill {
         >img {
-            height: 55px;
+            height: 56px;
         }
     }
 }
@@ -34,16 +34,16 @@
 
 @media screen and (max-width: 480px) {
 
-    .skills {
-        padding: 0px;
-        row-gap: 32px;
+    .content {
+        padding: 80px 0px;
+        gap: 32px;
     }
 
     .skill {
         flex: none;
 
         >img {
-            height: 36px;
+            // height: 36px;
         }
     }
 }

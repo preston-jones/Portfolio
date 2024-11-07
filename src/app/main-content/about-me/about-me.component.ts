@@ -7,12 +7,12 @@ import AOS from 'aos';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss', './about-me.responsive.scss']
+  styleUrls: ['./about-me.component.scss', './about-me.responsive.scss', '../../../styles.animations.scss']
 })
 export class AboutMeComponent {
 
   currentLang: string;
-  aboutMeScrolledY = false;
+  // aboutMeScrolledY = false;
   scrHeight: any;
   scrWidth: any;
 
@@ -28,25 +28,6 @@ export class AboutMeComponent {
     this.currentLang = savedLang || 'en';
     this.translate.use(this.currentLang);
     this.getScreenSize();
-  }
-
-
-  @HostListener('window:scroll', ['$event'])
-  function() {
-    if (window.scrollY >= 400) {
-      this.aboutMeScrolledY = true;
-    }
-    else if (window.scrollY > 1400) {
-      this.aboutMeScrolledY = false;
-    }
-    else {
-      this.aboutMeScrolledY = false
-    }
-  }
-
-  
-  @HostListener('window:scroll', ['$event'])
-  initAos() {
     AOS.init();
   }
 }

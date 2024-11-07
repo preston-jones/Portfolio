@@ -32,7 +32,8 @@
             </div>
         </div>
         <div class="project-counter font-syne"
-            [ngClass]="$index % 2 != 0 ? 'project-counter-left' : 'project-counter-right'">
+            [ngClass]="$index % 2 != 0 ? 'project-counter-left' : 'project-counter-right'"
+            [attr.data-aos]="$index % 2 != 0 ? 'fade-left' : 'fade-right'" data-aos-duration="500">
             <p>{{ this.formatNumber($index + 1) }}/{{ this.formatNumber(projectList.length) }}
             </p>
         </div>

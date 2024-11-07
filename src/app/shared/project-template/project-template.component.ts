@@ -12,9 +12,9 @@ import AOS from 'aos';
     TranslateModule
   ],
   templateUrl: './project-template.component.html',
-  styleUrls: ['./project-template.component.scss', './project-template.responsive.scss']
+  styleUrls: ['./project-template.component.scss', './project-template.responsive.scss', '../../../styles.animations.scss']
 })
-export class ProjectTemplateComponent implements AfterViewInit {
+export class ProjectTemplateComponent {
 
   evenNumber: boolean = false;
   mouseEnter: boolean = false;
@@ -95,14 +95,7 @@ export class ProjectTemplateComponent implements AfterViewInit {
     // },
   ];
 
-
-  ngAfterViewInit() {
-    AOS.init();
-  }
-
-  
-  @HostListener('window:scroll', ['$event'])
-  initAos() {
+  constructor() {
     AOS.init();
   }
 

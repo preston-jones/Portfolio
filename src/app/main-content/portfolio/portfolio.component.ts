@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProjectTemplateComponent } from '../../shared/project-template/project-template.component';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,19 +11,11 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
     TranslateModule
   ],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss', './portfolio.responsive.scss']
+  styleUrls: ['./portfolio.component.scss', './portfolio.responsive.scss', '../../../styles.animations.scss']
 })
 export class PortfolioComponent {
 
-  portfolioScrolledY = false;
-
-  @HostListener('window:scroll', ['$event'])
-  function() {
-    if (window.scrollY >= 2700) {
-      this.portfolioScrolledY = true;
-    }
-    else {
-      this.portfolioScrolledY = false
-    }
+  constructor () {
+    AOS.init();
   }
 }

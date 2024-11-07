@@ -1,32 +1,24 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './my-skills.component.html',
-  styleUrls: ['./my-skills.component.scss', './my-skills.responsive.scss']
+  styleUrls: ['./my-skills.component.scss', './my-skills.responsive.scss', '../../../styles.animations.scss']
 })
 
 export class MySkillsComponent {
 
   currentLang: string;
-  mySkillsScrolledY = false;
 
-  @HostListener('window:scroll', ['$event'])
-  function() {
-    if (window.scrollY >= 1700) {
-      this.mySkillsScrolledY = true;
-    }
-    else {
-      this.mySkillsScrolledY = false
-    }
-  }
 
   constructor(private translate: TranslateService) {
     const savedLang = localStorage.getItem('preferredLanguage');
     this.currentLang = savedLang || 'en';
     this.translate.use(this.currentLang);
+    AOS.init();
   }
 }
