@@ -29,8 +29,8 @@
         }
     }
 
-    .img-container>img {
-        width: 480px;
+    .profile-img-container {
+        width: 420px;
         height: 100%;
     }
 
@@ -56,11 +56,6 @@
         gap: 8px;
     }
 
-    .img-container>img {
-        // width: 100%;
-        height: auto;
-    }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -79,8 +74,8 @@
 
 @media screen and (max-width: 480px) {
 
-    .img-container>img {
+    .profile-img-container {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
