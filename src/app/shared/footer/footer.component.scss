@@ -47,6 +47,12 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: transform 125ms ease-in-out;
+
+            &:hover {
+                transition: transform 125ms ease-in-out;
+                transform: translateY(-10px);
+            }
 
             >p {
                 font-weight: 400;
@@ -67,6 +73,12 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 8px;
+        transition: transform 125ms ease-in-out;
+
+        &:hover {
+            transition: transform 125ms ease-in-out;
+            transform: scale(1.1);
+        }
 
         >#logo-footer {
             height: 40px;
