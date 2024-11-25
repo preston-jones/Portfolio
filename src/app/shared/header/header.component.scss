@@ -1,6 +1,10 @@
 @import url('./header.animations.scss');
 @import url('./header.responsive.scss');
 
+.max-width {
+    max-width: 1440px;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -166,140 +170,139 @@ menu {
 }
 
 .menu-footer-container {
+    justify-content: flex-end;
     width: 100%;
-    // height: 45vh;
     background-image: url('./../../../assets/imgs/rectangle_footer.svg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.menu-bottom-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
     color: #FFFCF3;
-    max-width: 1440px;
-    padding: 0 100px 24px 100px;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px 24px;
+    gap: 16px;
+    position: fixed;
+    bottom: 0;
 }
 
-.menu-link {
-    position: relative;
-    padding: 16px;
-    background-image: url('../../../assets/animation/link_hover_default.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: background-image 125ms ease-in-out;
-    background-position-y: bottom;
-    background-position-x: left;
-    transition: color 125ms ease-in-out;
-
-    >a {
-        font-family: Syne;
-        font-weight: 700;
-        font-size: clamp(2rem, 10vw, 72px);
-        line-height: 72px;
-        color: #1b1819;
-    }
-
-    &:hover {
-        animation: link-hover-animation 0.15s ease-in-out forwards;
+    .menu-link {
+        position: relative;
+        padding: 16px;
+        background-image: url('../../../assets/animation/link_hover_default.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 125ms ease-in-out;
+        background-position-y: bottom;
+        background-position-x: left;
         transition: color 125ms ease-in-out;
-        cursor: pointer;
 
         >a {
+            font-family: Syne;
+            font-weight: 700;
+            font-size: clamp(2rem, 10vw, 72px);
+            line-height: 72px;
+            color: #1b1819;
+        }
+
+        &:hover {
+            animation: link-hover-animation 0.15s ease-in-out forwards;
+            transition: color 125ms ease-in-out;
+            cursor: pointer;
+
+            >a {
+                color: #FF9900;
+                transition: color 125ms ease-in-out;
+            }
+        }
+
+        &:not(:hover) {
+            animation: link-hover-animation-reverse 125ms ease-in-out forwards;
+        }
+
+        &.active {
+            background-image: url('../../../assets/animation/link_hover_active.png');
+        }
+    }
+
+
+    .menu-icon-animation-open {
+        animation: icon-animate-open 0.5s ease-in-out forwards;
+        z-index: 2;
+        background-size: cover;
+    }
+
+    .menu-icon-animation-close {
+        animation: icon-animate-close 0.5s ease-in-out forwards;
+        z-index: 2;
+        background-size: cover;
+    }
+
+    .mailto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 16px;
+        transition: color 125ms ease-in-out;
+
+        >#mailto-headline {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            // font-size: 56px;
+            font-size: clamp(1.1rem, 10vw, 56px);
+            line-height: 56px;
+        }
+
+        >#mail-link {
+            font-family: Overpass;
+            font-weight: 300;
+            font-size: clamp(1rem, 5.4vw, 21px);
+            line-height: 23px;
+        }
+
+        &:hover {
+            cursor: pointer;
             color: #FF9900;
             transition: color 125ms ease-in-out;
         }
     }
 
-    &:not(:hover) {
-        animation: link-hover-animation-reverse 125ms ease-in-out forwards;
-    }
-
-    &.active {
-        background-image: url('../../../assets/animation/link_hover_active.png');
-    }
-}
-
-
-.menu-icon-animation-open {
-    animation: icon-animate-open 0.5s ease-in-out forwards;
-    z-index: 2;
-    background-size: cover;
-}
-
-.menu-icon-animation-close {
-    animation: icon-animate-close 0.5s ease-in-out forwards;
-    z-index: 2;
-    background-size: cover;
-}
-
-.mailto {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 16px;
-    transition: color 125ms ease-in-out;
-
-    >#mailto-headline {
-        font-family: 'Syne', sans-serif;
-        font-weight: 800;
-        // font-size: 56px;
-        font-size: clamp(1.1rem, 10vw, 56px);
-        line-height: 56px;
-    }
-
-    >#mail-link {
-        font-family: Overpass;
-        font-weight: 300;
-        font-size: clamp(1rem, 5.4vw, 21px);
-        line-height: 23px;
-    }
-
-    &:hover {
-        cursor: pointer;
-        color: #FF9900;
-        transition: color 125ms ease-in-out;
-    }
-}
-
-.menu-footer-headline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.menu-footer-bottom {
-    display: flex;
-    justify-content: center;
-    justify-content: center;
-    width: 100%;
-
-    >.social-links {
+    .menu-footer-headline {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        gap: 42px;
+        width: 100%;
+    }
 
-        >a {
+    .menu-footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        >.social-links {
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: transform 125ms ease-in-out;
+            gap: 42px;
 
-            &:hover {
+            >a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 transition: transform 125ms ease-in-out;
-                transform: translateY(-10px);
+
+                &:hover {
+                    transition: transform 125ms ease-in-out;
+                    transform: translateY(-10px);
+                }
+            }
+
+            >img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
             }
         }
-
-        >img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
     }
-}

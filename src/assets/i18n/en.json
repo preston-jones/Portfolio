@@ -39,7 +39,7 @@
                 "description": "2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion."
             },
             "pokedex": {
-                "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+                "description": "Based on the PokéAPI, a simple Rest-Api library that provides and catalogues pokemon information."
             }
         }
     },

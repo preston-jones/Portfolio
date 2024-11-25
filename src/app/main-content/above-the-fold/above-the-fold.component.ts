@@ -21,7 +21,6 @@ export class AboveTheFoldComponent {
   getScreenSize() {
         this.scrHeight = window.innerHeight;
         this.scrWidth = window.innerWidth;
-        console.log(this.scrHeight, this.scrWidth);
   }
 
 

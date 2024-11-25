@@ -47,9 +47,9 @@
 
 @media screen and (max-width: 480px) {
 
-    // .project-template {
-    //     padding-top: 36px;
-    // }
+    .project-template-container {
+        gap: 32px;
+    }
 
     .project-counter {
         font-size: 28px;
@@ -84,14 +84,6 @@
 }
 
 @media screen and (max-width: 420px) {
-
-    // .project-template {
-    //     padding-top: 0px;
-    // }
-
-    // .project-info {
-    //     margin-top: -100px;
-    // }
 
     .project-info-content {
         margin-top: -100px;

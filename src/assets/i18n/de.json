@@ -39,7 +39,7 @@
                 "description": "2D-Pixel-Art-Arcade-Spiel basierend auf einem objektorientierten Ansatz. Rette Cyber ​​City vor der Invasion der Wespen Königin."
             },
             "pokedex": {
-                "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+                "description": "Basierend auf der PokéAPI, einer einfachen Rest-Api Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
             }
         }
     },

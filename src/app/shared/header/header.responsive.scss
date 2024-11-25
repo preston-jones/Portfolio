@@ -45,9 +45,19 @@
 }
 
 @media screen and (max-width: 720px) {
-    .menu-bottom-wrapper {
+    .menu-footer-container {
+        gap: 1rem;
+        padding: 0 32px 24px;
+    }
+
+    .menu-footer-headline {
+        justify-content: center;
+    }
+
+    .menu-footer-bottom {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
 
         >.mailto {
             align-items: flex-start;
