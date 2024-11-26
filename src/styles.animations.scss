@@ -16,6 +16,14 @@
     }
 }
 
+[data-aos="opacity"] {
+
+  &.aos-animate {
+      opacity: 1 !important;
+      transition: opacity 225ms ease-in-out;
+    }
+}
+
 @keyframes arrowTopDown {
     from {
       transform: translateY(-200px);

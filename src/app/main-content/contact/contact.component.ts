@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogEmailSentComponent } from '../../dialog-email-sent/dialog-email-sent.component';
+import { DialogEmailSentComponent } from '../../dialogs/dialog-email-sent/dialog-email-sent.component';
+import { DialogEmailErrorComponent } from '../../dialogs/dialog-email-error/dialog-email-error.component';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -57,11 +58,11 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.openDialog();
+            this.openSuccessDialog();
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error(error);
+            this.openErrorDialog();
           },
         });
     }
@@ -86,7 +87,12 @@ export class ContactComponent {
   }
 
 
-  openDialog(): void {
+  openSuccessDialog(): void {
     const dialogRef = this.matDialog.open(DialogEmailSentComponent);
+  }
+
+
+  openErrorDialog(): void {
+    const dialogRef = this.matDialog.open(DialogEmailErrorComponent);
   }
 }

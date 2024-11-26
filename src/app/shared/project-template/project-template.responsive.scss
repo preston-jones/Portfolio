@@ -25,6 +25,20 @@
     }
 }
 
+@media screen and (max-width: 1080px) {
+
+    .img-container>.project-img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .img-container>.project-img {
+        width: 480px;
+    }
+}
+
 @media screen and (max-width: 960px) {
 
     .project-template,
@@ -42,6 +56,21 @@
 
     .img-container>.project-img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .frame {
+        top: 12px;
+    }
+    
+    .frame-position-left {
+        left: 12px;
+    }
+    
+    .frame-position-right {
+        left: -12px;
     }
 }
 
