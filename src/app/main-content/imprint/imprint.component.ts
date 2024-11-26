@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ContactComponent } from '../contact/contact.component';
-import { MainContentComponent } from '../main-content.component';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,7 +7,6 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [
     ContactComponent,
-    MainContentComponent,
     TranslateModule
   ],
   templateUrl: './imprint.component.html',
