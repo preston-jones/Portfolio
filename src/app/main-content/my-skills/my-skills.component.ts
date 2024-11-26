@@ -17,7 +17,7 @@ export class MySkillsComponent {
 
   constructor(private translate: TranslateService) {
     const savedLang = localStorage.getItem('preferredLanguage');
-    this.currentLang = savedLang || 'en';
+    this.currentLang = savedLang || 'de';
     this.translate.use(this.currentLang);
     AOS.init();
   }

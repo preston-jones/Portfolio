@@ -6,13 +6,13 @@
     background-repeat: no-repeat;
     margin-left: 200px;
     transition: opacity 125ms ease-in-out;
-    opacity: 0;
+    // opacity: 0;
 
     &.aos-animate {
-        animation-delay: 0.7s;
+        animation-delay: 0.5s;
         animation: arrow-diagonal-left 250ms ease-in-out forwards;
-        transition: opacity 125ms ease-in-out;
-        opacity: 1;
+        transition: opacity 100ms ease-in-out;
+        // opacity: 1;
     }
 }
 
@@ -23,14 +23,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 200px;
-    transition: opacity 125ms ease-in-out;
-    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    // opacity: 0;
 
     &.aos-animate {
-        animation-delay: 0.7s;
+        animation-delay: 0.5s;
         animation: arrow-diagonal-right 250ms ease-in-out forwards;
         transition: opacity 125ms ease-in-out;
-        opacity: 1;
+        // opacity: 1;
     }
 }
 

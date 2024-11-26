@@ -26,7 +26,7 @@ export class AboveTheFoldComponent {
 
   constructor(private translate: TranslateService) {
     const savedLang = localStorage.getItem('preferredLanguage');
-    this.currentLang = savedLang || 'en';
+    this.currentLang = savedLang || 'de';
     this.translate.use(this.currentLang);
 
     this.getScreenSize();
