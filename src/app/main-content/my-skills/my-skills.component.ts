@@ -21,4 +21,16 @@ export class MySkillsComponent {
     this.translate.use(this.currentLang);
     AOS.init();
   }
+
+
+  showInfoBox() {
+    const infoBox = document.getElementById('info-box');
+    infoBox!.style.display = 'block';
+  }
+
+
+  hideInfoBox() {
+    const infoBox = document.getElementById('info-box');
+    infoBox!.style.display = 'none';
+  }
 }
