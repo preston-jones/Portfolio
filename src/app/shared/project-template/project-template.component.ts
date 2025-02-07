@@ -21,24 +21,24 @@ export class ProjectTemplateComponent {
 
 
   projectList: Project[] = [
-    {
-      title: 'DABubble',
-      img: 'assets/imgs/projectimage_dabubble.png',
-      descriptionKey: 'portfolio.projects.dabubble.description',
-      technologies: [
-        'Angular | TypeScript | Firebase | Material Design | SCSS'
-      ],
-      links: [
-        {
-          title: 'Live Demo',
-          url: 'http://dabubble.projects.prestonjones.dev/'
-        },
-        {
-          title: 'GitHub',
-          url: 'https://github.com/preston-jones/DABubble'
-        }
-      ]
-    },
+    // {
+    //   title: 'DABubble',
+    //   img: 'assets/imgs/projectimage_dabubble.png',
+    //   descriptionKey: 'portfolio.projects.dabubble.description',
+    //   technologies: [
+    //     'Angular | TypeScript | Firebase | Material Design | SCSS'
+    //   ],
+    //   links: [
+    //     {
+    //       title: 'Live Demo',
+    //       url: 'http://dabubble.projects.prestonjones.dev/'
+    //     },
+    //     {
+    //       title: 'GitHub',
+    //       url: 'https://github.com/preston-jones/DABubble'
+    //     }
+    //   ]
+    // },
     {
       title: 'Join',
       img: 'assets/imgs/projectimage_join.png',
@@ -75,24 +75,24 @@ export class ProjectTemplateComponent {
         }
       ]
     },
-    // {
-    //   title: 'Pokedex',
-    //   img: 'assets/imgs/projectimage_pokedex.png',
-    //   descriptionKey: 'portfolio.projects.pokedex.description',
-    //   technologies: [
-    //     'JavaScript | API | CSS | HTML'
-    //   ],
-    //   links: [
-    //     {
-    //       title: 'Live Demo',
-    //       url: 'http://pokedex.projects.prestonjones.dev/'
-    //     },
-    //     {
-    //       title: 'GitHub',
-    //       url: 'https://github.com/preston-jones/pokedex'
-    //     }
-    //   ]
-    // },
+    {
+      title: 'Pokedex',
+      img: 'assets/imgs/projectimage_pokedex.png',
+      descriptionKey: 'portfolio.projects.pokedex.description',
+      technologies: [
+        'JavaScript | API | CSS | HTML'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'http://pokedex.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: 'https://github.com/preston-jones/pokedex'
+        }
+      ]
+    },
   ];
 
   constructor() {
