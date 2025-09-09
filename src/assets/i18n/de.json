@@ -16,8 +16,8 @@
         "quote": "Effiziente und klare Code-Strukturen bilden die Grundlage für innovative und nachhaltige Lösungen.",
         "introduction": "Hallo, ich bin Preston,",
         "description": {
-            "paragraph1": "leidenschaftlicher Frontend-Entwickler aus Deutschland mit einem Fokus auf Clean Code und Best Practices. Meine Stärken liegen in Angular, TypeScript, JavaScript, HTML und CSS.",
-            "paragraph2": "Ich konzentriere mich darauf, effiziente und durchdachte Lösungen zu entwickeln, um dynamische und moderne Business Applikationen zu schaffen, die sowohl ansprechend als auch nachhaltig und skalierbar sind.",
+            "paragraph1": "leidenschaftlicher Frontend-Entwickler aus Deutschland mit Schwerpunkt auf Angular, TypeScript und JavaScript. Mein Fokus liegt auf sauberem, wartbarem Code sowie skalierbaren Lösungen, die moderne Technologien mit klarer Struktur verbinden.",
+            "paragraph2": "Ich entwickle dynamische, responsive Anwendungen, die durch eine durchdachte Architektur, hohe Performance und ein ansprechendes Nutzererlebnis überzeugen. Dabei orientiere ich mich an Best Practices und setze auf agile Methoden, um gemeinsam im Team effiziente und nachhaltige Lösungen umzusetzen.",
             "paragraph3": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, freue ich mich auf Ihre Kontaktaufnahme."
         },
         "button": "Lass uns reden"
@@ -30,13 +30,13 @@
         "subtitle": "Erkunden Sie eine Auswahl meiner Projekte - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
         "projects": {
             "dabubble": {
-                "description": "Eine von Slack inspirierte Chat-Messenger-App ermöglicht es Benutzern, über Kanäle oder Direktnachrichten miteinander zu kommunizieren."
+                "description": "NexChat ist eine Chat-App mit Echtzeitkommunikation, inspiriert von Slack. Sie bietet Channels, Direktnachrichten, Threads, Emoji-Reaktionen und Mentions für eine klare und strukturierte Teamkommunikation."
             },
             "join": {
                 "description": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
             },
             "cybercity": {
-                "description": "2D-Pixel-Art-Arcade-Spiel basierend auf einem objektorientierten Ansatz. Rette Cyber ​​City vor der Invasion der Wespen Königin."
+                "description": "Vom Arcade-Feeling inspirierter 2D-Sidescroller im Cyberpunk-Stil. Objektorientiert entwickelt mit klarer Spiellogik und gegnerbasierter Kollisionsabfrage für ein authentisches Arcade-Erlebnis."
             },
             "pokedex": {
                 "description": "Basierend auf der PokéAPI, einer einfachen Rest-Api Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."

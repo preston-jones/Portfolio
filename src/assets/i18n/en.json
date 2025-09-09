@@ -16,8 +16,8 @@
         "quote": "Efficient and clear code structures are the basis for innovative and sustainable solutions.",
         "introduction": "Hello, I am Preston!",
         "description": {
-            "paragraph1": "a passionate frontend developer from Germany with a focus on clean code and best practices. My strengths lie in Angular, TypeScript, JavaScript, HTML, and CSS.",
-            "paragraph2": "I am dedicated to developing efficient and well-architected solutions to build dynamic and modern business applications that prioritize sustainability, scalability, and user-friendly interfaces.",
+            "paragraph1": "a passionate frontend developer from Germany specializing in Angular, TypeScript, and JavaScript. My focus is on writing clean, maintainable code and building scalable solutions that combine modern technologies with clear and structured design.",
+            "paragraph2": "I create dynamic, responsive applications that stand out through well-thought-out architecture, high performance, and an engaging user experience. Following best practices and working with agile methodologies, I contribute to developing efficient and sustainable solutions in a collaborative team environment.",
             "paragraph3": "If you think I'd be a great fit for your projects, I look forward to hearing from you."
         },
         "button": "Let's talk"
@@ -30,13 +30,13 @@
         "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
         "projects": {
             "dabubble": {
-                "description": "A chat messenger app inspired by Slack, allows users to communicate with each other through channels or direct messages."
+                "description": "NexChat is a chat application with real-time communication, inspired by Slack. It offers channels, direct messages, threads, emoji reactions, and mentions to enable clear and structured team communication."
             },
             "join": {
                 "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
             },
             "cybercity": {
-                "description": "2 D Pixel-Art Arcade Game based on object-oriented approach. Save Cyber City from the Wasp Queens Invasion."
+                "description": "A 2D sidescroller inspired by classic arcade gameplay in a cyberpunk style. Object-oriented development with clear game logic and enemy-based collision detection for an authentic arcade experience."
             },
             "pokedex": {
                 "description": "Based on the PokéAPI, a simple Rest-Api library that provides and catalogues pokemon information."
