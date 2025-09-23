@@ -16,9 +16,9 @@
         "quote": "Effiziente und klare Code-Strukturen bilden die Grundlage für innovative und nachhaltige Lösungen.",
         "introduction": "Hallo, ich bin Preston,",
         "description": {
-            "paragraph1": "leidenschaftlicher Frontend-Entwickler aus Deutschland mit Schwerpunkt auf Angular, TypeScript und JavaScript. Mein Fokus liegt auf sauberem, wartbarem Code sowie skalierbaren Lösungen, die moderne Technologien mit klarer Struktur verbinden.",
-            "paragraph2": "Ich entwickle dynamische, responsive Anwendungen, die durch eine durchdachte Architektur, hohe Performance und ein ansprechendes Nutzererlebnis überzeugen. Dabei orientiere ich mich an Best Practices und setze auf agile Methoden, um gemeinsam im Team effiziente und nachhaltige Lösungen umzusetzen.",
-            "paragraph3": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, freue ich mich auf Ihre Kontaktaufnahme."
+            "paragraph1": "leidenschaftlicher Frontend-Entwickler aus Deutschland mit Schwerpunkt auf Angular, TypeScript und JavaScript. Mein Fokus liegt auf sauberem, wartbarem Code und skalierbaren Lösungen, die moderne Technologien mit klarer Struktur verbinden.",
+            "paragraph2": "Ich entwickle dynamische, responsive Anwendungen mit durchdachter Architektur, hoher Performance und starkem Nutzererlebnis. Dabei orientiere ich mich an Best Practices und arbeite agil, um gemeinsam im Team effiziente und nachhaltige Lösungen umzusetzen.",
+            "paragraph3": "Passt mein Profil zu Ihren Projekten? Dann freue ich mich darauf, von Ihnen zu hören."
         },
         "button": "Lass uns reden"
     },
@@ -45,7 +45,7 @@
     },
     "contact": {
         "title": "Sag Hi!",
-        "subtitle": "Auf der Suche nach einem Frontend Entwickler?",
+        "subtitle": "Auf der Suche nach einem Software Entwickler?",
         "description": "Lass Sie uns über Ihre Ideen sprechen und wie wir sie verwirklichen.",
         "form": {
             "name": {

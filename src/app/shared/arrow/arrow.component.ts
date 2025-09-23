@@ -1,6 +1,6 @@
 import { Component, Input, AfterViewInit, HostListener } from '@angular/core'
 import { CommonModule } from '@angular/common';
-import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-arrow',

@@ -2,7 +2,7 @@ import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../Interfaces/project.interfaces';
 import { TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-project-template',
@@ -31,7 +31,7 @@ export class ProjectTemplateComponent {
       links: [
         {
           title: 'Live Demo',
-          url: 'http://dabubble.projects.prestonjones.dev/'
+          url: 'https://nexchat.projects.prestonjones.dev/'
         },
         {
           title: 'GitHub',

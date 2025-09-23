@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-about-me',

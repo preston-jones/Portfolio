@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectTemplateComponent } from '../../shared/project-template/project-template.component';
 import { TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',

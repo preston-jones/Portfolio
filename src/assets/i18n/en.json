@@ -16,9 +16,9 @@
         "quote": "Efficient and clear code structures are the basis for innovative and sustainable solutions.",
         "introduction": "Hello, I am Preston!",
         "description": {
-            "paragraph1": "a passionate frontend developer from Germany specializing in Angular, TypeScript, and JavaScript. My focus is on writing clean, maintainable code and building scalable solutions that combine modern technologies with clear and structured design.",
-            "paragraph2": "I create dynamic, responsive applications that stand out through well-thought-out architecture, high performance, and an engaging user experience. Following best practices and working with agile methodologies, I contribute to developing efficient and sustainable solutions in a collaborative team environment.",
-            "paragraph3": "If you think I'd be a great fit for your projects, I look forward to hearing from you."
+            "paragraph1": "a passionate Frontend Developer from Germany, specializing in Angular, TypeScript, and JavaScript. My focus is on writing clean, maintainable code and building scalable solutions that combine modern technologies with clear structure.",
+            "paragraph2": "I create dynamic, responsive applications with well-thought-out architecture, high performance, and strong user experience. I follow best practices and work in agile environments to deliver efficient and sustainable solutions together with the team.",
+            "paragraph3": "Does my profile fit your projects? Then I'd be happy to hear from you."
         },
         "button": "Let's talk"
     },
@@ -45,7 +45,7 @@
     },
     "contact": {
         "title": "Say Hi!",
-        "subtitle": "Looking for a Frontend Developer?",
+        "subtitle": "Looking for a Software Developer?",
         "description": "Say hello! let's discuss your ideas and make it happen.",
         "form": {
             "name": {
