@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { HostListener } from "@angular/core";
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgOptimizedImage],
   templateUrl: './above-the-fold.component.html',
-  styleUrls: ['./above-the-fold.component.scss', './above-the-fold.responsive.scss', '../../../styles.animations.scss']
+  styleUrls: ['./above-the-fold.component.scss', './above-the-fold.responsive.scss', '../../../styles.animations.scss', '../../../styles.wcag.scss']
 })
 
 
