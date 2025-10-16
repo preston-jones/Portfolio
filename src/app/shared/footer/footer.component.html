@@ -1,19 +1,31 @@
-<footer>
+<footer role="contentinfo" aria-label="Website Footer">
     <div class="footer-container">
         <div class="section-top">
-            <a href="">
-                <img id="logo-footer" src="./../../../assets/icons/logo_light.png">
+            <a href="#main" aria-label="Preston Jones - Zur Startseite">
+                <img id="logo-footer" ngSrc="./../../../assets/icons/logo_light.png" 
+                     alt="Preston Jones – Entwickler-Logo" width="40" height="40">
                 <span>PJ</span>
             </a>
-            <div class="social-links">
-                <a href="https://github.com/preston-jones" target="_blank"><img src="./../../../assets/icons/github_icon.png"></a>
-                <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!" target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
-                <a href="https://www.linkedin.com/in/preston-jones-25bb912b6/" target="_blank"><img src="./../../../assets/icons/linkedin_icon.png"></a>
-            </div>
+            <nav class="social-links" role="navigation" aria-label="Social Media Links">
+                <a href="https://github.com/preston-jones" target="_blank" rel="noopener noreferrer"
+                   aria-label="Preston Jones auf GitHub (öffnet in neuem Tab)">
+                    <img ngSrc="./../../../assets/icons/github_icon.png" alt="GitHub Logo" width="40" height="40">
+                </a>
+                <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!"
+                   aria-label="E-Mail an Preston Jones senden">
+                    <img ngSrc="./../../../assets/icons/email_icon.png" alt="E-Mail Symbol" width="40" height="40">
+                </a>
+                <a href="https://www.linkedin.com/in/preston-jones-25bb912b6/" target="_blank" rel="noopener noreferrer"
+                   aria-label="Preston Jones auf LinkedIn (öffnet in neuem Tab)">
+                    <img ngSrc="./../../../assets/icons/linkedin_icon.png" alt="LinkedIn Logo" width="40" height="40">
+                </a>
+            </nav>
         </div>
         <div class="section-bottom">
-            <p id="copyright">© Preston Jones 2024</p>
-            <a href="imprint"><p>{{ "footer.imprint.title" | translate}}</p></a>
+            <p id="copyright" role="text">© Preston Jones 2024</p>
+            <a href="/imprint" aria-label="Impressum anzeigen">
+                <p>{{ "footer.imprint.title" | translate}}</p>
+            </a>
         </div>
     </div>
 </footer>
