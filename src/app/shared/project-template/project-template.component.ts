@@ -23,8 +23,8 @@ export class ProjectTemplateComponent {
   projectList: Project[] = [
     {
       title: 'NexChat',
-      img: 'assets/imgs/projectimage_dabubble.png',
-      descriptionKey: 'portfolio.projects.dabubble.description',
+      img: 'assets/imgs/projectimage_nexchat.png',
+      descriptionKey: 'portfolio.projects.nexchat.description',
       technologies: [
         'Angular | TypeScript | Firebase | Material Design | SCSS'
       ],
