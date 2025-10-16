@@ -15,12 +15,16 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        font-family: Overpass;
+        font-size: clamp(1rem, 5.4vw, 21px);
+        line-height: 135%;
         gap: 48px;
+        width: 100%;
 
         >h2 {
             font-weight: 800;
-            font-size: clamp(1.2rem, 10vw, 56px);
-            line-height: 56px;
+            font-size: clamp(1.8rem, 8vw, 56px);
+            line-height: clamp(1.8rem, 8vw, 56px);
             text-align: left;
         }
 
@@ -30,34 +34,44 @@ section {
             justify-content: center;
             align-items: flex-start;
             gap: 16px;
-    
+
             >h3 {
                 font-weight: 800;
-                font-size: clamp(1.1rem, 5.4vw, 32px);
-                line-height: 32px;
+                font-size: clamp(1.4rem, 5vw, 32px);
+                line-height: clamp(1.4rem, 5vw, 32px);
                 text-align: left;
             }
         }
     }
 }
 
-p, ul {
+p,
+ul {
     font-family: Overpass;
     font-weight: 400;
-    font-size: clamp(1rem, 5.4vw, 21px);
+    font-size: clamp(0.9rem, 3.5vw, 18px);
     line-height: 135%;
     text-align: left;
 
     >span {
         font-weight: 700;
-        font-size: clamp(1rem, 5.4vw, 21px);
-        line-height: 21px;
+        font-size: clamp(0.9rem, 3.5vw, 18px);
+        line-height: clamp(1.2rem, 4vw, 24px);
         text-align: left;
     }
 }
 
 a {
-    color: #FF9900 ;
+    color: #FF9900;
+
+    // WCAG 2.1 AA - Focus States
+    &:focus,
+    &:focus-visible {
+        outline: 2px solid #FF9900;
+        outline-offset: 2px;
+        background-color: rgba(255, 153, 0, 0.1);
+        border-radius: 4px;
+    }
 
     &:hover {
         cursor: pointer;

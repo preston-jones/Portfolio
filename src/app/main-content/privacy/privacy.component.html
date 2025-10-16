@@ -1,6 +1,6 @@
-<section>
+<section id="privacy" aria-labelledby="privacy-title">
     <div class="content">
-        <h2>{{ "privacy.title" | translate }}</h2>
+        <h2 id="privacy-title">{{ "privacy.title" | translate }}</h2>
         <p>
             {{ "privacy.preamble.paragraph1" | translate }}
             <br>
@@ -19,7 +19,7 @@
             {{ "privacy.preamble.structure.list.section3" | translate }}<br>
         </p>
         <div>
-            <h3>{{ "privacy.section1.title" | translate }}</h3>
+            <h3 id="privacy-section1">{{ "privacy.section1.title" | translate }}</h3>
             <p>
                 {{ "privacy.section1.paragraph1" | translate }}
                 <br>
@@ -28,28 +28,29 @@
                 <strong>Unterlauterbach 4</strong><br>
                 <strong>82393 Iffeldorf</strong><br>
                 <br>
-                {{ "privacy.section1.phone" | translate }}<a href="tel:+4915234237664">+49 152 34 23 76 64</a>
+                {{ "privacy.section1.phone" | translate }}<a href="tel:+4915234237664" aria-label="Telefonnummer anrufen: +49 152 34 23 76 64">+49 152 34 23 76 64</a>
                 <br>
                 {{ "privacy.section1.mail" | translate }}<a
                     href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!"
-                    target="_blank">mail&#64;prestonjones.dev</a>
+                    target="_blank" aria-label="E-Mail senden an mail@prestonjones.dev (Öffnet E-Mail-Programm)">mail&#64;prestonjones.dev</a>
             </p>
         </div>
         <div>
-            <h3>{{ "privacy.section2.title" | translate }}</h3>
+            <h3 id="privacy-section2">{{ "privacy.section2.title" | translate }}</h3>
             <p>
                 {{ "privacy.section2.paragraph1" | translate }}
                 <br>
                 <br>
             </p>
-            <ul>
-                <li>{{ "privacy.section2.list.point1" | translate }}<span>&#59;</span>
+            <ul aria-labelledby="privacy-section2">
+                <li>{{ "privacy.section2.list.point1" | translate }}<span aria-hidden="true">&#59;</span>
                 </li>
-                <li>{{ "privacy.section2.list.point2" | translate }}<span>&#59;</span>
+                <li>{{ "privacy.section2.list.point2" | translate }}<span aria-hidden="true">&#59;</span>
                 </li>
-                <li>{{ "privacy.section2.list.point3" | translate }}<span>&#59;</span>
+                <li>{{ "privacy.section2.list.point3" | translate }}<span aria-hidden="true">&#59;</span>
                 </li>
-                <li>{{ "privacy.section2.list.point4" | translate }}<span>&#59;</span>
+                <li>{{ "privacy.section2.list.point4" | translate }}<span aria-hidden="true">&#59;</span>
+                </li>
                 <li>{{ "privacy.section2.list.point5" | translate }}
                 </li>
             </ul>
@@ -63,12 +64,12 @@
             </p>
         </div>
         <div>
-            <h3>{{ "privacy.section3.title" | translate }}</h3>
+            <h3 id="privacy-section3">{{ "privacy.section3.title" | translate }}</h3>
             <p>
                 {{ "privacy.section3.paragraph1" | translate }}
                 <br>
                 <br>
-                <span>{{ "privacy.section3.paragraph2.title" | translate }}</span>
+                <span><strong>{{ "privacy.section3.paragraph2.title" | translate }}</strong></span>
                 <br>
                 <br>
                 {{ "privacy.section3.paragraph2.content1" | translate }}
@@ -80,13 +81,13 @@
                 {{ "privacy.section3.paragraph2.content3" | translate }}
                 <br>
                 <br>
-                <span>{{ "privacy.section3.paragraph3.title" | translate }}</span>
+                <span><strong>{{ "privacy.section3.paragraph3.title" | translate }}</strong></span>
                 <br>
                 <br>
                 {{ "privacy.section3.paragraph3.content" | translate }}
                 <br>
                 <br>
-                <span>{{ "privacy.section3.paragraph4.title" | translate }}</span>
+                <span><strong>{{ "privacy.section3.paragraph4.title" | translate }}</strong></span>
                 <br>
                 <br>
                 {{ "privacy.section3.paragraph4.content" | translate }}
