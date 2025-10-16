@@ -1,8 +1,14 @@
-<h2 mat-dialog-title><strong>Email gesendet</strong></h2>
-<mat-dialog-content class="dialog-email-sent">
-    <p>Ihre Nachricht wurde versendet.</p>
-    <img src="../../../assets/animation/email.gif" alt="">
+<h2 mat-dialog-title id="success-dialog-title"><strong>Email gesendet</strong></h2>
+<mat-dialog-content class="dialog-email-sent" aria-labelledby="success-dialog-title">
+    <p>Ihre Nachricht wurde erfolgreich versendet. Ich werde mich so schnell wie möglich bei Ihnen melden!</p>
+    <img src="../../../assets/animation/email.gif" 
+         alt="Animation zeigt erfolgreich versendete E-Mail" 
+         aria-describedby="success-dialog-title">
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button mat-dialog-close 
+          aria-label="Dialog schließen und zur Hauptseite zurückkehren"
+          autofocus>
+    Schließen
+  </button>
 </mat-dialog-actions>
