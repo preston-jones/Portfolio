@@ -1,64 +1,70 @@
-<header>
-    <a href="" (click)="closeMenu()">
-        <img id="logo-header" src="./../../../assets/icons/logo.png">
+<header role="banner">
+    <a href="#main" (click)="closeMenu()" aria-label="Preston Jones - Zur Startseite">
+        <img id="logo-header" ngSrc="./../../../assets/icons/logo.png" alt="Preston Jones – Entwickler-Logo" width="35" height="40" priority />
         <span>PJ</span>
     </a>
     <div class="header-section-right">
-        <div id="translate-button-container" class=" display-none">
-            <span class="translate-button-en width-auto" (click)="changeLanguage('en')"
-                [class.translate-button-active]="currentLang ==='en'">ENG</span>
-            <span class="translate-button-divider">|</span>
-            <span class="translate-button-de width-32" (click)="changeLanguage('de')"
-                [class.translate-button-active]="currentLang ==='de'">DE</span>
+        <div id="translate-button-container" class="display-none" role="group" aria-label="Sprache wechseln">
+            <button class="translate-button-en width-auto" (click)="changeLanguage('en')"
+                [class.translate-button-active]="currentLang ==='en'"
+                [attr.aria-pressed]="currentLang === 'en'"
+                aria-label="Sprache zu Englisch wechseln">ENG</button>
+            <span class="translate-button-divider" aria-hidden="true">|</span>
+            <button class="translate-button-de width-32" (click)="changeLanguage('de')"
+                [class.translate-button-active]="currentLang ==='de'"
+                [attr.aria-pressed]="currentLang === 'de'"
+                aria-label="Sprache zu Deutsch wechseln">DE</button>
         </div>
-        <div id="burger-icon" (click)="toggleMenu()"
-            [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''">
-        </div>
+        <button id="burger-icon" (click)="toggleMenu()"
+            [ngClass]="initialized ? (openMenu ? 'menu-icon-animation-open' : 'menu-icon-animation-close') : ''"
+            [attr.aria-expanded]="openMenu"
+            [attr.aria-controls]="'main-menu'"
+            aria-label="Menü öffnen/schließen">
+            <span class="sr-only">{{ openMenu ? 'Menü schließen' : 'Menü öffnen' }}</span>
+        </button>
     </div>
 </header>
-<menu [ngClass]="{'openMenu': openMenu, 'closeMenu': !openMenu, 'display-none': !initialized}">
+<nav id="main-menu" role="navigation" aria-label="Hauptmenü" [ngClass]="{'openMenu': openMenu, 'closeMenu': !openMenu, 'display-none': !initialized}">
     <div class="menu-container" [class.menu-animation]="openMenu">
         <div class="menu-content">
             <div class="menu-link">
-                <a href="#aboutme" (click)="closeMenu()"><span>{{ "menu.navLinks.about" | translate }}</span></a>
+                <a href="#aboutme" (click)="closeMenu()" tabindex="0"><span>{{ "menu.navLinks.about" | translate }}</span></a>
             </div>
             <div class="menu-link">
-                <a href="#myskills" (click)="closeMenu()"><span>{{ "menu.navLinks.skills" | translate }}</span></a>
+                <a href="#myskills" (click)="closeMenu()" tabindex="0"><span>{{ "menu.navLinks.skills" | translate }}</span></a>
             </div>
             <div class="menu-link">
-                <a href="#portfolio" (click)="closeMenu()"><span>{{ "menu.navLinks.portfolio" | translate }}</span></a>
+                <a href="#portfolio" (click)="closeMenu()" tabindex="0"><span>{{ "menu.navLinks.portfolio" | translate }}</span></a>
             </div>
             <div class="menu-link">
-                <a href="#contact" (click)="closeMenu()"><span>{{ "menu.navLinks.contact" | translate }}</span></a>
+                <a href="#contact" (click)="closeMenu()" tabindex="0"><span>{{ "menu.navLinks.contact" | translate }}</span></a>
             </div>
         </div>
-        <div class="menu-footer-container">
-
+        <footer class="menu-footer-container" role="contentinfo">
             <div class="menu-footer-headline max-width">
-                <a class="mailto" href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!">
+                <a class="mailto" href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!" 
+                   aria-label="E-Mail an Preston Jones senden">
                     <span id="mailto-headline">Say Hi!</span>
                 </a>
             </div>
     
             <div class="menu-footer-bottom max-width">
-                <span id="mail-link">mail&#64;prestonjones-developer.de</span>
-                <div class="social-links">
-                    <a href="https://github.com/preston-jones" target="_blank"><img
-                            src="./../../../assets/icons/github_icon.png"></a>
+                <span id="mail-link" role="text">mail&#64;prestonjones-developer.de</span>
+                <div class="social-links" role="list" aria-label="Social Media Links">
+                    <a href="https://github.com/preston-jones" target="_blank" rel="noopener noreferrer" 
+                       aria-label="Preston Jones auf GitHub (öffnet in neuem Tab)" role="listitem">
+                        <img ngSrc="./../../../assets/icons/github_icon.png" alt="GitHub Logo" width="40" height="40">
+                    </a>
                     <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!"
-                        target="_blank"><img src="./../../../assets/icons/email_icon.png"></a>
-                    <a href="https://www.linkedin.com/in/preston-jones-25bb912b6/" target="_blank"><img
-                            src="./../../../assets/icons/linkedin_icon.png"></a>
+                       aria-label="E-Mail an Preston Jones senden" role="listitem">
+                        <img ngSrc="./../../../assets/icons/email_icon.png" alt="E-Mail Symbol" width="40" height="40">
+                    </a>
+                    <a href="https://www.linkedin.com/in/preston-jones-25bb912b6/" target="_blank" rel="noopener noreferrer"
+                       aria-label="Preston Jones auf LinkedIn (öffnet in neuem Tab)" role="listitem">
+                        <img ngSrc="./../../../assets/icons/linkedin_icon.png" alt="LinkedIn Logo" width="40" height="40">
+                    </a>
                 </div>
             </div>
-
-
-        </div>
-
-
-
-
-
-
+        </footer>
     </div>
-</menu>
+</nav>

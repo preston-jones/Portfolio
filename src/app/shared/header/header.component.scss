@@ -31,6 +31,7 @@ header {
 
         >#logo-header {
             height: 40px;
+            width: 35px;
             object-fit: contain;
 
             &:hover {
@@ -71,6 +72,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
 
     &:hover {
         cursor: pointer;
@@ -110,6 +115,9 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('./../../../assets/animation/menue_default.png');
+    border: none;
+    background-color: transparent;
+    padding: 0;
 
     &:hover {
         cursor: pointer;
@@ -124,7 +132,7 @@ header {
     }
 }
 
-menu {
+#main-menu {
     position: absolute;
     top: 100px;
     left: 0;
