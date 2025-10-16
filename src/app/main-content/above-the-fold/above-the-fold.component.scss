@@ -75,6 +75,14 @@ h1 {
         &:hover {
             color: #FF9900;
         }
+
+        // WCAG 2.1 AA - Focus States
+        &:focus,
+        &:focus-visible {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
     }
 }
 
@@ -86,11 +94,13 @@ h1 {
     height: 100%;
     width: clamp(56px, 8vw, 115px);
 
+    // WCAG 2.1 AA - Touch Targets ≥ 44x44px
+    min-height: 44px;
+    min-width: 44px;
+
     >#scroll-down-text {
         width: 100%;
         font-weight: 300;
-        // font-size: 21px;
-        // line-height: 23px;
         text-align: center;
 
         &:hover {
@@ -103,8 +113,10 @@ h1 {
     overflow: hidden;
 
     >img {
-        width: 100%;
-        object-fit: contain;
+        // NgOptimizedImage Fix: CSS Override für gewünschte Display-Größe
+        height: 56px !important;  // Gewünschte Display-Höhe
+        width: auto !important;   // Behält korrektes Aspect Ratio
+        object-fit: contain;      // Saubere Skalierung
     }
 
     >.arrow-down {

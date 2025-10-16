@@ -1,6 +1,6 @@
-<section>
+<section id="aboutme" aria-labelledby="about-heading" role="region">
     <div class="headline">
-        <h2 data-aos="headline-color" data-aos-duration="500">{{ "about.title" | translate }}</h2>
+        <h2 id="about-heading" data-aos="headline-color" data-aos-duration="500">{{ "about.title" | translate }}</h2>
     </div>
     <!-- <p id="aboutme-quote" data-aos="fade-left" data-aos-duration="1000">{{ "about.quote" | translate }}</p> -->
     <div class="content">
@@ -10,12 +10,18 @@
             <p>{{ "about.description.paragraph2" | translate }}</p>
             <br>
             <p>{{ "about.description.paragraph3" | translate }}</p>
-            <a class="btn-prim" href="#contact" [class.d-none]="scrWidth <= 960">{{ "about.button" | translate }}</a>
+            <a class="btn-prim" href="#contact" [class.d-none]="scrWidth <= 960" 
+               aria-label="Zum Kontaktformular springen">{{ "about.button" | translate }}</a>
         </div>
         <div class="img-container" data-aos="fade-left" data-aos-duration="1000">
             <div class="profile-img-container">
-                <img src="./../../../assets/imgs/portrait.png" alt="About me" class="profile-img">
-                <div class="frame" data-aos="opacity" data-aos-anchor-placement="bottom-bottom"></div>
+                <img ngSrc="./../../../assets/imgs/portrait.png" 
+                     alt="Preston Jones - Entwickler Portrait" 
+                     class="profile-img" 
+                     width="480" 
+                     height="480"
+                     priority>
+                <div class="frame" data-aos="opacity" data-aos-anchor-placement="bottom-bottom" aria-hidden="true"></div>
             </div>
         </div>
     </div>

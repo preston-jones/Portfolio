@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { NgOptimizedImage } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgOptimizedImage],
   templateUrl: './my-skills.component.html',
-  styleUrls: ['./my-skills.component.scss', './my-skills.responsive.scss', '../../../styles.animations.scss']
+  styleUrls: ['./my-skills.component.scss', './my-skills.responsive.scss', '../../../styles.animations.scss', '../../../styles.wcag.scss']
 })
 
 export class MySkillsComponent {
@@ -20,6 +21,11 @@ export class MySkillsComponent {
     this.currentLang = savedLang || 'de';
     this.translate.use(this.currentLang);
     AOS.init();
+  }
+
+
+  getTranslation(key: string): string {
+    return this.translate.instant(key);
   }
 
 

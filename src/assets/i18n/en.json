@@ -3,6 +3,9 @@
         "title": "Developer",
         "sendMessageBtn": "Send A Message"
     },
+    "mySkills": {
+        "learning": "Continually Learning"
+    },
     "menu": {
         "navLinks": {
             "about": "About Me",
@@ -50,21 +53,21 @@
         "form": {
             "name": {
                 "label": "Your Name",
-                "placeholder": "Your Name",
+                "placeholder": "John Doe",
                 "errors": {
                     "required": "Please enter your name."
                 }
             },
             "email": {
-                "label": "Your email",
-                "placeholder": "Your email",
+                "label": "Your Email Address",
+                "placeholder": "john.doe@example.com",
                 "errors": {
-                    "required": "Please enter your email."
+                    "required": "Please enter your email address."
                 }
             },
             "message": {
-                "label": "Your message",
-                "placeholder": "Your message",
+                "label": "Your Message",
+                "placeholder": "Hello Preston, I have an exciting project idea...",
                 "errors": {
                     "required": "Please enter a message."
                 }

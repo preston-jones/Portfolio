@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { NgOptimizedImage } from '@angular/common'
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    NgOptimizedImage
   ],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss', './header.responsive.scss']
+  styleUrls: ['./header.component.scss', './header.responsive.scss', '../../../styles.wcag.scss']
 })
 export class HeaderComponent {
   openMenu: boolean = false;

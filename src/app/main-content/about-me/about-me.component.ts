@@ -1,13 +1,14 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { NgOptimizedImage } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgOptimizedImage],
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss', './about-me.responsive.scss', '../../../styles.animations.scss']
+  styleUrls: ['./about-me.component.scss', './about-me.responsive.scss', '../../../styles.animations.scss', '../../../styles.wcag.scss']
 })
 export class AboutMeComponent {
 

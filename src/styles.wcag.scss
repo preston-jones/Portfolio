@@ -1,0 +1,95 @@
+/**
+ * WCAG 2.1 AA Global Styles
+ * Globale Accessibility-Styles für WCAG-Konformität
+ * Autor: Preston Jones
+ */
+
+/* Screen Reader Only Text - WCAG 2.1 AA */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus States - WCAG 2.1 AA */
+.wcag-focus {
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid #FF9900;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Touch Targets - WCAG 2.1 AA (≥ 44x44px) */
+.wcag-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Skip Link - WCAG 2.1 AA */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 4px;
+  font-weight: 600;
+  
+  // WCAG 2.1 AA Kontrast ≥ 4.5:1
+  &:focus,
+  &:focus-visible {
+    top: 6px;
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+}
+
+/* High Contrast Support - WCAG 2.1 AA */
+@media (prefers-contrast: high) {
+  .wcag-focus {
+    &:focus,
+    &:focus-visible {
+      outline-width: 3px;
+      outline-color: #000000;
+    }
+  }
+}
+
+/* Reduced Motion Support - WCAG 2.1 AA */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus Management for Modal/Dialog */
+.wcag-focus-trap {
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Accessible Hide/Show */
+.wcag-hidden {
+  display: none;
+}
+
+.wcag-visually-hidden {
+  @extend .sr-only;
+}

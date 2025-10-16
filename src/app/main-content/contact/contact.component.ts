@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
+import { NgOptimizedImage } from '@angular/common';
 import { DialogEmailSentComponent } from '../../dialogs/dialog-email-sent/dialog-email-sent.component';
 import { DialogEmailErrorComponent } from '../../dialogs/dialog-email-error/dialog-email-error.component';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
@@ -12,11 +13,12 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [FormsModule,
     MatDialogModule,
-    TranslateModule
+    TranslateModule,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss', './contact.responsive.scss']
+  styleUrls: ['./contact.component.scss', './contact.responsive.scss', '../../../styles.wcag.scss']
 })
 
 export class ContactComponent {

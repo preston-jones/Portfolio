@@ -23,8 +23,8 @@ section {
 
         >h2 {
             font-weight: 800;
-            font-size: clamp(1rem, 10vw, 56px);
-            line-height: 56px;
+            font-size: clamp(1.8rem, 8vw, 56px);
+            line-height: clamp(1.8rem, 8vw, 56px);
             text-align: left;
         }
 
@@ -37,15 +37,15 @@ section {
     
             >h3 {
                 font-weight: 800;
-                font-size: 32px;
-                line-height: 32px;
+                font-size: clamp(1.4rem, 5vw, 32px);
+                line-height: clamp(1.4rem, 5vw, 32px);
                 text-align: left;
             }
     
             >span {
                 font-weight: 800;
-                font-size: 21px;
-                line-height: 21px;
+                font-size: clamp(1rem, 3.5vw, 21px);
+                line-height: clamp(1rem, 3.5vw, 21px);
                 text-align: left;
             }
         }

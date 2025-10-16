@@ -1,25 +1,29 @@
-<section class="above-the-fold" id="top">
+<main id="main" class="above-the-fold" role="main" aria-labelledby="main-heading">
     <div class="headline-container">
-        <h1 class="slide-down-animation">Frontend</h1>
-        <h1 class="slide-to-left-animation">{{ "aboveTheFold.title" | translate }}</h1>
+        <h1 id="main-heading" class="slide-down-animation">Frontend</h1>
+        <h1 class="slide-to-left-animation" aria-describedby="developer-name">{{ "aboveTheFold.title" | translate }}</h1>
         <div class="headline-underline slide-to-right-animation">
-            <hr>
-            <p>Preston Jones</p>
+            <hr aria-hidden="true">
+            <p id="developer-name">Preston Jones</p>
         </div>
     </div>
     @if (scrWidth <= 960) {
-        <a class="btn-prim btn-font zoom-in" href="#contact">{{ "aboveTheFold.sendMessageBtn" | translate }}</a>
+        <a class="btn-prim btn-font zoom-in" href="#contact" aria-label="Zum Kontaktformular springen">
+            {{ "aboveTheFold.sendMessageBtn" | translate }}
+        </a>
     }
     <div class="headline-bottom slide-down-animation">
         <div class="headline-email">
-            <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!" target="_blank">
+            <a href="mailto:mail@prestonjones.dev?subject=Hi Preston, I've got a message for you!" 
+               aria-label="E-Mail an Preston Jones senden">
                 <p>mail&#64;prestonjones.dev</p>
             </a>
         </div>
-        <a href="#aboutme">
+        <a href="#aboutme" aria-label="Nach unten zu Über mich scrollen">
             <div class="scroll-down">
                 <div class="arrow-container">
-                    <img class="arrow-down" src="./../../../assets/animation/arrow.png">
+                    <img class="arrow-down" ngSrc="./../../../assets/animation/arrow.png" 
+                         alt="Nach unten scrollen" width="116" height="180" priority>
                 </div>
                 <div id="scroll-down-text">
                     <p>Scroll</p>
@@ -28,4 +32,4 @@
             </div>
         </a>
     </div>
-</section>
+</main>

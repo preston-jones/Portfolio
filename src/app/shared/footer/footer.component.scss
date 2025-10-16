@@ -48,10 +48,22 @@ footer {
             justify-content: center;
             align-items: center;
             transition: transform 125ms ease-in-out;
+            
+            // WCAG 2.1 AA - Touch Targets ≥ 44x44px
+            min-height: 44px;
+            min-width: 44px;
 
             &:hover {
                 transition: transform 125ms ease-in-out;
                 transform: translateY(-10px);
+            }
+
+            // WCAG 2.1 AA - Focus States
+            &:focus,
+            &:focus-visible {
+                outline: 2px solid #FF9900;
+                outline-offset: 2px;
+                border-radius: 4px;
             }
 
             >p {
@@ -80,9 +92,17 @@ footer {
             transform: scale(1.1);
         }
 
+        // WCAG 2.1 AA - Focus States
+        &:focus,
+        &:focus-visible {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
         >#logo-footer {
-            height: 40px;
-            width: 35px;
+            height: 40px !important;  // Override NgOptimizedImage inline styles
+            width: auto !important;   // Maintain aspect ratio from intrinsic dimensions
             object-fit: contain;
             cursor: pointer;
         }

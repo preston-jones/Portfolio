@@ -23,6 +23,13 @@
 }
 
 .project-img-link {
+    // WCAG 2.1 AA - Focus States
+    &:focus,
+    &:focus-visible {
+        outline: 2px solid #FF9900;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -195,6 +202,13 @@
         white-space: nowrap;
         transition: all 125ms ease-in-out;
         box-shadow: 9px 9px 2px #9191916e;
+
+        // WCAG 2.1 AA - Focus States
+        &:focus,
+        &:focus-visible {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+        }
 
         &:hover {
             cursor: pointer;
