@@ -147,20 +147,27 @@
                    required
                    aria-describedby="policy-error"
                    [attr.aria-invalid]="!policy && name.valid && email.valid && message.valid">
-            <label for="policy" class="policy-label">
-                {{ "contact.form.privacy.label_01" | translate }}
-                <a href="privacy" 
-                   class="policy-link"
-                   [attr.aria-label]="'Link zur ' + ('contact.form.privacy.title' | translate)">
-                    {{ "contact.form.privacy.title" | translate }}
-                </a>
-                {{ "contact.form.privacy.label_02" | translate}}
-            </label>
-            @if (name.valid && email.valid && message.valid && !policy) {
-            <div id="policy-error" class="form-error" role="alert" aria-live="polite">
-                {{ "contact.form.privacy.errors.required" | translate }}
+            <div class="policy-text-container">
+                <label for="policy" class="policy-label">
+                    {{ "contact.form.privacy.label_01" | translate }}
+                    <a href="privacy" 
+                       class="policy-link"
+                       [attr.aria-label]="'Link zur ' + ('contact.form.privacy.title' | translate)">
+                        {{ "contact.form.privacy.title" | translate }}
+                    </a>
+                    {{ "contact.form.privacy.label_02" | translate}}
+                </label>
+                <!-- Fixed height error container to prevent layout jumping -->
+                <div id="policy-error" 
+                     class="form-error policy-error" 
+                     role="alert" 
+                     aria-live="polite"
+                     [class.visible]="name.valid && email.valid && message.valid && !policy">
+                    @if (name.valid && email.valid && message.valid && !policy) {
+                        {{ "contact.form.privacy.errors.required" | translate }}
+                    }
+                </div>
             </div>
-            }
         </div>
 
         <div class="submit-container">
