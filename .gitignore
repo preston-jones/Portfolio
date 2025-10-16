@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Development Instructions and AI Prompts (private/internal)
+.github/instructions/
+*.instructions.md
+/tmp/postman-*.instructions.md
