@@ -48,7 +48,7 @@ section {
     padding: 8px;
 
     >img {
-        height: 75px !important;  // Override NgOptimizedImage inline styles
+        height: 75px;
         width: auto !important;   // Maintain aspect ratio
         object-fit: contain;
         
