@@ -1,13 +1,15 @@
 <div class="project-template-container">
 
     @for ( project of projectList; track project.title) {
-    <div class="project-template" [class.flex-row-reverse]="$index % 2 != 0" (mouseenter)="onMouseEnter()"
-        (mouseleave)="onMouseLeave()">
+    <article class="project-template" [class.flex-row-reverse]="$index % 2 != 0" (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()" [attr.aria-labelledby]="'project-title-' + $index">
 
-        <a href="{{ project.links[0].url }}" target="_blank" data-aos="zoom-in" data-aos-duration="500" class="project-img-link">
+        <a [href]="project.links[0].url" target="_blank" data-aos="zoom-in" data-aos-duration="500" 
+           class="project-img-link" [attr.aria-label]="'Zum Projekt ' + project.title">
             <div class="img-container" data-aos="fade-left" data-aos-duration="1000">
 
-                <img class="project-img" src="{{ project.img }}" alt="" data-aos="color-filter" data-aos-duration="500" data-aos-anchor-placement="bottom-bottom">
+                <img class="project-img" [src]="project.img" [alt]="'Screenshot des Projekts ' + project.title" 
+                     data-aos="color-filter" data-aos-duration="500" data-aos-anchor-placement="bottom-bottom">
                 <div class="frame" [ngClass]="$index % 2 != 0 ? 'frame-position-right' : 'frame-position-left'"></div>
                 
             </div>
@@ -17,27 +19,30 @@
             [class.project-info-reverse]="$index % 2 != 0"
             [attr.data-aos]="$index % 2 != 0 ? 'fade-left' : 'fade-right'" data-aos-duration="500">
             <div class="project-info-content">
-                <h3 class="font-syne">{{ project.title }}</h3>
+                <h3 class="font-syne" [id]="'project-title-' + $index">{{ project.title }}</h3>
                 <div class="technologies">
-                    <span class="technologie-list">{{ project.technologies }}</span>
+                    <span class="technologie-list" aria-label="Verwendete Technologien">{{ project.technologies }}</span>
                 </div>
                 <p class="description">{{ project.descriptionKey | translate }}</p>
 
-
                 <div class="project-links" [ngClass]="$index % 2 != 0 ? 'project-links-left' : 'project-links-right'">
                     @for(link of project.links; track link.title){
-                    <a class="projectlink-btn" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+                    <a class="projectlink-btn" [href]="link.url" target="_blank" 
+                       [attr.aria-label]="link.title + ' für Projekt ' + project.title + ' (Öffnet in neuem Tab)'">
+                       {{ link.title }}
+                    </a>
                     }
                 </div>
             </div>
         </div>
         <div class="project-counter font-syne"
             [ngClass]="$index % 2 != 0 ? 'project-counter-left' : 'project-counter-right'"
-            [attr.data-aos]="$index % 2 != 0 ? 'fade-left' : 'fade-right'" data-aos-duration="500">
+            [attr.data-aos]="$index % 2 != 0 ? 'fade-left' : 'fade-right'" data-aos-duration="500"
+            [attr.aria-label]="'Projekt ' + ($index + 1) + ' von ' + projectList.length">
             <p>{{ this.formatNumber($index + 1) }}/{{ this.formatNumber(projectList.length) }}
             </p>
         </div>
-    </div>
+    </article>
     }
 
 </div>
