@@ -53,21 +53,21 @@
         "form": {
             "name": {
                 "label": "Ihr Name",
-                "placeholder": "Ihr Name",
+                "placeholder": "Max Mustermann",
                 "errors": {
                     "required": "Bitte geben Sie Ihren Namen ein."
                 }
             },
             "email": {
-                "label": "Ihre Email",
-                "placeholder": "Ihre Email",
+                "label": "Ihre E-Mail-Adresse",
+                "placeholder": "max.mustermann@example.com",
                 "errors": {
                     "required": "Bitte geben Sie Ihre Email Adresse ein."
                 }
             },
             "message": {
                 "label": "Ihre Nachricht",
-                "placeholder": "Ihre Nachricht",
+                "placeholder": "Hallo Preston, ich habe eine spannende Projektidee...",
                 "errors": {
                     "required": "Bitte geben Sie eine Nachricht."
                 }

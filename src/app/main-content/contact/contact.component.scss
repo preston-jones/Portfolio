@@ -28,6 +28,13 @@ section {
             color: #FF9900;
             cursor: default;
         }
+        
+        // WCAG 2.1 AA - Focus States
+        &:focus {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
     }
 }
 
@@ -58,6 +65,7 @@ section {
     }
 }
 
+// WCAG 2.1 AA - Form Accessibility
 form {
     font-family: Overpass;
     display: flex;
@@ -70,16 +78,45 @@ form {
     margin-top: 56px;
 }
 
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+// WCAG 2.1 AA - Form Labels and Structure
+.form-label {
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFCF3;
+    margin-bottom: 8px;
+    display: block;
+    width: 100%;
+    
+    .required-indicator {
+        color: #FF9900;
+        font-weight: 700;
+        margin-left: 4px;
+    }
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 8px;
     width: 100%;
     background-color: transparent;
     color: #FFFCF3;
 
+    // Legacy label styles (keep for backwards compatibility)
     >label {
         font-family: 'Overpass';
         text-align: left;
@@ -104,9 +141,10 @@ form {
     >.status-icon {
         position: absolute;
         right: 4px;
-        width: 30px;
-        height: 30px;
+        width: 30px !important;  // Override NgOptimizedImage
+        height: 30px !important; // Override NgOptimizedImage
         object-fit: contain;
+        z-index: 1;
     }
 
     >input,
@@ -126,19 +164,36 @@ form {
         font-size: 16px;
         line-height: 23px;
         text-align: left;
+        
+        // WCAG 2.1 AA - Touch Targets ≥ 44x44px
+        min-height: 44px;
 
         &:hover {
             cursor: text;
             border: 1px solid #FF9900;
         }
 
+        // WCAG 2.1 AA - Focus States
         &:focus {
             border: 2px solid #FF9900;
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+        }
+        
+        // WCAG 2.1 AA - Error States
+        &[aria-invalid="true"] {
+            border: 2px solid #FF4444;
+            
+            &:focus {
+                border: 2px solid #FF4444;
+                outline: 2px solid #FF4444;
+            }
         }
     }
 
     textarea {
         height: 200px;
+        resize: vertical; // Allow vertical resize only
 
         >span {
             color: #FFFCF3;
@@ -150,21 +205,37 @@ form {
     }
 
     input::placeholder, textarea::placeholder {
-        color: #FFFCF3;
+        color: #BBBBBB; // WCAG 2.1 AA - Grauer Placeholder-Text für besseren Kontrast
         font-family: 'Overpass';
         font-weight: 400;
         font-size: 16px;
         line-height: 23px;
         text-align: left;
+        opacity: 0.8; // Zusätzliche Transparenz für bessere Unterscheidung
+        font-style: italic; // Kursiv für noch klarere Unterscheidung
     }
 
     input:focus::placeholder, textarea:focus::placeholder {
-        opacity: 0;
+        opacity: 0; // Verschwindet beim Fokus
     }
 }
 
+// WCAG 2.1 AA - Error Messages
 .form-error {
-    color: red;
+    color: #FF4444;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+    display: block;
+    width: 100%;
+}
+
+// WCAG 2.1 AA - Submit Button
+.submit-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
 }
 
 .submit-btn {
@@ -179,67 +250,111 @@ form {
     text-align: center;
     background-color: transparent;
     color: #FFFCF3;
+    border-radius: 4px;
+    
+    // WCAG 2.1 AA - Touch Targets ≥ 44x44px (already met with 68px height)
+    
+    // WCAG 2.1 AA - Focus States
+    &:focus {
+        outline: 2px solid #FF9900;
+        outline-offset: 2px;
+        border-color: #FF9900;
+    }
+    
+    &:hover:not(:disabled) {
+        background-color: #FF9900;
+        color: #1B1819;
+        border-color: #FF9900;
+        transition: all 200ms ease-in-out;
+    }
 
     &:disabled {
         opacity: 30%;
         cursor: not-allowed;
         border: 3px solid #BBBBBB;
-        // background-color: #bbbbbb41;
         color: #BBBBBB;
+        
+        &:focus {
+            outline: 2px solid #BBBBBB;
+        }
     }
 }
 
 input {
-    // border:  0px 0px 2px 0px;
     padding: 15px 25px 15px 25px;
     gap: 10px;
 }
 
 .input-error {
-    border: 2px solid red !important;
+    border: 2px solid #FF4444 !important;
 }
 
+// WCAG 2.1 AA - Checkbox and Policy
 .policy-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    height: 60px;
     gap: 16px;
 
     >#policy {
         height: 21px;
         width: 21px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        // WCAG Touch Target mit ::before Pseudo-Element
+        position: relative;
+        flex-shrink: 0;
+
+        // Vergrößert den klickbaren Bereich ohne Layout zu beeinflussen
+        &::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
+            // Unsichtbarer klickbarer Bereich 45x45px
+        }
 
         &:hover {
             cursor: pointer;
             border: 2px solid #FF9900;
         }
+        
+        // WCAG 2.1 AA - Focus States
+        &:focus {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+        }
     }
 
-    >.policy-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 8px;
-
-        >label {
-
-            >a {
-                color: #FF9900;
-
-                &:hover {
-                    text-decoration: underline;
-                }
+    .policy-label {
+        font-family: 'Overpass';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        color: #FFFCF3;
+        flex: 1;
+        
+        .policy-link {
+            color: #FF9900;
+            text-decoration: underline;
+            
+            &:hover {
+                text-decoration: none;
+                background-color: rgba(255, 153, 0, 0.1);
+            }
+            
+            // WCAG 2.1 AA - Focus States
+            &:focus {
+                outline: 2px solid #FF9900;
+                outline-offset: 2px;
+                border-radius: 2px;
             }
         }
     }
 }
 
+// WCAG 2.1 AA - Back to Top Button
 .back-to-top {
     position: absolute;
     bottom: 0;
@@ -251,6 +366,15 @@ input {
     background-size: cover;
     background-repeat: no-repeat;
     transition: animation 300ms ease-out;
+    
+    // WCAG 2.1 AA - Touch Targets ≥ 44x44px (already met)
+    
+    // WCAG 2.1 AA - Focus States
+    &:focus {
+        outline: 2px solid #FF9900;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
 
     &:hover {
         cursor: pointer;

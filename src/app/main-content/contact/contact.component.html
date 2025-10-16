@@ -1,82 +1,189 @@
-<section>
+<section id="contact" aria-labelledby="contact-heading" role="region">
     <div class="headline">
-        <h2 class="change-color">{{ "contact.title" | translate }}</h2>
+        <h2 id="contact-heading" class="change-color">{{ "contact.title" | translate }}</h2>
     </div>
     <div class="subheadline">
         <span id="subheadline1">{{ "contact.subtitle" | translate }}</span>
         <span id="subheadline2"><span [class.anim-typewriter]="aboutMeScrolledY && scrWidth >= 490">{{ "contact.description" | translate }}</span></span>
     </div>
-    <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete>
-        <div class="input-container">
-            <div class="input-wrapper">
-                <input #name="ngModel" [class.input-error]="!name.valid && name.touched && !name.disabled"
-                    [(ngModel)]="contactData.name" type="text" id="name" name="firstname"
-                    placeholder="{{ 'contact.form.name.placeholder' | translate }}" autocomplete="off" required>
+    <form class="contact-form" 
+          (ngSubmit)="onSubmit(contactForm)" 
+          #contactForm="ngForm" 
+          autocomplete="on"
+          novalidate
+          aria-label="Kontaktformular"
+          role="form">
+        <fieldset>
+            <legend class="sr-only">Kontaktinformationen</legend>
+            
+            <div class="input-container">
+                <label for="name" class="form-label">
+                    {{ "contact.form.name.label" | translate }}
+                    <span class="required-indicator" aria-label="Pflichtfeld">*</span>
+                </label>
+                <div class="input-wrapper">
+                    <input #name="ngModel" 
+                           [class.input-error]="!name.valid && name.touched && !name.disabled"
+                           [(ngModel)]="contactData.name" 
+                           type="text" 
+                           id="name" 
+                           name="firstname"
+                           placeholder="{{ 'contact.form.name.placeholder' | translate }}" 
+                           autocomplete="given-name" 
+                           required
+                           aria-describedby="name-error"
+                           [attr.aria-invalid]="!name.valid && name.touched">
+                    @if (!name.valid && name.touched && !name.disabled) {
+                    <img class="status-icon" 
+                         ngSrc="../../../assets/icons/error.png" 
+                         alt="Fehler" 
+                         width="24" 
+                         height="24"
+                         aria-hidden="true">
+                    } @else if (name.valid && name.touched && !name.disabled) {
+                    <img class="status-icon"
+                         ngSrc="../../../assets/icons/success.png" 
+                         alt="Erfolgreich" 
+                         width="24" 
+                         height="24"
+                         aria-hidden="true">
+                    }
+                </div>
                 @if (!name.valid && name.touched && !name.disabled) {
-                <img class="status-icon" src="../../../assets/icons/error.png" alt="">
-                } @else if (name.valid && name.touched && !name.disabled) {<img class="status-icon"
-                    src="../../../assets/icons/success.png" alt="">}
-            </div>
-            <label for="name">
-                @if (!name.valid && name.touched && !name.disabled) {
-                <span class="form-error">{{ "contact.form.name.errors.required" | translate }}</span>
+                <div id="name-error" class="form-error" role="alert" aria-live="polite">
+                    {{ "contact.form.name.errors.required" | translate }}
+                </div>
                 }
-            </label>
-        </div>
-        <div class="input-container">
-            <div class="input-wrapper">
-                <input #email="ngModel" [class.input-error]="!email.valid && email.touched && !email.disabled"
-                    [(ngModel)]="contactData.email" type="text" id="email" name="lastname"
-                    placeholder="{{ 'contact.form.email.placeholder' | translate }}" required
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            </div>
+
+            <div class="input-container">
+                <label for="email" class="form-label">
+                    {{ "contact.form.email.label" | translate }}
+                    <span class="required-indicator" aria-label="Pflichtfeld">*</span>
+                </label>
+                <div class="input-wrapper">
+                    <input #email="ngModel" 
+                           [class.input-error]="!email.valid && email.touched && !email.disabled"
+                           [(ngModel)]="contactData.email" 
+                           type="email" 
+                           id="email" 
+                           name="email"
+                           placeholder="{{ 'contact.form.email.placeholder' | translate }}" 
+                           required
+                           autocomplete="email"
+                           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                           aria-describedby="email-error"
+                           [attr.aria-invalid]="!email.valid && email.touched">
+                    @if (!email.valid && email.touched && !email.disabled) {
+                    <img class="status-icon" 
+                         ngSrc="../../../assets/icons/error.png" 
+                         alt="Fehler" 
+                         width="24" 
+                         height="24"
+                         aria-hidden="true">
+                    } @else if (email.valid && email.touched && !email.disabled) {
+                    <img class="status-icon"
+                         ngSrc="../../../assets/icons/success.png" 
+                         alt="Erfolgreich" 
+                         width="24" 
+                         height="24"
+                         aria-hidden="true">
+                    }
+                </div>
                 @if (!email.valid && email.touched && !email.disabled) {
-                <img class="status-icon" src="../../../assets/icons/error.png" alt="">
-                } @else if (email.valid && email.touched && !email.disabled) {<img class="status-icon"
-                    src="../../../assets/icons/success.png" alt="">}
-            </div>
-            <label for="email">
-                @if (!email.valid && email.touched && !email.disabled) {
-                <span class="form-error">{{ "contact.form.email.errors.required" | translate }}</span>
+                <div id="email-error" class="form-error" role="alert" aria-live="polite">
+                    {{ "contact.form.email.errors.required" | translate }}
+                </div>
                 }
-            </label>
-        </div>
-        <div class="input-container">
-            <div class="input-wrapper">
-                <textarea #message="ngModel" minlength="4"
-                    [class.input-error]="!message.valid && message.touched && !message.disabled"
-                    [(ngModel)]="contactData.message" id="message" name="message"
-                    placeholder="{{ 'contact.form.message.placeholder' | translate }}" required></textarea>
-                @if (!message.valid && message.touched && !message.disabled) {
-                <img class="status-icon textarea-icon" src="../../../assets/icons/error.png" alt="">
-                } @else if (message.valid && message.touched && !message.disabled) {<img
-                    class="status-icon textarea-icon" src="../../../assets/icons/success.png" alt="">}
             </div>
-            <label for="message">
+
+            <div class="input-container">
+                <label for="message" class="form-label">
+                    {{ "contact.form.message.label" | translate }}
+                    <span class="required-indicator" aria-label="Pflichtfeld">*</span>
+                </label>
+                <div class="input-wrapper">
+                    <textarea #message="ngModel" 
+                              minlength="4"
+                              [class.input-error]="!message.valid && message.touched && !message.disabled"
+                              [(ngModel)]="contactData.message" 
+                              id="message" 
+                              name="message"
+                              placeholder="{{ 'contact.form.message.placeholder' | translate }}" 
+                              required
+                              rows="5"
+                              autocomplete="off"
+                              aria-describedby="message-error"
+                              [attr.aria-invalid]="!message.valid && message.touched"></textarea>
+                    @if (!message.valid && message.touched && !message.disabled) {
+                    <img class="status-icon textarea-icon" 
+                         ngSrc="../../../assets/icons/error.png" 
+                         alt="Fehler" 
+                         width="24" 
+                         height="24"
+                         aria-hidden="true">
+                    } @else if (message.valid && message.touched && !message.disabled) {
+                    <img class="status-icon textarea-icon" 
+                         ngSrc="../../../assets/icons/success.png" 
+                         alt="Erfolgreich" 
+                         width="24" 
+                         height="24"
+                         aria-hidden="true">
+                    }
+                </div>
                 @if (!message.valid && message.touched && !message.disabled) {
-                <span class="form-error">{{ "contact.form.message.errors.required" | translate }}</span>
+                <div id="message-error" class="form-error" role="alert" aria-live="polite">
+                    {{ "contact.form.message.errors.required" | translate }}
+                </div>
                 }
-            </label>
-        </div>
+            </div>
+        </fieldset>
 
         <div class="policy-container">
-            <input type="checkbox" id="policy" name="policy" [(ngModel)]="policy" required>
-            <div class="policy-container">
-                <label for="policy">{{ "contact.form.privacy.label_01" | translate }}<a href="privacy">{{
-                        "contact.form.privacy.title" | translate }}</a>{{ "contact.form.privacy.label_02" | translate}}
-                </label>
-                @if (name.valid && email.valid && message.valid && !policy) {
-                <span class="form-error">{{ "contact.form.privacy.errors.required" | translate }}</span>
-                }
+            <input type="checkbox" 
+                   id="policy" 
+                   name="policy" 
+                   [(ngModel)]="policy" 
+                   required
+                   aria-describedby="policy-error"
+                   [attr.aria-invalid]="!policy && name.valid && email.valid && message.valid">
+            <label for="policy" class="policy-label">
+                {{ "contact.form.privacy.label_01" | translate }}
+                <a href="privacy" 
+                   class="policy-link"
+                   [attr.aria-label]="'Link zur ' + ('contact.form.privacy.title' | translate)">
+                    {{ "contact.form.privacy.title" | translate }}
+                </a>
+                {{ "contact.form.privacy.label_02" | translate}}
+            </label>
+            @if (name.valid && email.valid && message.valid && !policy) {
+            <div id="policy-error" class="form-error" role="alert" aria-live="polite">
+                {{ "contact.form.privacy.errors.required" | translate }}
             </div>
-
+            }
         </div>
 
-        @if (contactForm.valid && policy) {
-        <input class="submit-btn" type="submit" value="{{ 'contact.form.button.label' | translate }}">
-
-        } @else {
-        <input class="submit-btn" type="submit" value="{{ 'contact.form.button.label' | translate }}" disabled>
-        }
+        <div class="submit-container">
+            @if (contactForm.valid && policy) {
+            <button class="submit-btn" 
+                    type="submit"
+                    [attr.aria-label]="'contact.form.button.label' | translate">
+                {{ 'contact.form.button.label' | translate }}
+            </button>
+            } @else {
+            <button class="submit-btn" 
+                    type="submit" 
+                    disabled
+                    [attr.aria-label]="'Formular unvollständig - ' + ('contact.form.button.label' | translate)">
+                {{ 'contact.form.button.label' | translate }}
+            </button>
+            }
+        </div>
     </form>
-    <a href="#top" class="back-to-top"></a>
+    <a href="#top" 
+       class="back-to-top wcag-touch-target"
+       aria-label="Zurück zum Seitenanfang"
+       title="Zurück zum Seitenanfang">
+        <span class="sr-only">Zurück zum Seitenanfang</span>
+    </a>
 </section>

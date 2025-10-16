@@ -101,8 +101,8 @@ footer {
         }
 
         >#logo-footer {
-            height: 40px;
-            width: 35px;
+            height: 40px !important;  // Override NgOptimizedImage inline styles
+            width: auto !important;   // Maintain aspect ratio from intrinsic dimensions
             object-fit: contain;
             cursor: pointer;
         }

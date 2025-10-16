@@ -175,6 +175,41 @@ um Projekte **WCAG 2.1 AA-konform** und **Lighthouse-optimiert** zu machen.
 - Bildgrößen (`width` / `height`) setzen.  
 - `routerLinkActive="active"` + `aria-current="page"`.
 - **WICHTIG:** Original Bildgrößen und Layout-Dimensionen immer beibehalten!
-- **WICHTIG:** NgOptimizedImage Aspect Ratio Fehler beheben. Korrigiere die Bildabmessungen mit den tatsächlichen Intrinsic Sizes.
+
+### 🖼️ NgOptimizedImage Aspect Ratio Fix Protocol
+
+**Problem:** Console Warning `NG02952: The NgOptimizedImage directive has detected that the aspect ratio of the image does not match...`
+
+**Automatische Lösung bei jeder Aspect Ratio Warning:**
+
+1. **Identifiziere intrinsische Bildmaße** aus Console Warning:
+   - Beispiel: `Intrinsic image size: 112w x 128h (aspect-ratio: 0.88)`
+
+2. **Aktualisiere HTML width/height** mit EXAKTEN intrinsischen Werten:
+   ```html
+   <!-- VORHER (falsch) -->
+   <img ngSrc="logo.png" width="40" height="40">
+   
+   <!-- NACHHER (korrekt mit intrinsischen Maßen) -->
+   <img ngSrc="logo.png" width="112" height="128">
+   ```
+
+3. **CSS Override mit !important** für gewünschte Display-Größe:
+   ```scss
+   img {
+     height: 40px !important;  // Gewünschte Display-Höhe
+     width: auto !important;   // Behält korrektes Aspect Ratio
+     object-fit: contain;      // Saubere Skalierung
+   }
+   ```
+
+4. **Regel:** 
+   - HTML width/height = Intrinsische Bildmaße (NgOptimizedImage Compliance)
+   - CSS width/height = Display-Größe (Layout/Design)
+   - Immer `!important` verwenden um NgOptimizedImage inline-styles zu überschreiben
+
+5. **Validierung:** Console zeigt keine NG02952 Warnings mehr
+
+**Wann anwenden:** Automatisch bei jeder NgOptimizedImage Aspect Ratio Console Warning
 
 > Verwende diese Best Practices in allen Angular-Komponenten für bessere Performance, Accessibility und Lighthouse Scores **ohne das bestehende Design zu verändern**.
