@@ -1,3 +1,24 @@
+// WCAG 2.1 AA - Skip Links for keyboard navigation
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #FF9900;
+    color: #1b1819;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    font-weight: 600;
+    font-size: 14px;
+    
+    &:focus {
+        top: 6px;
+        outline: 2px solid #1b1819;
+        outline-offset: 2px;
+    }
+}
+
 app-header {
     position: fixed;
     top: 0;
@@ -10,6 +31,17 @@ app-header {
     transition: box-shadow 0.25s ease-in-out;
 }
 
+// WCAG 2.1 AA - Main content with proper spacing for fixed header
+main {
+    min-height: 100vh;
+    padding-top: 0; // Headers handle their own spacing
+    
+    // Ensure focus is visible within main content
+    &:focus-within {
+        outline: none; // Let individual elements handle focus
+    }
+}
+
 app-footer {
     display: flex;
     justify-content: center;
@@ -20,4 +52,13 @@ app-footer {
 .navbar-shadow {
     transition: box-shadow 0.25s ease-in-out;
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+// WCAG 2.1 AA - Reduced Motion Support
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

@@ -1,3 +1,12 @@
-<app-header [ngClass]="{'navbar-shadow': this.userHasScrolled}"></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- WCAG 2.1 AA - Skip Links for keyboard navigation -->
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+<a class="skip-link" href="#main-menu">Zur Navigation springen</a>
+
+<app-header [ngClass]="{'navbar-shadow': this.userHasScrolled}" role="banner"></app-header>
+
+<!-- WCAG 2.1 AA - Main content landmark -->
+<main id="main-content" role="main">
+    <router-outlet></router-outlet>
+</main>
+
+<app-footer role="contentinfo"></app-footer>

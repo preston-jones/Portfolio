@@ -1,8 +1,14 @@
-<h2 mat-dialog-title><strong>Email NICHT gesendet</strong></h2>
-<mat-dialog-content class="dialog-email-error">
-    <p>Ihre Nachricht konnte nicht gesendet werden.</p><br>
-    <img src="../../../assets/animation/email_error.gif" alt="">
+<h2 mat-dialog-title id="error-dialog-title"><strong>Email NICHT gesendet</strong></h2>
+<mat-dialog-content class="dialog-email-error" aria-labelledby="error-dialog-title">
+    <p>Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt.</p>
+    <img src="../../../assets/animation/email_error.gif" 
+         alt="Animation zeigt einen Fehler beim E-Mail-Versand" 
+         aria-describedby="error-dialog-title">
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button mat-dialog-close 
+          aria-label="Dialog schließen und zum Kontaktformular zurückkehren"
+          autofocus>
+    Schließen
+  </button>
 </mat-dialog-actions>

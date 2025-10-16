@@ -327,13 +327,33 @@ input {
         }
     }
 
+    // WCAG 2.1 AA - Policy Text Container (Label + Error in Column)
+    .policy-text-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 4px;
+    }
+
+    // Fix for layout jumping - always reserve space for error message
+    .policy-error {
+        min-height: 20px; // Reserve space for one line of error text
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease-in-out;
+        
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     .policy-label {
         font-family: 'Overpass';
         font-weight: 400;
         font-size: 16px;
         line-height: 23px;
         color: #FFFCF3;
-        flex: 1;
         
         .policy-link {
             color: #FF9900;
