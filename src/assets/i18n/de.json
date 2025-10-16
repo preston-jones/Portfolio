@@ -32,7 +32,7 @@
         "title": "Portfolio",
         "subtitle": "Erkunden Sie eine Auswahl meiner Projekte - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
         "projects": {
-            "dabubble": {
+            "nexchat": {
                 "description": "NexChat ist eine Chat-App mit Echtzeitkommunikation, inspiriert von Slack. Sie bietet Channels, Direktnachrichten, Threads, Emoji-Reaktionen und Mentions für eine klare und strukturierte Teamkommunikation."
             },
             "join": {
