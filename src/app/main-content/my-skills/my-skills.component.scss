@@ -41,10 +41,23 @@ section {
     width: 100px;
     transition: all 125ms ease-in-out;
     flex: 0 0 20%;
+    
+    // WCAG 2.1 AA - Touch Targets ≥ 44x44px
+    min-height: 44px;
+    min-width: 44px;
+    padding: 8px;
 
     >img {
-        height: 75px;
+        height: 75px !important;  // Override NgOptimizedImage inline styles
+        width: auto !important;   // Maintain aspect ratio
         object-fit: contain;
+        
+        // WCAG 2.1 AA - Focus States for images
+        &:focus {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
     }
 
     >p {
@@ -58,6 +71,15 @@ section {
         transform: scale(1.1);
         transition: all 125ms ease-in-out;
         color: #FF9900;
+    }
+    
+    // WCAG 2.1 AA - Focus States for skill containers
+    &:focus,
+    &:focus-within {
+        outline: 2px solid #FF9900;
+        outline-offset: 2px;
+        border-radius: 8px;
+        background-color: rgba(255, 153, 0, 0.1);
     }
 }
 

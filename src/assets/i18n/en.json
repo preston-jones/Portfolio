@@ -3,6 +3,9 @@
         "title": "Developer",
         "sendMessageBtn": "Send A Message"
     },
+    "mySkills": {
+        "learning": "Continually Learning"
+    },
     "menu": {
         "navLinks": {
             "about": "About Me",

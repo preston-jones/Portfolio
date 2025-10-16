@@ -1,71 +1,53 @@
-<section>
+<section id="myskills" aria-labelledby="skills-heading" role="region">
     <div class="headline">
-        <h2 data-aos="headline-color" data-aos-duration="500" class="my-skills-headline">{{ "skills.title" | translate
-            }}</h2>
+        <h2 id="skills-heading" data-aos="headline-color" data-aos-duration="500" class="my-skills-headline">
+            {{ "skills.title" | translate }}
+        </h2>
     </div>
-    <div class="content">
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/angular.png">
+    <div class="content" role="list" aria-label="Technische Fähigkeiten">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/angular.png" alt="Angular Framework Logo" width="64" height="64">
             <p>Angular</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/typescript.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/typescript.png" alt="TypeScript Sprache Logo" width="64" height="64">
             <p>TypeScript</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/javascript.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/javascript.png" alt="JavaScript Sprache Logo" width="64" height="64">
             <p>JavaScript</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/html.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/html.png" alt="HTML Markup-Sprache Logo" width="64" height="64">
             <p>HTML</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/css.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/css.png" alt="CSS Stylesheet-Sprache Logo" width="66" height="75">
             <p>CSS</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/firebase.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/firebase.png" alt="Firebase Backend-Platform Logo" width="55" height="75">
             <p>Firebase</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/git.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/git.png" alt="Git Versionskontrolle Logo" width="64" height="64">
             <p>Git</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/scrum.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/scrum.png" alt="Scrum Agile Methodik Logo" width="64" height="64">
             <p>Scrum</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/rest_api.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/rest_api.png" alt="REST API Interface Logo" width="64" height="64">
             <p>Rest-Api</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/materialdesign.png">
+        <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/materialdesign.png" alt="Material Design System Logo" width="64" height="64">
             <p>Material design</p>
         </div>
-        <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/continually_learning.png">
-            <p>Continually learning</p>
+                <div class="skill" data-aos="zoom-in" data-aos-duration="1000" role="listitem">
+            <img ngSrc="./../../../assets/icons/continually_learning.png" alt="Kontinuierliches Lernen Icon" width="82" height="82">
+            <p>{{ getTranslation('mySkills.learning') }}</p>
         </div>
-        <!-- <div class="continually_learning-icon" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="./../../../assets/icons/continually_learning.png" (mouseover)="showInfoBox()"
-                (mouseout)="hideInfoBox()">
-            <p>Continually learning</p>
-            <div class="info-box-container" id="info-box">
-                <div class="info-box-content">
-                    <span class="logo">I have a special interest in learning </span>
-                    <div class="info-box-content-skills">
-                        <span><img class="info-box-icon" src="./../../../assets/icons/python.png">
-                            <strong>Python</strong>
-                        </span>
-                        <span><img class="info-box-icon" src="./../../../assets/icons/django.png">
-                            <strong>Django</strong>
-                        </span>
-                    </div>
-                </div>
-                <img src="./../../../assets/icons/Vector 8.png">
-            </div>
-        </div> -->
     </div>
 </section>

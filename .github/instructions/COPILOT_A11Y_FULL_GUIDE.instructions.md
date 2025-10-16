@@ -175,5 +175,6 @@ um Projekte **WCAG 2.1 AA-konform** und **Lighthouse-optimiert** zu machen.
 - Bildgrößen (`width` / `height`) setzen.  
 - `routerLinkActive="active"` + `aria-current="page"`.
 - **WICHTIG:** Original Bildgrößen und Layout-Dimensionen immer beibehalten!
+- **WICHTIG:** NgOptimizedImage Aspect Ratio Fehler beheben. Korrigiere die Bildabmessungen mit den tatsächlichen Intrinsic Sizes.
 
 > Verwende diese Best Practices in allen Angular-Komponenten für bessere Performance, Accessibility und Lighthouse Scores **ohne das bestehende Design zu verändern**.
