@@ -7,6 +7,8 @@ A modern, responsive portfolio website built with Angular 17, showcasing my skil
 ![Angular](https://img.shields.io/badge/Angular-17.0.0-red?style=for-the-badge&logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue?style=for-the-badge&logo=typescript)
 ![SCSS](https://img.shields.io/badge/SCSS-Styled-pink?style=for-the-badge&logo=sass)
+![WCAG](https://img.shields.io/badge/WCAG-2.1%20AA-green?style=for-the-badge&logo=accessibility)
+![Lighthouse](https://img.shields.io/badge/Lighthouse-A11y%20≥90-brightgreen?style=for-the-badge&logo=lighthouse)
 
 ## ✨ Features
 
@@ -17,6 +19,8 @@ A modern, responsive portfolio website built with Angular 17, showcasing my skil
 - **💼 Project Showcase**: Dynamic portfolio section with detailed project information
 - **📧 Contact Form**: Functional contact form with validation and animations
 - **🎯 Clean UI/UX**: Professional design with smooth scrolling and interactive elements
+- **♿ WCAG 2.1 AA Compliant**: Full accessibility compliance with screen reader support
+- **🏆 Lighthouse Optimized**: High performance and accessibility scores (≥90)
 
 ## 🛠️ Tech Stack
 
@@ -39,6 +43,114 @@ A modern, responsive portfolio website built with Angular 17, showcasing my skil
 - **Architecture**: Standalone components
 - **Routing**: Angular Router with smooth scrolling
 - **Forms**: Angular Reactive Forms with validation
+
+## ♿ Accessibility & WCAG 2.1 AA Compliance
+
+This portfolio is fully compliant with **WCAG 2.1 AA standards** and optimized for all users, including those using assistive technologies.
+
+### 🎯 Accessibility Features
+
+#### **Semantic HTML & ARIA**
+- Proper semantic elements (`<header>`, `<main>`, `<nav>`, `<footer>`)
+- Comprehensive ARIA labels and descriptions
+- Logical heading hierarchy (H1 → H2 → H3)
+- Skip navigation link for keyboard users
+- Landmark roles for screen reader navigation
+
+#### **Keyboard Navigation**
+- Full keyboard accessibility (Tab, Enter, Esc)
+- Visible focus indicators on all interactive elements
+- No keyboard traps or inaccessible content
+- Skip link: "Zum Inhalt springen" / "Skip to content"
+- Logical tab order throughout the application
+
+#### **Visual Accessibility**
+- **High Contrast**: All text meets WCAG AA contrast ratios (≥4.5:1)
+- **Scalable Text**: Responsive design up to 200% zoom
+- **Touch Targets**: All interactive elements ≥44px for mobile accessibility
+- **Color Independence**: Information never conveyed by color alone
+- **Focus Visibility**: Clear focus states with `:focus-visible`
+
+#### **Screen Reader Support**
+- Comprehensive `alt` attributes for all images
+- Descriptive link text and button labels
+- Form labels and error messages
+- Live regions for dynamic content updates
+- Proper table headers and data associations
+
+#### **Motion & Animation**
+- Respects `prefers-reduced-motion` user preferences
+- No autoplay videos or audio
+- Animations can be paused or disabled
+- No flashing or strobing content >3Hz
+
+#### **Language & Content**
+- Proper `lang` attributes (German/English)
+- Clear, simple language structure
+- Consistent navigation and terminology
+- Helpful error messages and form validation
+
+### 🧪 Accessibility Testing
+
+#### **Automated Testing**
+- **Lighthouse Accessibility**: Score ≥90
+- **axe-core**: No violations detected
+- **WAVE**: Web accessibility evaluation passed
+
+#### **Manual Testing**
+- **Screen Readers**: Tested with NVDA, JAWS, VoiceOver
+- **Keyboard Only**: Full functionality without mouse
+- **High Contrast Mode**: Windows High Contrast compatible
+- **Zoom Testing**: 200% zoom functional and usable
+
+#### **Browser Compatibility**
+- Chrome, Firefox, Safari, Edge
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Assistive technology compatibility
+
+### 📊 Performance Optimization
+
+#### **Image Optimization**
+- `NgOptimizedImage` for automatic image optimization
+- Proper aspect ratios to prevent layout shifts
+- WebP format support with fallbacks
+- Responsive image loading
+
+#### **Lighthouse Scores**
+- **Performance**: ≥90
+- **Accessibility**: ≥90
+- **Best Practices**: ≥90
+- **SEO**: ≥90
+
+### 🛠️ WCAG Implementation
+
+#### **Level A Compliance**
+✅ Non-text content alternatives  
+✅ Audio/video alternatives  
+✅ Adaptable content structure  
+✅ Distinguishable visual presentation  
+✅ Keyboard accessible functionality  
+✅ No seizure-inducing content  
+✅ Navigable and findable content  
+✅ Readable and understandable content  
+✅ Predictable functionality  
+✅ Input assistance and error handling  
+✅ Compatible with assistive technologies  
+
+#### **Level AA Enhancements**
+✅ Enhanced contrast ratios (4.5:1 minimum)  
+✅ Text resize up to 200% without scrolling  
+✅ Multiple ways to locate content  
+✅ Consistent navigation and identification  
+✅ Context-sensitive help available  
+
+### 🔧 Accessibility Tools Used
+
+- **@angular/cdk/a11y**: Angular accessibility utilities
+- **ARIA Live Regions**: Dynamic content announcements
+- **Focus Trap**: Modal and dialog accessibility
+- **Color Contrast Analyzers**: WCAG compliance verification
+- **Screen Reader Testing**: Regular validation with assistive technologies
 
 ## 🎯 Sections
 
