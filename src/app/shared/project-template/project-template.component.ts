@@ -23,7 +23,7 @@ export class ProjectTemplateComponent {
   projectList: Project[] = [
     {
       title: 'NexChat',
-      img: 'assets/imgs/projectimage_nexchat.png',
+      img: 'assets/imgs/projectimage_nexchat.jpeg',
       descriptionKey: 'portfolio.projects.nexchat.description',
       technologies: [
         'Angular | TypeScript | Firebase | Material Design | SCSS'
@@ -41,7 +41,7 @@ export class ProjectTemplateComponent {
     },
     {
       title: 'Join',
-      img: 'assets/imgs/projectimage_join.png',
+      img: 'assets/imgs/projectimage_join.jpeg',
       descriptionKey: 'portfolio.projects.join.description',
       technologies: [
         'JavaScript | Firebase | CSS | HTML'
@@ -59,7 +59,7 @@ export class ProjectTemplateComponent {
     },
     {
       title: 'Cyber City',
-      img: 'assets/imgs/projectimage_cybercity.png',
+      img: 'assets/imgs/projectimage_cybercity.jpeg',
       descriptionKey: 'portfolio.projects.cybercity.description',
       technologies: [
         'JavaScript | OOP | CSS | HTML',
@@ -75,24 +75,6 @@ export class ProjectTemplateComponent {
         }
       ]
     },
-    // {
-    //   title: 'Pokedex',
-    //   img: 'assets/imgs/projectimage_pokedex.png',
-    //   descriptionKey: 'portfolio.projects.pokedex.description',
-    //   technologies: [
-    //     'JavaScript | API | CSS | HTML'
-    //   ],
-    //   links: [
-    //     {
-    //       title: 'Live Demo',
-    //       url: 'http://pokedex.projects.prestonjones.dev/'
-    //     },
-    //     {
-    //       title: 'GitHub',
-    //       url: 'https://github.com/preston-jones/pokedex'
-    //     }
-    //   ]
-    // },
   ];
 
   constructor() {

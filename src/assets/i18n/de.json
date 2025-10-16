@@ -40,9 +40,6 @@
             },
             "cybercity": {
                 "description": "Vom Arcade-Feeling inspirierter 2D-Sidescroller im Cyberpunk-Stil. Objektorientiert entwickelt mit klarer Spiellogik und gegnerbasierter Kollisionsabfrage für ein authentisches Arcade-Erlebnis."
-            },
-            "pokedex": {
-                "description": "Basierend auf der PokéAPI, einer einfachen Rest-Api Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
             }
         }
     },

@@ -40,9 +40,6 @@
             },
             "cybercity": {
                 "description": "A 2D sidescroller inspired by classic arcade gameplay in a cyberpunk style. Object-oriented development with clear game logic and enemy-based collision detection for an authentic arcade experience."
-            },
-            "pokedex": {
-                "description": "Based on the PokéAPI, a simple Rest-Api library that provides and catalogues pokemon information."
             }
         }
     },
