@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy, inject, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { NgOptimizedImage } from '@angular/common';
 import { DialogEmailSentComponent } from '../../dialogs/dialog-email-sent/dialog-email-sent.component';
@@ -11,8 +10,8 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule,
-    MatDialogModule,
+  imports: [
+    FormsModule,
     TranslateModule,
     NgOptimizedImage
   ],

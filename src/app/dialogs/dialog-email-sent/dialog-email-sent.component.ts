@@ -3,7 +3,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import  {MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialog } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
