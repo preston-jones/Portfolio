@@ -15,7 +15,8 @@
     "stats:read": "ng build --stats-json && node scripts/green-stats.js",
     "stats:file-sizes": "ng build && ls -lah dist/portfolio/*.{js,css} | awk '{print $5 \"\\t\" $9}' | column -t",
     "stats:debug": "ng build --stats-json && node -e \"const stats = require('./dist/portfolio/stats.json'); console.log('📊 Stats Structure Debug:'); console.log('Available keys:', Object.keys(stats)); if (stats.assets) console.log('Assets:', stats.assets.slice(0,3)); if (stats.chunks) console.log('Chunks:', stats.chunks.slice(0,2)); if (stats.modules) console.log('Modules count:', stats.modules.length);\"",
-    "stats:simple": "ng build --stats-json --verbose"
+    "stats:simple": "ng build --stats-json --verbose",
+    "green:dialogs": "npm run stats:read && echo '📊 Green Coding: Dialog optimization complete - check bundle reduction'"
   },
   "private": true,
   "dependencies": {
