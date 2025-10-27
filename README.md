@@ -9,6 +9,7 @@ A modern, responsive portfolio website built with Angular 17, showcasing my skil
 ![SCSS](https://img.shields.io/badge/SCSS-Styled-pink?style=for-the-badge&logo=sass)
 ![WCAG](https://img.shields.io/badge/WCAG-2.1%20AA-green?style=for-the-badge&logo=accessibility)
 ![Lighthouse](https://img.shields.io/badge/Lighthouse-A11y%20≥90-brightgreen?style=for-the-badge&logo=lighthouse)
+![Green Coding](https://img.shields.io/badge/Green%20Coding-Optimized-brightgreen?style=for-the-badge&logo=leaf)
 
 ## ✨ Features
 
@@ -21,6 +22,7 @@ A modern, responsive portfolio website built with Angular 17, showcasing my skil
 - **🎯 Clean UI/UX**: Professional design with smooth scrolling and interactive elements
 - **♿ WCAG 2.1 AA Compliant**: Full accessibility compliance with screen reader support
 - **🏆 Lighthouse Optimized**: High performance and accessibility scores (≥90)
+- **🌱 Green Coding**: Optimized bundle size for environmental sustainability
 
 ## 🛠️ Tech Stack
 
@@ -152,6 +154,120 @@ This portfolio is fully compliant with **WCAG 2.1 AA standards** and optimized f
 - **Color Contrast Analyzers**: WCAG compliance verification
 - **Screen Reader Testing**: Regular validation with assistive technologies
 
+## 🌱 Green Coding & Environmental Sustainability
+
+This portfolio follows **Green Coding principles** to minimize environmental impact through optimized bundle sizes and efficient resource usage.
+
+### 🎯 Green Coding Goals
+
+- **Target Bundle Size**: ≤500KB (currently ~537KB)
+- **CO2 Reduction**: Minimize data transfer for lower emissions
+- **Performance**: Faster load times and better user experience
+- **Efficiency**: Optimized code and dependencies
+
+### 📊 Bundle Analysis Commands
+
+#### **Quick Green Coding Check**
+```bash
+# Run comprehensive green coding analysis
+npm run stats:read
+```
+This command provides:
+- ✅ Current bundle size vs 500KB target
+- ✅ CO2 impact calculation (2M users/month)
+- ✅ Optimization recommendations
+- ✅ Large file identification (>20KB)
+
+#### **Alternative Analysis Methods**
+```bash
+# Basic build with verbose output
+npm run build:verbose
+
+# File system size check
+npm run stats:file-sizes
+
+# Debug stats structure
+npm run stats:debug
+
+# Manual bundle inspection
+ls -la dist/portfolio/*.{js,css}
+```
+
+### 🔧 Built-in Angular CLI Analysis
+
+No external tools required! Use Angular CLI's built-in analysis:
+
+```bash
+# Generate detailed statistics
+ng build --stats-json --verbose
+
+# Production build analysis
+ng build --configuration=production --stats-json
+
+# Check optimization warnings
+ng build --verbose
+```
+
+### 📈 Current Bundle Status
+
+**Initial Bundle**: ~537KB / 500KB target  
+**Status**: ⚠️ Needs minor optimization (-37KB)  
+**Environmental Impact**: ~295kg CO2/year (2M users)
+
+### ⚡ Optimization Roadmap
+
+1. **Replace AOS Library** (-20-30KB) ← **Priority**
+   - Switch to CSS `@keyframes` animations
+   - Fixes CommonJS optimization warnings
+
+2. **Standalone Components** (-30-50KB)
+   - Better tree-shaking
+   - Smaller bundle sizes
+
+3. **Angular 17 Control Flow** (-10-15KB)
+   - Replace `*ngIf/*ngFor` with `@if/@for`
+   - More efficient change detection
+
+4. **Tree-shake Material Imports** (-10-20KB)
+   - Import specific components vs full modules
+
+5. **Code Splitting & Lazy Loading** (-15-25KB)
+   - Load routes on demand
+
+### 🌍 Environmental Benefits
+
+- **Reduced Server Costs**: Smaller bundles = less bandwidth
+- **Faster Load Times**: Better user experience
+- **Lower CO2 Emissions**: Less data transfer
+- **Improved Core Web Vitals**: Better SEO and performance
+- **Green Hosting**: Optimized for sustainable web practices
+
+### 📊 How to Read Bundle Statistics
+
+```bash
+# Generate and analyze in one command
+npm run stats:read
+
+# Manual stats inspection
+ng build --stats-json
+node -p "JSON.parse(require('fs').readFileSync('dist/portfolio/stats.json')).chunks.map(c => ({name: c.names, size: (c.size/1024).toFixed(2) + 'KB', initial: c.initial}))"
+```
+
+**Key Metrics to Monitor:**
+- Initial bundle size (most important for Green Coding)
+- Large modules (>20KB) for optimization targets
+- CommonJS warnings (tree-shaking issues)
+- Total initial load time
+
+### 🔄 Green Coding Maintenance
+
+- ✅ Monitor bundle size with each release
+- ✅ Set up bundle size CI/CD alerts
+- ✅ Regular dependency audits
+- ✅ Keep Angular and dependencies updated
+- ✅ Consider lazy loading for new features
+- ✅ Track Core Web Vitals in production
+
 ## 🎯 Sections
 
 ### 1. Above the Fold
@@ -208,7 +324,12 @@ This portfolio is fully compliant with **WCAG 2.1 AA standards** and optimized f
    ng serve
    ```
 
-4. **Open in browser**
+4. **Check bundle size (Green Coding)**
+   ```bash
+   npm run stats:read
+   ```
+
+5. **Open in browser**
    Navigate to `http://localhost:4200/`
 
 ### Build for Production
@@ -217,7 +338,11 @@ This portfolio is fully compliant with **WCAG 2.1 AA standards** and optimized f
 # Build the project
 npm run build
 
-# The build artifacts will be stored in the `dist/` directory
+# Build with bundle analysis
+npm run build:stats
+
+# Check green coding compliance
+npm run stats:read
 ```
 
 ## 📱 Responsive Design
@@ -264,10 +389,23 @@ ng test --code-coverage
 
 ## 📋 Scripts
 
+### Development
 - `npm start` - Start development server
 - `npm run build` - Build for production
 - `npm test` - Run unit tests
 - `npm run watch` - Build and watch for changes
+
+### Bundle Analysis (Green Coding)
+- `npm run stats:read` - **Comprehensive green coding analysis**
+- `npm run build:stats` - Generate stats.json file
+- `npm run build:verbose` - Build with detailed output
+- `npm run stats:file-sizes` - Quick file size check
+- `npm run stats:debug` - Debug stats structure
+
+### Advanced Analysis
+- `npm run build:analyze` - Webpack Bundle Analyzer
+- `npm run build:source-map` - Source map analysis
+- `npm run build:profile` - Detailed build profiling
 
 ## 🔧 Configuration
 
@@ -281,6 +419,11 @@ The project is optimized with specific budget configurations:
 - ES2022 target
 - Module resolution optimized
 
+### Green Coding Target
+- **Target**: 500KB initial bundle
+- **Current**: ~537KB
+- **Status**: ⚠️ Minor optimization needed
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -289,6 +432,13 @@ The project is optimized with specific budget configurations:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+### Green Coding Guidelines
+- Always run `npm run stats:read` before commits
+- Keep bundle size under 500KB
+- Optimize images and dependencies
+- Use tree-shaking friendly imports
+
 ---
 
-*Built with ❤️ using Angular 17, TypeScript, and modern web technologies.*
+*Built with ❤️ using Angular 17, TypeScript, and modern web technologies.*  
+*Optimized for accessibility, performance, and environmental sustainability.* 🌱
