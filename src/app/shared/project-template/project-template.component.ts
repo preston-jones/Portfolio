@@ -22,6 +22,24 @@ export class ProjectTemplateComponent {
 
   projectList: Project[] = [
     {
+      title: 'HCloud Vision',
+      img: 'assets/imgs/projectimage_hcloud.jpeg',
+      descriptionKey: 'portfolio.projects.hcloud.description',
+      technologies: [
+        'Angular | TypeScript | TailwindCSS | Serverless Proxy | Mock API'
+      ],
+      links: [
+        {
+          title: 'Live Demo',
+          url: 'https://hcloud.projects.prestonjones.dev/'
+        },
+        {
+          title: 'GitHub',
+          url: 'https://github.com/preston-jones/hcloud-angular-dashboard'
+        }
+      ]
+    },
+    {
       title: 'NexChat',
       img: 'assets/imgs/projectimage_nexchat.jpeg',
       descriptionKey: 'portfolio.projects.nexchat.description',
